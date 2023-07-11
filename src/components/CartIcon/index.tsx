@@ -1,7 +1,4 @@
 function CartIcon() {
-  return (
-      <div>
-      </div>
-      );
+  return <div></div>;
 }
 export default CartIcon;
