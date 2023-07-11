@@ -1,4 +1,4 @@
 function CartIcon() {
-  return <div></div>;
+  return <div>Some Cart Icon</div>;
 }
 export default CartIcon;

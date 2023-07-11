@@ -1,4 +1,4 @@
 function Nav() {
-  return <nav></nav>;
+  return <nav>Some text</nav>;
 }
 export default Nav;
