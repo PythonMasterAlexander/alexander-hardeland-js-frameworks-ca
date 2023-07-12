@@ -1,7 +1,19 @@
-import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Layout from "./components/Layout";
+import HomePage from "./pages/HomePage";
+import ProductPage from "./pages/ProductPage";
 
 function App() {
-  return <div className="App"></div>;
+  return (
+    <>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<HomePage />} />
+          <Route path="products" element={<ProductPage />} />
+        </Route>
+      </Routes>
+    </>
+  );
 }
 
 export default App;
