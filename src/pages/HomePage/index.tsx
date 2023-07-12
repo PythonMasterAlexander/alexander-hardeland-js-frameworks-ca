@@ -1,7 +1,9 @@
+import * as Styles from "./index.styles";
+
 function HomePage() {
   return (
     <>
-      <h1>Hello from the home page</h1>
+      <Styles.HeadingOne>Hello from the home page</Styles.HeadingOne>
     </>
   );
 }
