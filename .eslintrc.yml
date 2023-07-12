@@ -4,6 +4,7 @@ root: true
 extends:
   - "eslint:recommended"
   - "plugin:@typescript-eslint/recommended"
+  # Extend prettier will make eslint only checking for errors in the code and not formating
   - "prettier"
 
 parser: "@typescript-eslint/parser"
