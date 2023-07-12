@@ -4,7 +4,7 @@ import Nav from "../Nav";
 function Header() {
   return (
     <header>
-      <div>Page Logo goes here</div>
+      <section>Page Logo goes here</section>
       <Nav />
       <CartIcon />
     </header>
