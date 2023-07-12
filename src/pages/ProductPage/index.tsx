@@ -1,4 +1,8 @@
 function ProductPage() {
-  return <div></div>;
+  return (
+    <>
+      <h1>Hello From Product Page</h1>
+    </>
+  );
 }
 export default ProductPage;

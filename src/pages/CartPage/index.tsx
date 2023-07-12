@@ -1,4 +1,8 @@
 function CartPage() {
-  return <div></div>;
+  return (
+    <>
+      <h1>Hello From the Cart page</h1>
+    </>
+  );
 }
 export default CartPage;

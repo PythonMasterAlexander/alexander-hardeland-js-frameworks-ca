@@ -1,4 +1,8 @@
 function ContactPage() {
-  return <div></div>;
+  return (
+    <>
+      <h1>Hello from the contact page</h1>
+    </>
+  );
 }
 export default ContactPage;
