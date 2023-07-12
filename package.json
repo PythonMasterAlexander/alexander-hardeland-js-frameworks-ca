@@ -24,7 +24,7 @@
     "prettier": "npx prettier ./src/**/*.* --write",
     "check-prettier": "npx prettier ./src/**/*.* --check",
     "lint": "npx eslint ./src/**/*.*",
-    "fix-lint": "npx eslint ./src/**/*.* --cache --fix"
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [
@@ -48,6 +48,12 @@
     "@typescript-eslint/parser": "^5.62.0",
     "eslint": "^8.44.0",
     "eslint-config-prettier": "^8.8.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.3",
     "prettier": "3.0.0"
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix",
+    "*.{js,css,md,ts,tsx}": "prettier --write"
   }
 }
