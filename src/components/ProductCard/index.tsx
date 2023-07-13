@@ -1,4 +1,9 @@
+import { useEffect, useState } from "react";
+
 function ProductCard() {
+  const url = "https://api.noroff.dev/api/v1/online-shop";
+  const [posts, setPosts] = useState([]);
+
   return (
     <>
       <div className="card">
