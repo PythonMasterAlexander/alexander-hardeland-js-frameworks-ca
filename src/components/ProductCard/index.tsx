@@ -1,16 +1,25 @@
-import { useEffect, useState } from "react";
+import * as React from "react";
 
 function ProductCard() {
-  const url = "https://api.noroff.dev/api/v1/online-shop";
-  const [posts, setPosts] = useState([]);
+  const url: string = "https://api.noroff.dev/api/v1/online-shop";
 
-  useEffect(() => {
+  interface ApiReturnData {
+    id: string;
+    title: string;
+    description: string;
+    discountedPrice: number;
+    price: number;
+  }
+
+  const [products, setProducts] = React.useState<Array<ApiReturnData>>([]);
+
+  React.useEffect(() => {
     async function getUrlData() {
       const response = await fetch(url);
       const json = await response.json();
 
-      // Reciving data from the url and then assign it to the setPosts state
-      setPosts(json);
+      // Reciving data from the url and then assign it to the setProducts state
+      setProducts(json);
     }
     // Call the function getUrlData
     getUrlData();
