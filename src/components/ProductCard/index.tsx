@@ -9,6 +9,7 @@ function ProductCard() {
     description: string;
     discountedPrice: number;
     price: number;
+    imageUrl: string;
   }
 
   const [products, setProducts] = React.useState<Array<ApiReturnData>>([]);
@@ -27,14 +28,16 @@ function ProductCard() {
 
   return (
     <>
-      <div className="card">
-        <img className="product-image" src="" alt="" />
-        <div className="card-body">
-          <h3 className="card-title">Product Name</h3>
-          <p className="card-info">Info about the card</p>
-          <button className="btn-primary to-product">Go to product</button>
+      {products.map((product) => (
+        <div className="card" key={product.id}>
+          <img className="product-image" src={product.imageUrl} alt="" />
+          <div className="card-body">
+            <h3 className="card-title">{product.title}</h3>
+            <p className="card-info">{product.description}</p>
+            <button className="btn-primary to-product">Go to product</button>
+          </div>
         </div>
-      </div>
+      ))}
     </>
   );
 }
