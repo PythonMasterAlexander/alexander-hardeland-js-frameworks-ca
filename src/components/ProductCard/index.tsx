@@ -4,6 +4,18 @@ function ProductCard() {
   const url = "https://api.noroff.dev/api/v1/online-shop";
   const [posts, setPosts] = useState([]);
 
+  useEffect(() => {
+    async function getUrlData() {
+      const response = await fetch(url);
+      const json = await response.json();
+
+      // Reciving data from the url and then assign it to the setPosts state
+      setPosts(json);
+    }
+    // Call the function getUrlData
+    getUrlData();
+  }, []);
+
   return (
     <>
       <div className="card">
