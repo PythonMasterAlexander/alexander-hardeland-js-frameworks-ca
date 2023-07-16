@@ -1,4 +1,5 @@
 import ApiCallData from "./ApiCallData";
+import * as Styles from "./index.styles";
 
 function ProductCard() {
   const { products, isLoading, isError } = ApiCallData();
@@ -13,7 +14,7 @@ function ProductCard() {
       <>
         {products.map((product) => (
           <div className="card" key={product.id}>
-            <img
+            <Styles.ProductImage
               className="product-image"
               src={product.imageUrl}
               alt={product.description}
