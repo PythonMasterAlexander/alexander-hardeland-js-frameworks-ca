@@ -6,6 +6,6 @@ export const HeadingOne = styled.h1`
 
 export const HomePageMainContainer = styled.section`
   display: grid;
-  grid-template-columns: repeat(auto-fix, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 1.5rem;
 `;
