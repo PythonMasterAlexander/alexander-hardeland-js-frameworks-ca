@@ -6,7 +6,7 @@ export const CardBody = styled.div``;
 
 export const ProductImage = styled.img`
   width: 100%;
-  height: 15%;
+  height: 12.5rem;
   object-fit: contain;
 `;
 
