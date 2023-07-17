@@ -1,6 +1,11 @@
 import styled from "styled-components";
 
+export const CardContainer = styled.div`
+  width: 200px;
+  box-sizing: border-box;
+`;
+
 export const ProductImage = styled.img`
-  width: auto;
-  height: 50%;
+  border-radius: 10px;
+  object-fit: cover;
 `;

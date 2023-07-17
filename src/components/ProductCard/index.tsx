@@ -13,7 +13,7 @@ function ProductCard() {
     return (
       <>
         {products.map((product) => (
-          <div className="card" key={product.id}>
+          <Styles.CardContainer key={product.id}>
             <Styles.ProductImage
               className="product-image"
               src={product.imageUrl}
@@ -24,7 +24,7 @@ function ProductCard() {
               <p className="card-info">{product.description}</p>
               <button className="btn-primary to-product">Go to product</button>
             </div>
-          </div>
+          </Styles.CardContainer>
         ))}
       </>
     );
