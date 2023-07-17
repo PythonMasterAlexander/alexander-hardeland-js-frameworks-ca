@@ -19,11 +19,13 @@ function ProductCard() {
               src={product.imageUrl}
               alt={product.description}
             />
-            <div className="card-body">
+            <Styles.CardBody>
               <h3 className="card-title">{product.title}</h3>
-              <p className="card-info">{product.description}</p>
+              <Styles.CardParagraph className="card-info">
+                {product.description}
+              </Styles.CardParagraph>
               <button className="btn-primary to-product">Go to product</button>
-            </div>
+            </Styles.CardBody>
           </Styles.CardContainer>
         ))}
       </>
