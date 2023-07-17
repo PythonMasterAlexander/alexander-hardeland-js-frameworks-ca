@@ -5,11 +5,11 @@ import CartIcon from "../CartIcon";
 
 function Header() {
   return (
-    <header>
+    <Styles.Header>
       <section>Page Logo goes here</section>
       <Nav />
       <CartIcon />
-    </header>
+    </Styles.Header>
   );
 }
 export default Header;
