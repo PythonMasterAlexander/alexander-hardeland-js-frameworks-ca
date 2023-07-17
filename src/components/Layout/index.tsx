@@ -8,9 +8,9 @@ function Layout() {
   return (
     <>
       <Header />
-      <main>
+      <Styles.Main>
         <Outlet />
-      </main>
+      </Styles.Main>
       <Footer />
     </>
   );
