@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
 export const Main = styled.main`
-  display: grid;
+  margin: 3rem auto;
+  width: 85%;
 `;
