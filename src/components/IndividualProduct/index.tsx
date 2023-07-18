@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import * as React from "react";
+import NotFoundPage from "../../pages/NotFoundPage";
 
 function IndividualProduct() {
   const { id } = useParams();
@@ -34,6 +35,14 @@ function IndividualProduct() {
     );
   }, [id]);
   console.log(individualProductData);
+
+  if (isLoading || !individualProductData || isError) {
+    return (
+      <>
+        <NotFoundPage />
+      </>
+    );
+  }
 
   return (
     <>
