@@ -8,7 +8,7 @@ function Nav() {
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/product">Product</Link>
+          <Link to="/product/:id">Product</Link>
         </li>
         <li>
           <Link to="/contact">Contact</Link>

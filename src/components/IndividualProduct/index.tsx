@@ -1,4 +1,9 @@
+import { useParams } from "react-router-dom";
+
 function IndividualProduct() {
+  const { id } = useParams();
+  console.log(id);
+
   return (
     <>
       <div>
