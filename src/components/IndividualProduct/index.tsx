@@ -1,6 +1,9 @@
-console.log("Hello World");
+import GetIndividualProductData from "./GetIndividualProductData";
 
 function IndividualProduct() {
+  const product = GetIndividualProductData();
+  console.log(product);
+
   return (
     <>
       <div>
