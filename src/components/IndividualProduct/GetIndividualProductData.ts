@@ -1,6 +1,5 @@
 import * as React from "react";
 import { useParams } from "react-router-dom";
-export const data: string = "Hello World";
 
 function GetIndividualProductData() {
   // State for each product
@@ -14,35 +13,26 @@ function GetIndividualProductData() {
   const [isError, setIsError] = React.useState(false);
 
   // id value for each product
-  //let { id }  = useParams();
-  const url: string = "https://api.noroff.dev/api/v1/online-shop";
-
-  interface ApiReturnData {
-    id: string;
-    title: string;
-    description: string;
-    discountedPrice: number;
-    price: number;
-    imageUrl: string;
-  }
+  //const { id }  = useParams();
+  const url: string = `https://api.noroff.dev/api/v1/online-shop`;
 
   React.useEffect(() => {
     async function getApiData() {
       try {
+        setIsError(false);
+        setIsLoading(true);
+
         const response = await fetch(url);
         const json = await response.json();
 
         setIndividualProductData(json);
-      } catch (error) {
-        console.log(error);
-      } finally {
         setIsLoading(false);
+      } catch (error) {
+        setIsError(true);
       }
     }
 
     getApiData();
   }, []);
-
-  return { individualProductData, isLoading, isError };
 }
 export default GetIndividualProductData;
