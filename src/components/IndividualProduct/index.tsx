@@ -1,19 +1,40 @@
 import { useParams } from "react-router-dom";
+import * as React from "react";
 
 function IndividualProduct() {
   const { id } = useParams();
-  console.log(id);
+
+  // State for each product
+  const [individualProductData, setIndividualProductData] =
+    React.useState(null);
+
+  // State for loading
+  const [isLoading, setIsLoading] = React.useState(false);
+
+  // State for error
+  const [isError, setIsError] = React.useState(false);
+
+  React.useEffect(() => {
+    async function getApiData(url: string) {
+      try {
+        setIsError(false);
+        setIsLoading(true);
+
+        const response = await fetch(url);
+        const json = await response.json();
+
+        setIndividualProductData(json);
+        setIsLoading(false);
+      } catch (error) {
+        setIsError(true);
+      }
+    }
+    getApiData(`https://api.noroff.dev/api/v1/online-shop/${id}`);
+  }, [id]);
 
   return (
     <>
-      <div>
-        <img />
-        <div>
-          <h3>Product header</h3>
-          <p>Product Text</p>
-          <button>Add Product to cart</button>
-        </div>
-      </div>
+      <div>{id}</div>
     </>
   );
 }
