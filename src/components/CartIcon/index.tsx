@@ -1,4 +1,8 @@
 function CartIcon() {
-  return <section>Some Cart Icon</section>;
+  return (
+    <>
+      <section></section>
+    </>
+  );
 }
 export default CartIcon;
