@@ -5,9 +5,17 @@ import NotFoundPage from "../../pages/NotFoundPage";
 function IndividualProduct() {
   const { id } = useParams();
 
+  interface ApiReturnData {
+    id: string;
+    title: string;
+    description: string;
+    discountedPrice: number;
+    price: number;
+    imageUrl: string;
+  }
+
   // State for each product
-  const [individualProductData, setIndividualProductData] =
-    React.useState(null);
+  const [individualProductData, setIndividualProductData] = React.useState();
 
   // State for loading
   const [isLoading, setIsLoading] = React.useState(false);
@@ -16,6 +24,7 @@ function IndividualProduct() {
   const [isError, setIsError] = React.useState(false);
 
   React.useEffect(() => {
+    console.log("UseEffect runs...");
     async function getApiData(url: string) {
       try {
         setIsError(false);
@@ -32,8 +41,6 @@ function IndividualProduct() {
     }
     getApiData(`https://api.noroff.dev/api/v1/online-shop/${id}`);
   }, [id]);
-  console.log(individualProductData);
-
   if (isLoading || !individualProductData || isError) {
     return (
       <>
