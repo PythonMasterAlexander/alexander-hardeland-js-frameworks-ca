@@ -1,12 +1,8 @@
 import * as React from "react";
 import * as Styles from "./index.styles";
+import { handleInputChange } from "../ProductCard";
+
 function SearchProductBar() {
-  const [inputValue, setInputValue] = React.useState<string>("");
-
-  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const userSearchInputValue = event.target.value.trim().toLowerCase();
-  };
-
   return (
     <>
       <section>
