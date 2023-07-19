@@ -1,13 +1,6 @@
-import * as React from "react";
 import ApiCallData from "./ApiCallData";
 import * as Styles from "./index.styles";
 import { Link } from "react-router-dom";
-
-export const handleInputChange = (
-  event: React.ChangeEvent<HTMLInputElement>
-) => {
-  const userSearchInputValue = event.target.value.trim().toLowerCase();
-};
 
 function ProductCard() {
   const { products, isLoading, isError } = ApiCallData();

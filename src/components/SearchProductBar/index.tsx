@@ -1,6 +1,11 @@
 import * as React from "react";
 import * as Styles from "./index.styles";
-import { handleInputChange } from "../ProductCard";
+
+export const handleInputChange = (
+  event: React.ChangeEvent<HTMLInputElement>
+) => {
+  const userSearchInputValue = event.target.value.trim().toLowerCase();
+};
 
 function SearchProductBar() {
   return (
