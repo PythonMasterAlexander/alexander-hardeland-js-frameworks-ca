@@ -4,7 +4,7 @@ function CartIcon() {
   return (
     <>
       <section>
-        <Link to="/cart">
+        <Link to="/checkout">
           <span>0</span>
           <i className="fa-solid fa-cart-shopping fa-2xl"></i>
           <span>Cart</span>
