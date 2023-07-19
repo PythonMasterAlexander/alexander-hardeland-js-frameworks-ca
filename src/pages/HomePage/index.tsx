@@ -1,6 +1,7 @@
 import * as Styles from "./index.styles";
 import ProductCard from "../../components/ProductCard";
-import SearchProductBar from "../../components/SearchProductBar";
+//import SearchProductBar from "../../components/SearchProductBar";
+import { SearchProductBar } from "../../components/ProductCard";
 
 function HomePage() {
   return (

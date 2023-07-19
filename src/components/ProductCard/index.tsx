@@ -1,6 +1,25 @@
+import * as React from "react";
 import ApiCallData from "./ApiCallData";
 import * as Styles from "./index.styles";
 import { Link } from "react-router-dom";
+
+// Moved from SeachProductBar to figure out how to work this out
+export function SearchProductBar() {
+  const [inputValue, setInputValue] = React.useState<string>("");
+
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const userSearchInputValue = event.target.value.trim().toLowerCase();
+  };
+
+  return (
+    <>
+      <section>
+        <input onChange={handleInputChange} />
+        <button>Search</button>
+      </section>
+    </>
+  );
+}
 
 function ProductCard() {
   const { products, isLoading, isError } = ApiCallData();
