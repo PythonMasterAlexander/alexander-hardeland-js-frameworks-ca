@@ -8,14 +8,16 @@ function IndividualProduct() {
   interface ApiReturnData {
     id: string;
     title: string;
+    imageUrl: string;
     description: string;
     discountedPrice: number;
     price: number;
-    imageUrl: string;
+    reviews: Array<object>;
   }
 
   // State for each product
-  const [individualProductData, setIndividualProductData] = React.useState();
+  const [individualProductData, setIndividualProductData] =
+    React.useState<ApiReturnData | null>(null);
 
   // State for loading
   const [isLoading, setIsLoading] = React.useState(false);
@@ -24,7 +26,6 @@ function IndividualProduct() {
   const [isError, setIsError] = React.useState(false);
 
   React.useEffect(() => {
-    console.log("UseEffect runs...");
     async function getApiData(url: string) {
       try {
         setIsError(false);
@@ -41,6 +42,8 @@ function IndividualProduct() {
     }
     getApiData(`https://api.noroff.dev/api/v1/online-shop/${id}`);
   }, [id]);
+
+  // Here you check for possibly of individualProductData being null
   if (isLoading || !individualProductData || isError) {
     return (
       <>
@@ -48,6 +51,7 @@ function IndividualProduct() {
       </>
     );
   }
+  console.log(individualProductData.reviews);
 
   return (
     <>
