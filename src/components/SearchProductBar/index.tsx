@@ -3,7 +3,6 @@ import * as Styles from "./index.styles";
 
 const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
   const userSearchInputValue = event.target.value.trim().toLowerCase();
-  return userSearchInputValue;
 };
 
 function SearchProductBar() {
