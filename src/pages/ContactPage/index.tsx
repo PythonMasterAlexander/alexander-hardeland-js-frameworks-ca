@@ -1,4 +1,10 @@
+import * as React from "react";
+
 function ContactPage() {
+  const [fullName, setFullName] = React.useState<string>("");
+  const [email, setEmail] = React.useState<string>("");
+  const [body, setBody] = React.useState<string>("");
+
   return (
     <>
       <h1>If you will like to tell us anything</h1>
