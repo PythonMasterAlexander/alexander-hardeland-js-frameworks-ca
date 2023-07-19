@@ -1,6 +1,7 @@
+import { useParams } from "react-router-dom";
+
 import NotFoundPage from "../../pages/NotFoundPage";
 import GetIndividualProductData from "./GetIndividualProductData";
-import { useParams } from "react-router-dom";
 
 function IndividualProduct() {
   const { id } = useParams();
@@ -14,11 +15,25 @@ function IndividualProduct() {
       </>
     );
   } else {
-    console.log(individualProductData);
-
+    const productTitle = individualProductData.title;
+    const productDescription = individualProductData.description;
+    const productImageUrl = individualProductData.imageUrl;
+    // TODO Call a function that fetch the reviews
     return (
       <>
-        <div></div>
+        <div>
+          <img src={productImageUrl} alt={productDescription} />
+          <div>
+            <h3>{productTitle}</h3>
+            <p>{productDescription}</p>
+            <span>Put price here</span>
+          </div>
+          <div>
+            <h4>Product Review</h4>
+            <p>Put product review here</p>
+            <button>Add to cart</button>
+          </div>
+        </div>
       </>
     );
   }
