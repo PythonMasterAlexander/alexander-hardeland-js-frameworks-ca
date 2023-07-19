@@ -1,33 +1,41 @@
 import * as React from "react";
-import { useParams } from "react-router-dom";
 
-// State for each product
-const [individualProductData, setIndividualProductData] = React.useState(null);
-
-// State for loading
-const [isLoading, setIsLoading] = React.useState(false);
-
-// State for error
-const [isError, setIsError] = React.useState(false);
-
-// id value for each product
-const { id } = useParams();
-//const url: string = `https://api.noroff.dev/api/v1/online-shop/`;
-
-React.useEffect(() => {
-  async function getApiData(url: string) {
-    try {
-      setIsError(false);
-      setIsLoading(true);
-
-      const response = await fetch(url);
-      const json = await response.json();
-
-      setIndividualProductData(json);
-      setIsLoading(false);
-    } catch (error) {
-      setIsError(true);
-    }
+function GetIndividualProductData(id: string | undefined) {
+  const url: string = `https://api.noroff.dev/api/v1/online-shop/${id}`;
+  interface ApiReturnData {
+    id: string;
+    title: string;
+    imageUrl: string;
+    description: string;
+    discountedPrice: number;
+    price: number;
+    reviews: Array<object>;
   }
-  getApiData(`https://api.noroff.dev/api/v1/online-shop`);
-}, [id]);
+
+  const [individualProductData, setIndividualProductData] =
+    React.useState<ApiReturnData | null>(null);
+
+  const [isLoading, setIsLoading] = React.useState(false);
+  const [isError, setIsError] = React.useState(false);
+
+  React.useEffect(() => {
+    async function getApiData() {
+      try {
+        setIsError(false);
+        setIsLoading(true);
+
+        const response = await fetch(url);
+        const json = await response.json();
+
+        setIndividualProductData(json);
+        setIsLoading(false);
+      } catch (error) {
+        setIsError(true);
+      }
+    }
+    getApiData();
+  }, [id]);
+
+  return { individualProductData, isLoading, isError };
+}
+export default GetIndividualProductData;
