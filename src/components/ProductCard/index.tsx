@@ -1,4 +1,4 @@
-import ApiCallData from "./ApiCallData";
+import ApiCallData from "../../pages/HomePage/ApiCallData";
 import * as Styles from "./index.styles";
 import { Link } from "react-router-dom";
 
