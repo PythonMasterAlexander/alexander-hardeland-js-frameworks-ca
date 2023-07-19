@@ -1,5 +1,6 @@
 import ApiCallData from "./ApiCallData";
 import * as Styles from "./index.styles";
+import { Link } from "react-router-dom";
 
 function ProductCard() {
   const { products, isLoading, isError } = ApiCallData();
@@ -24,7 +25,7 @@ function ProductCard() {
               <Styles.CardParagraph className="card-info">
                 {product.description}
               </Styles.CardParagraph>
-              <button className="btn-primary to-product">Go to product</button>
+              <Link to={`/product/${product.id}`}>Go to product</Link>
             </Styles.CardBody>
           </Styles.CardContainer>
         ))}
