@@ -1,4 +1,6 @@
 import ApiCallData from "./ApiCallData";
+import * as Styles from "./index.styles";
+import { Link } from "react-router-dom";
 
 function ProductCard() {
   const { products, isLoading, isError } = ApiCallData();
@@ -12,18 +14,20 @@ function ProductCard() {
     return (
       <>
         {products.map((product) => (
-          <div className="card" key={product.id}>
-            <img
+          <Styles.CardContainer key={product.id}>
+            <Styles.ProductImage
               className="product-image"
               src={product.imageUrl}
               alt={product.description}
             />
-            <div className="card-body">
+            <Styles.CardBody>
               <h3 className="card-title">{product.title}</h3>
-              <p className="card-info">{product.description}</p>
-              <button className="btn-primary to-product">Go to product</button>
-            </div>
-          </div>
+              <Styles.CardParagraph className="card-info">
+                {product.description}
+              </Styles.CardParagraph>
+              <Link to={`/product/${product.id}`}>Go to product</Link>
+            </Styles.CardBody>
+          </Styles.CardContainer>
         ))}
       </>
     );

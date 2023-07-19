@@ -1,8 +1,10 @@
+import * as Styles from "./index.styles";
+
 function Footer() {
   return (
-    <footer>
+    <Styles.Footer>
       <h3>This is the footer</h3>
-    </footer>
+    </Styles.Footer>
   );
 }
 export default Footer;

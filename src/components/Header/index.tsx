@@ -1,13 +1,15 @@
-import CartIcon from "../CartIcon";
+import * as Styles from "./index.styles";
+
 import Nav from "../Nav";
+import CartIcon from "../CartIcon";
 
 function Header() {
   return (
-    <header>
+    <Styles.Header>
       <section>Page Logo goes here</section>
       <Nav />
       <CartIcon />
-    </header>
+    </Styles.Header>
   );
 }
 export default Header;

@@ -1,13 +1,13 @@
-import ProductCard from "../../components/ProductCard";
 import * as Styles from "./index.styles";
+import ProductCard from "../../components/ProductCard";
 
 function HomePage() {
   return (
     <>
       <Styles.HeadingOne>Hello from the home page</Styles.HeadingOne>
-      <section>
+      <Styles.HomePageMainContainer>
         <ProductCard />
-      </section>
+      </Styles.HomePageMainContainer>
     </>
   );
 }
