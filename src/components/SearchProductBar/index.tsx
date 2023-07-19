@@ -1,8 +1,11 @@
+import * as Styles from "./index.styles";
+
 function SearchProductBar() {
   return (
     <>
       <section>
-        <h1>Hello from the search bar</h1>
+        <Styles.Input />
+        <button>Search</button>
       </section>
     </>
   );
