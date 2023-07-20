@@ -3,6 +3,8 @@ import * as Styles from "./index.styles";
 import { Link } from "react-router-dom";
 //import ProductCard from "../../components/ProductCard";
 import ApiCallData from "./ApiCallData";
+//import FilteredProducts from "./FilteredProducts";
+import HandleInputChange from "./HandleInputChange";
 
 function HomePage() {
   const { products, isLoading, isError } = ApiCallData();
