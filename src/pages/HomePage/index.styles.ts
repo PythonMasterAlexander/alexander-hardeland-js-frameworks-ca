@@ -16,3 +16,8 @@ export const HomePageMainContainer = styled.section`
     grid-template-columns: repeat(1, 1fr);
   }
 `;
+
+export const Input = styled.input`
+  background: gray;
+  border: solid 2px black;
+`;
