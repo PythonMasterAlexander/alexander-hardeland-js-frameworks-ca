@@ -5,10 +5,32 @@ import ApiCallData from "./ApiCallData";
 
 function HomePage() {
   const { products, isLoading, isError } = ApiCallData();
+
+  // Filter value will be used as the state to determen the value of the input field
+  const [filterValue, setFilterValue] = React.useState<string | undefined>("");
+
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const userSearchInputValue = event.target.value.trim().toLowerCase();
-    console.log(userSearchInputValue);
+    // When ever the user write someting in the input field, the value will be set in the filter state
+    setFilterValue(event.target.value);
   };
+  // Test to see if it works
+  console.log(filterValue);
+
+  // Create a interface for the Products return array when its been filtered out
+  interface Product {
+    id: string;
+    title: string;
+    description: string;
+    discountedPrice: number;
+    price: number;
+    imageUrl: string;
+  }
+  // Filter the products array
+  const filteredProducts: Product[] = products.filter((product) => {
+    console.log(product);
+  });
+  // Test to see if it works
+  console.log(filteredProducts);
 
   return (
     <React.Fragment>
