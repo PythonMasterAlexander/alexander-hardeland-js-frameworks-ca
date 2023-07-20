@@ -1,15 +1,15 @@
 import * as React from "react";
 import * as Styles from "./index.styles";
 import ProductCard from "../../components/ProductCard";
-
-export const handleInputChange = (
-  event: React.ChangeEvent<HTMLInputElement>
-) => {
-  const userSearchInputValue = event.target.value.trim().toLowerCase();
-  console.log(userSearchInputValue);
-};
+import ApiCallData from "./ApiCallData";
 
 function HomePage() {
+  const { products, isLoading, isError } = ApiCallData();
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const userSearchInputValue = event.target.value.trim().toLowerCase();
+    console.log(userSearchInputValue);
+  };
+
   return (
     <React.Fragment>
       <section>
