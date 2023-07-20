@@ -1,7 +1,6 @@
 import * as React from "react";
 import * as Styles from "./index.styles";
 import { Link } from "react-router-dom";
-//import ProductCard from "../../components/ProductCard";
 import ApiCallData from "./ApiCallData";
 
 function HomePage() {
@@ -32,8 +31,7 @@ function HomePage() {
       return product;
     }
   });
-  // Test to see if it works
-  console.log(filteredProducts);
+
   function FilteredProductCard() {
     return (
       <>
