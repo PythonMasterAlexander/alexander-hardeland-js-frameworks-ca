@@ -1,7 +1,10 @@
+import { Link } from "react-router-dom";
+
 function CheckoutPageSuccess() {
   return (
     <>
-      <h1>Hello From the checkout page success</h1>
+      <h1>The order was a success</h1>
+      <Link to="/">Go back to the store</Link>
     </>
   );
 }

@@ -1,4 +1,4 @@
-import ApiCallData from "./ApiCallData";
+import ApiCallData from "../../pages/HomePage/ApiCallData";
 import * as Styles from "./index.styles";
 import { Link } from "react-router-dom";
 
@@ -25,7 +25,7 @@ function ProductCard() {
               <Styles.CardParagraph className="card-info">
                 {product.description}
               </Styles.CardParagraph>
-              <Link to={`/product/${product.id}`}>Go to product</Link>
+              <Link to={`/product/${product.id}`}>View product</Link>
             </Styles.CardBody>
           </Styles.CardContainer>
         ))}
