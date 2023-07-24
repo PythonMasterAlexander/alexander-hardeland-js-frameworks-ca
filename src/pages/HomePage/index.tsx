@@ -1,6 +1,5 @@
 import * as React from "react";
 import * as Styles from "./index.styles";
-import { Link } from "react-router-dom";
 import ApiCallData from "./ApiCallData";
 
 function HomePage() {
@@ -42,11 +41,15 @@ function HomePage() {
               src={product.imageUrl}
               alt={product.description}
             />
-            <div>
+            <Styles.ProductCardBody>
               <h3 className="card-title">{product.title}</h3>
               <p className="card-info">{product.description}</p>
-              <Link to={`/product/${product.id}`}>View product</Link>
-            </div>
+            </Styles.ProductCardBody>
+            <Styles.LinkButtonContainer>
+              <Styles.StyledLink to={`/product/${product.id}`}>
+                View product
+              </Styles.StyledLink>
+            </Styles.LinkButtonContainer>
           </Styles.ProductCardContainer>
         ))}
       </>
