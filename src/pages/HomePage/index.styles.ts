@@ -17,7 +17,6 @@ export const Input = styled.input`
 `;
 
 export const Img = styled.img`
-  border-radius: 0.375rem;
   height: 9.375rem;
   object-fit: contain;
   max-width: 100%;
