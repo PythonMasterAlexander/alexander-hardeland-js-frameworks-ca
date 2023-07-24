@@ -42,8 +42,12 @@ function HomePage() {
               alt={product.description}
             />
             <Styles.ProductCardBody>
-              <h3 className="card-title">{product.title}</h3>
-              <p className="card-info">{product.description}</p>
+              <Styles.HeadingTwo className="card-title">
+                {product.title}
+              </Styles.HeadingTwo>
+              <Styles.CardText className="card-info">
+                {product.description}
+              </Styles.CardText>
             </Styles.ProductCardBody>
             <Styles.LinkButtonContainer>
               <Styles.StyledLink to={`/product/${product.id}`}>

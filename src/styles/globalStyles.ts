@@ -12,6 +12,14 @@ const GlobalStyles = createGlobalStyle`
     height: 100%;
   }
 
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto Mono', monospace;
+  }
+
+  p {
+    font-family: 'Lato', sans-serif;
+  }
+
   main {
     flex-grow: 1;
   }
@@ -19,6 +27,7 @@ const GlobalStyles = createGlobalStyle`
   #root {
     display: flex;
     flex-direction: column;
+    font-size: 1rem;
     width: 90%;
     margin: 2% auto;
   }

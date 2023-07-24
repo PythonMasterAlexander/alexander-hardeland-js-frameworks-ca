@@ -5,6 +5,12 @@ export const HeadingOne = styled.h1`
   color: red;
 `;
 
+export const HeadingTwo = styled.h2`
+  font-size: clamp(1.3rem, 1vw + 2vw, 1.5rem);
+  letter-spacing: -0.031rem;
+  margin-bottom: 1rem;
+`;
+
 export const Input = styled.input`
   background: gray;
   border: solid 2px black;
@@ -33,15 +39,22 @@ export const ProductCardBody = styled.div`
   flex-grow: 1;
 `;
 
+export const CardText = styled.p`
+  font-size: clamp(0.75rem, 1vw + 2vw, 1.3rem);
+`;
+
 export const LinkButtonContainer = styled.div`
   border-radius: 0.375rem;
   background-color: #ffffff;
   text-align: center;
-  padding: 1.5rem 0;
+  padding: 1rem 0;
 `;
 
 export const StyledLink = styled(Link)`
   color: #000000;
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+  font-size: clamp(1rem, 1vw + 2vw, 1.3rem);
   text-decoration: none;
   text-transform: uppercase;
 `;
