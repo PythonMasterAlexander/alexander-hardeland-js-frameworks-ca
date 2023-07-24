@@ -36,8 +36,8 @@ function HomePage() {
     return (
       <>
         {filteredProducts.map((product) => (
-          <div key={product.id}>
-            <img
+          <Styles.ProductCardContainer key={product.id}>
+            <Styles.Img
               className="product-image"
               src={product.imageUrl}
               alt={product.description}
@@ -47,7 +47,7 @@ function HomePage() {
               <p className="card-info">{product.description}</p>
               <Link to={`/product/${product.id}`}>View product</Link>
             </div>
-          </div>
+          </Styles.ProductCardContainer>
         ))}
       </>
     );
