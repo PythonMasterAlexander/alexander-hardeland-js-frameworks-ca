@@ -1,6 +1,5 @@
 import * as React from "react";
 import * as Styles from "./index.styles";
-import { Link } from "react-router-dom";
 import ApiCallData from "./ApiCallData";
 
 function HomePage() {
@@ -9,7 +8,7 @@ function HomePage() {
   // Filter value will be used as the state to determen the value of the input field
   const [filterValue, setFilterValue] = React.useState<string>("");
 
-  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const HandleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     // When ever the user write someting in the input field, the value will be set in the filter state
     setFilterValue(event.target.value.trim().toLowerCase());
   };
@@ -36,18 +35,26 @@ function HomePage() {
     return (
       <>
         {filteredProducts.map((product) => (
-          <div key={product.id}>
-            <img
+          <Styles.ProductCardContainer key={product.id}>
+            <Styles.Img
               className="product-image"
               src={product.imageUrl}
               alt={product.description}
             />
-            <div>
-              <h3 className="card-title">{product.title}</h3>
-              <p className="card-info">{product.description}</p>
-              <Link to={`/product/${product.id}`}>View product</Link>
-            </div>
-          </div>
+            <Styles.ProductCardBody>
+              <Styles.HeadingTwo className="card-title">
+                {product.title}
+              </Styles.HeadingTwo>
+              <Styles.CardText className="card-info">
+                {product.description}
+              </Styles.CardText>
+            </Styles.ProductCardBody>
+            <Styles.LinkButtonContainer>
+              <Styles.StyledLink to={`/product/${product.id}`}>
+                View product
+              </Styles.StyledLink>
+            </Styles.LinkButtonContainer>
+          </Styles.ProductCardContainer>
         ))}
       </>
     );
@@ -56,7 +63,7 @@ function HomePage() {
   return (
     <React.Fragment>
       <section>
-        <Styles.Input onChange={handleInputChange} />
+        <Styles.Input onChange={HandleInputChange} />
         <button>Search</button>
       </section>
       <Styles.HeadingOne>Hello from the home page</Styles.HeadingOne>
