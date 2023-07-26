@@ -27,14 +27,15 @@ function IndividualProduct() {
           <Styles.IndividualProductCardBody>
             <h3>{productTitle}</h3>
             <p>{productDescription}</p>
-            <span>Put price here</span>
-          </Styles.IndividualProductCardBody>
-          <Styles.IndividualProductReviewBody>
             <h4>Product Review</h4>
             <p>Put product review here</p>
-          </Styles.IndividualProductReviewBody>
+          </Styles.IndividualProductCardBody>
+          <Styles.IndividualPriceInformationContainer>
+            <p>Product price</p>
+            <span>Put price here</span>
+          </Styles.IndividualPriceInformationContainer>
           <Styles.IndividualLinkButtonContainer>
-            <button>Add to cart</button>
+            <Styles.ButtonLink to={`/cart`}>Add to cart</Styles.ButtonLink>
           </Styles.IndividualLinkButtonContainer>
         </Styles.IndividualProductCardContainer>
       </>

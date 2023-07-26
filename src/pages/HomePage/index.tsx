@@ -50,9 +50,9 @@ function HomePage() {
               </Styles.CardText>
             </Styles.ProductCardBody>
             <Styles.LinkButtonContainer>
-              <Styles.StyledLink to={`/product/${product.id}`}>
+              <Styles.ButtonLink to={`/product/${product.id}`}>
                 View product
-              </Styles.StyledLink>
+              </Styles.ButtonLink>
             </Styles.LinkButtonContainer>
           </Styles.ProductCardContainer>
         ))}
