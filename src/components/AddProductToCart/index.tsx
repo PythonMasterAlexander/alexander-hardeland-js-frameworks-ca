@@ -1,12 +1,10 @@
 import * as Styles from "./index.styles";
-import { handleClickOnButton } from "./AddToCart";
-import GetIndividualProductData from "../IndividualProduct";
+import ClickToAddProductToCart from "./ClickToAddProductToCart";
 
 function AddProductToCart() {
-  GetIndividualProductData();
   return (
     <Styles.IndividualLinkButtonContainer>
-      <Styles.ButtonLink onClick={handleClickOnButton}>
+      <Styles.ButtonLink onClick={ClickToAddProductToCart}>
         Add to cart
       </Styles.ButtonLink>
     </Styles.IndividualLinkButtonContainer>
