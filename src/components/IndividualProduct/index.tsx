@@ -6,6 +6,7 @@ import AddProductToCart from "../AddProductToCart";
 import { useParams } from "react-router-dom";
 
 function IndividualProduct() {
+  //Make the addToCart code here
   const { id } = useParams();
   const { isLoading, individualProductData, isError } =
     GetIndividualProductData(id);
