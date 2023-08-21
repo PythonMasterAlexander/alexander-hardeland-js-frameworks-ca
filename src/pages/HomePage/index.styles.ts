@@ -49,7 +49,7 @@ export const LinkButtonContainer = styled.div`
   padding: 1rem 0;
 `;
 
-export const StyledLink = styled(Link)`
+export const ButtonLink = styled(Link)`
   color: #000000;
   font-family: "Lato", sans-serif;
   font-weight: bold;
