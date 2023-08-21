@@ -1,1 +1,3 @@
-import { useState } from "react";
+export function handleClickOnButton() {
+  console.log("I was clicked");
+}
