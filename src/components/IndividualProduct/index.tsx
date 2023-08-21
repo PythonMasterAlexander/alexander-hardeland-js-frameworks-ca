@@ -1,6 +1,7 @@
 import * as Styles from "./index.styles";
 import NotFoundPage from "../../pages/NotFoundPage";
 import GetIndividualProductData from "./GetIndividualProductData";
+import AddProductToCart from "../AddProductToCart";
 
 import { useParams } from "react-router-dom";
 
@@ -34,9 +35,7 @@ function IndividualProduct() {
             <p>Product price</p>
             <span>Put price here</span>
           </Styles.IndividualPriceInformationContainer>
-          <Styles.IndividualLinkButtonContainer>
-            <Styles.ButtonLink to={`/cart`}>Add to cart</Styles.ButtonLink>
-          </Styles.IndividualLinkButtonContainer>
+          <AddProductToCart />
         </Styles.IndividualProductCardContainer>
       </>
     );
