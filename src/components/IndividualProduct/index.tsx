@@ -9,16 +9,29 @@ function IndividualProduct() {
   const { isLoading, individualProductData, isError } =
     GetIndividualProductData(id);
 
-  //Make the addToCart code here
-  //Found out how to add a the product to the cartProduct state
   const [cartProduct, setCartProduct] = React.useState<object | null>([]);
 
   function AddProductToCart() {
     setCartProduct(individualProductData);
   }
-  //const jsonCartProduct = JSON.stringify(cartProduct);
-  //const localStoreKey: string = "key";
-  //localStorage.setItem(localStoreKey, jsonCartProduct);
+
+  const localStoreKey: string = "key";
+  const jsonCartProduct = JSON.stringify(cartProduct);
+
+  React.useEffect(() => {
+    const productInLocalStorage = window.localStorage.getItem(localStoreKey);
+    if (!productInLocalStorage) {
+      [];
+    } else {
+      setCartProduct(JSON.parse(productInLocalStorage));
+    }
+  }, []);
+
+  React.useEffect(() => {
+    window.localStorage.setItem(localStoreKey, jsonCartProduct);
+  }, [jsonCartProduct]);
+  // Update the cartProduct if a new product are clicked
+  console.log(cartProduct);
 
   if (isLoading || !individualProductData || isError) {
     return (
