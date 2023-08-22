@@ -4,19 +4,20 @@ import NotFoundPage from "../../pages/NotFoundPage";
 import GetIndividualProductData from "./GetIndividualProductData";
 import { useParams } from "react-router-dom";
 
+//Moved lines of code outside of the IndividualProduct function
+const { id } = useParams();
+const { isLoading, individualProductData, isError } =
+  GetIndividualProductData(id);
+
+//Make the addToCart code here
+//Found out how to add a the product to the cartProduct state
+const [cartProduct, setCartProduct] = React.useState<object | null>();
+function AddProductToCart() {
+  setCartProduct([individualProductData]);
+}
+console.log(cartProduct);
+
 function IndividualProduct() {
-  const { id } = useParams();
-  const { isLoading, individualProductData, isError } =
-    GetIndividualProductData(id);
-
-  //Make the addToCart code here
-  //Found out how to add a the product to the cartProduct state
-  const [cartProduct, setCartProduct] = React.useState<object | null>();
-  function AddProductToCart() {
-    setCartProduct([individualProductData]);
-  }
-  console.log(cartProduct);
-
   if (isLoading || !individualProductData || isError) {
     return (
       <>
