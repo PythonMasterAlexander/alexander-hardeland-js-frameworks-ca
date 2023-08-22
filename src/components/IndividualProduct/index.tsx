@@ -11,13 +11,14 @@ function IndividualProduct() {
 
   //Make the addToCart code here
   //Found out how to add a the product to the cartProduct state
-  const [cartProduct, setCartProduct] = React.useState<object | null>();
+  const [cartProduct, setCartProduct] = React.useState<object | null>([]);
+
   function AddProductToCart() {
-    setCartProduct([individualProductData]);
+    setCartProduct(individualProductData);
   }
-  const jsonCartProduct = JSON.stringify(cartProduct);
-  const localStoreKey: string = "key";
-  window.localStorage.setItem(localStoreKey, jsonCartProduct);
+  //const jsonCartProduct = JSON.stringify(cartProduct);
+  //const localStoreKey: string = "key";
+  //localStorage.setItem(localStoreKey, jsonCartProduct);
 
   if (isLoading || !individualProductData || isError) {
     return (
