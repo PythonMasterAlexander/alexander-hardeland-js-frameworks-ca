@@ -1,4 +1,4 @@
-function ClickToAddProductToCart() {
+function AddProductToCart() {
   console.log("I was clicked");
 }
-export default ClickToAddProductToCart;
+export default AddProductToCart;
