@@ -15,7 +15,9 @@ function IndividualProduct() {
   function AddProductToCart() {
     setCartProduct([individualProductData]);
   }
-  console.log(cartProduct);
+  const jsonCartProduct = JSON.stringify(cartProduct);
+  const localStoreKey: string = "key";
+  window.localStorage.setItem(localStoreKey, jsonCartProduct);
 
   if (isLoading || !individualProductData || isError) {
     return (
