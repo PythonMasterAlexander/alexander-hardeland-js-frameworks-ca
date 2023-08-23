@@ -8,12 +8,14 @@ interface StateCounter {
 interface CounterActions {
   addOne: () => void;
   clearCount: () => void;
+  decrement: () => void;
 }
 
 const UseCartStore = Zustand.create<StateCounter & CounterActions>(
   (set, get) => ({
     count: 0,
     addOne: () => set((state) => ({ count: state.count + 1 })),
+    decrement: () => set((state) => ({ count: state.count - 1 })),
     clearCount: () => set({ count: 0 }),
   })
 );

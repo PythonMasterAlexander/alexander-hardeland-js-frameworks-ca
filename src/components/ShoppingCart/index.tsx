@@ -4,6 +4,7 @@ import UseCartStore from "./UseCartStore";
 function ShoppingCart() {
   const count = UseCartStore((state) => state.count);
   const addOne = UseCartStore((state) => state.addOne);
+  const decrementCount = UseCartStore((state) => state.decrement);
   const clearCount = UseCartStore((state) => state.clearCount);
 
   return (
@@ -13,6 +14,9 @@ function ShoppingCart() {
       <Styles.AddToCountButton onClick={addOne}>
         Add to count
       </Styles.AddToCountButton>
+      <Styles.DecrementCountButton onClick={decrementCount}>
+        Decrement count
+      </Styles.DecrementCountButton>
       <Styles.ClearCountButton onClick={clearCount}>
         Clear count
       </Styles.ClearCountButton>
