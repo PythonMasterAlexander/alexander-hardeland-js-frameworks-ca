@@ -13,14 +13,14 @@ function IndividualProduct() {
 
   //I have the products as an object in one value -> individualProductData
   //This value are a object and TS types are object | null
-  console.log(individualProductData);
+  console.log("individualProductData: ", individualProductData);
 
   function AddProductToCart() {
     setCartProduct(individualProductData);
   }
 
   //When I click the button -> the cartProduct state gets the value of the product which are an array of the product object
-  console.log(cartProduct);
+  console.log("cartProduct value: ", cartProduct);
 
   if (isLoading || !individualProductData || isError) {
     return (
