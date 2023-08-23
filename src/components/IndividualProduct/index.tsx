@@ -29,17 +29,15 @@ function IndividualProduct() {
       </>
     );
   } else {
-    const productTitle = individualProductData.title;
-    const productDescription = individualProductData.description;
-    const productImageUrl = individualProductData.imageUrl;
+    const { title, description, imageUrl } = individualProductData;
     // TODO Call a function that fetch the reviews
     return (
       <>
         <Styles.IndividualProductCardContainer>
-          <Styles.Img src={productImageUrl} alt={productDescription} />
+          <Styles.Img src={imageUrl} alt={description} />
           <Styles.IndividualProductCardBody>
-            <h3>{productTitle}</h3>
-            <p>{productDescription}</p>
+            <h3>{title}</h3>
+            <p>{description}</p>
             <h4>Product Review</h4>
             <p>Put product review here</p>
           </Styles.IndividualProductCardBody>
