@@ -11,3 +11,7 @@ export const RemoveProductButton = styled.button`
 export const ClearCountButton = styled.button`
   display: block;
 `;
+
+export const AddProductToCart = styled.button`
+  display: block;
+`;
