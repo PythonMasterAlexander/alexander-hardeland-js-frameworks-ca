@@ -11,10 +11,16 @@ function IndividualProduct() {
 
   const [cartProduct, setCartProduct] = React.useState<object | null>([]);
 
+  //I have the products as an object in one value -> individualProductData
+  //This value are a object and TS types are object | null
+  console.log(individualProductData);
+
   function AddProductToCart() {
     setCartProduct(individualProductData);
-    console.log(cartProduct);
   }
+
+  //When I click the button -> the cartProduct state gets the value of the product which are an array of the product object
+  console.log(cartProduct);
 
   if (isLoading || !individualProductData || isError) {
     return (
