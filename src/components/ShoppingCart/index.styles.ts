@@ -4,7 +4,7 @@ export const AddToCountButton = styled.button`
   display: block;
 `;
 
-export const DecrementCountButton = styled.button`
+export const RemoveProductButton = styled.button`
   display: block;
 `;
 

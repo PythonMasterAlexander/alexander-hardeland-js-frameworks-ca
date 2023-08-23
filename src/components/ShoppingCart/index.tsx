@@ -17,9 +17,9 @@ function ShoppingCart() {
       <Styles.AddToCountButton onClick={addProductToCart}>
         Add to cart
       </Styles.AddToCountButton>
-      <Styles.DecrementCountButton onClick={removeProductFromCart}>
-        Remove cart product
-      </Styles.DecrementCountButton>
+      <Styles.RemoveProductButton onClick={removeProductFromCart}>
+        Remove
+      </Styles.RemoveProductButton>
     </>
   );
 }

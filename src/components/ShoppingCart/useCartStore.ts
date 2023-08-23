@@ -5,7 +5,8 @@ interface CartState {
   totalProductsInCart: number;
   cartProductList: [];
   addProductToCart: object;
-  clearCart: [];
+  clearProductCart: () => void;
+  cartTotalPrice: number;
   addToCart: () => void;
   removeProductFromCart: () => void;
 }
@@ -25,7 +26,8 @@ const UseCartStore = Zustand.create<CartState>()(
           set((state) => ({
             totalProductsInCart: state.totalProductsInCart - 1,
           })),
-        clearCart: [],
+        cartTotalPrice: 0,
+        clearProductCart: () => set({ cartProductList: [] }),
       }),
       {
         name: "cartStore",
