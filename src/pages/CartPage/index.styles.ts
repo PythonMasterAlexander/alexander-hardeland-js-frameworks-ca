@@ -15,3 +15,7 @@ export const ButtonLink = styled(Link)`
   font-weight: bold;
   padding: 1rem;
 `;
+
+export const ClearCartButton = styled.button`
+  display: block;
+`;

@@ -14,7 +14,7 @@ interface CartState {
 const UseCartStore = Zustand.create<CartState>()(
   devtools(
     persist(
-      (set, get) => ({
+      (set) => ({
         totalProductsInCart: 0,
         cartProductList: [],
         addProductToCart: {},
