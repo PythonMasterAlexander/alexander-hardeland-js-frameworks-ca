@@ -2,12 +2,14 @@ import { Link } from "react-router-dom";
 import UseCartStore from "../ShoppingCart/UseCartStore";
 
 function CartIcon() {
-  const cartCounter = UseCartStore((state) => state.cartCount);
+  const totalProductsInCart = UseCartStore(
+    (state) => state.totalProductsInCart
+  );
   return (
     <>
       <section>
         <Link to="/checkout">
-          <span>{cartCounter}</span>
+          <span>{totalProductsInCart}</span>
           <i className="fa-solid fa-cart-shopping fa-2xl"></i>
           <span>Cart</span>
         </Link>

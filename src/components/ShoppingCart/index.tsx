@@ -2,7 +2,9 @@ import * as Styles from "./index.styles";
 import UseCartStore from "./UseCartStore";
 
 function ShoppingCart() {
-  const cartProductCounter = UseCartStore((state) => state.cartCount);
+  const totalProductsInCart = UseCartStore(
+    (state) => state.totalProductsInCart
+  );
   const addProductToCart = UseCartStore((state) => state.addToCart);
   const removeProductFromCart = UseCartStore(
     (state) => state.removeProductFromCart
@@ -11,7 +13,7 @@ function ShoppingCart() {
   return (
     <>
       <h2>Your Shopping cart</h2>
-      <div>{cartProductCounter}</div>
+      <div>{totalProductsInCart}</div>
       <Styles.AddToCountButton onClick={addProductToCart}>
         Add to cart
       </Styles.AddToCountButton>

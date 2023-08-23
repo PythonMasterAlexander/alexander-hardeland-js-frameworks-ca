@@ -3,24 +3,19 @@ import * as React from "react";
 import NotFoundPage from "../../pages/NotFoundPage";
 import GetIndividualProductData from "./GetIndividualProductData";
 import { useParams } from "react-router-dom";
+import UseCartStore from "../ShoppingCart/UseCartStore";
 
 function IndividualProduct() {
   const { id } = useParams();
+  //This is how I will try and add the object in individualProductData to the cart when button is clicked
+  const addProductToCart = UseCartStore((state) => state.addProductToCart);
+
   const { isLoading, individualProductData, isError } =
     GetIndividualProductData(id);
 
-  const [cartProduct, setCartProduct] = React.useState<object | null>([]);
-
-  //I have the products as an object in one value -> individualProductData
-  //This value are a object and TS types are object | null
-  console.log("individualProductData: ", individualProductData);
-
   function AddProductToCart() {
-    setCartProduct(individualProductData);
+    console.log("hello World");
   }
-
-  //When I click the button -> the cartProduct state gets the value of the product which are an array of the product object
-  console.log("cartProduct value: ", cartProduct);
 
   if (isLoading || !individualProductData || isError) {
     return (
