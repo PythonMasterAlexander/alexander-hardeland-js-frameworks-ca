@@ -11,30 +11,10 @@ function IndividualProduct() {
 
   const [cartProduct, setCartProduct] = React.useState<object | null>([]);
 
-  const localStoreKey: string = "key";
-  const jsonCartProduct = JSON.stringify(cartProduct);
-
-  React.useEffect(() => {
-    const productInLocalStorage = window.localStorage.getItem(localStoreKey);
-    if (!productInLocalStorage) {
-      [];
-    } else {
-      setCartProduct(JSON.parse(productInLocalStorage));
-    }
-  }, []);
-
-  React.useEffect(() => {
-    window.localStorage.setItem(localStoreKey, jsonCartProduct);
-  }, [jsonCartProduct]);
-
   function AddProductToCart() {
     setCartProduct(individualProductData);
+    console.log(cartProduct);
   }
-
-  // Update the cartProduct if a new product are clicked
-  // Whenever I go back to the home page, click a new product and try to add that product, localStore only change the
-  // the product already in there. It dose not add a new one
-  console.log(cartProduct);
 
   if (isLoading || !individualProductData || isError) {
     return (
