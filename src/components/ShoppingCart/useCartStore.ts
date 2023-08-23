@@ -1,24 +1,24 @@
 import * as Zustand from "zustand";
 import { devtools, persist } from "zustand/middleware";
 
-interface NumbersOfItemsInCart {
-  cartCount: number;
-}
-
 interface CartState {
-  productsInCartList: [];
+  cartCount: number;
+  cartProductsList: [];
   addProductToCart: object;
   addToCart: () => void;
+  removeProductFromCart: () => void;
 }
 
-const UseCartStore = Zustand.create<NumbersOfItemsInCart & CartState>()(
+const UseCartStore = Zustand.create<CartState>()(
   devtools(
     persist(
       (set, get) => ({
         cartCount: 0,
-        productsInCartList: [],
+        cartProductsList: [],
         addProductToCart: {},
         addToCart: () => set((state) => ({ cartCount: state.cartCount + 1 })),
+        removeProductFromCart: () =>
+          set((state) => ({ cartCount: state.cartCount - 1 })),
       }),
       {
         name: "cartStore",

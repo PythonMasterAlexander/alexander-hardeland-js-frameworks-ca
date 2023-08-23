@@ -2,16 +2,22 @@ import * as Styles from "./index.styles";
 import UseCartStore from "./UseCartStore";
 
 function ShoppingCart() {
-  const cartCounter = UseCartStore((state) => state.cartCount);
-  const addOne = UseCartStore((state) => state.addToCart);
+  const cartProductCounter = UseCartStore((state) => state.cartCount);
+  const addProductToCart = UseCartStore((state) => state.addToCart);
+  const removeProductFromCart = UseCartStore(
+    (state) => state.removeProductFromCart
+  );
 
   return (
     <>
       <h2>Your Shopping cart</h2>
-      <div>{cartCounter}</div>
-      <Styles.AddToCountButton onClick={addOne}>
-        Add to count
+      <div>{cartProductCounter}</div>
+      <Styles.AddToCountButton onClick={addProductToCart}>
+        Add to cart
       </Styles.AddToCountButton>
+      <Styles.DecrementCountButton onClick={removeProductFromCart}>
+        Remove cart product
+      </Styles.DecrementCountButton>
     </>
   );
 }
