@@ -1,13 +1,20 @@
 import * as Styles from "./index.styles";
+import * as React from "react";
 import NotFoundPage from "../../pages/NotFoundPage";
 import GetIndividualProductData from "./GetIndividualProductData";
-
 import { useParams } from "react-router-dom";
+import UseCartStore from "../ShoppingCart/UseCartStore";
 
 function IndividualProduct() {
   const { id } = useParams();
+  //This is how I will try and add the object in individualProductData to the cart when button is clicked
+
   const { isLoading, individualProductData, isError } =
     GetIndividualProductData(id);
+
+  const addProductToCartStore = UseCartStore(
+    (state) => state.addProductToCartStore
+  );
 
   if (isLoading || !individualProductData || isError) {
     return (
@@ -16,17 +23,15 @@ function IndividualProduct() {
       </>
     );
   } else {
-    const productTitle = individualProductData.title;
-    const productDescription = individualProductData.description;
-    const productImageUrl = individualProductData.imageUrl;
+    const { title, description, imageUrl } = individualProductData;
     // TODO Call a function that fetch the reviews
     return (
       <>
         <Styles.IndividualProductCardContainer>
-          <Styles.Img src={productImageUrl} alt={productDescription} />
+          <Styles.Img src={imageUrl} alt={description} />
           <Styles.IndividualProductCardBody>
-            <h3>{productTitle}</h3>
-            <p>{productDescription}</p>
+            <h3>{title}</h3>
+            <p>{description}</p>
             <h4>Product Review</h4>
             <p>Put product review here</p>
           </Styles.IndividualProductCardBody>
@@ -35,7 +40,11 @@ function IndividualProduct() {
             <span>Put price here</span>
           </Styles.IndividualPriceInformationContainer>
           <Styles.IndividualLinkButtonContainer>
-            <Styles.ButtonLink to={`/cart`}>Add to cart</Styles.ButtonLink>
+            <Styles.ButtonLink
+              onClick={() => addProductToCartStore(individualProductData)}
+            >
+              Add to cart
+            </Styles.ButtonLink>
           </Styles.IndividualLinkButtonContainer>
         </Styles.IndividualProductCardContainer>
       </>

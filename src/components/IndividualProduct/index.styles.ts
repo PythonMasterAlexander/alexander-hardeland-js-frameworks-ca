@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 
 export const Img = styled.img`
   max-width: 100%;
@@ -11,8 +10,6 @@ export const IndividualProductCardBody = styled.div`
   grid-column: 2;
 `;
 
-export const IndividualPriceInformationContainer = styled.div``;
-
 export const IndividualLinkButtonContainer = styled.div`
   align-self: end;
   background-color: #ffffff;
@@ -21,13 +18,15 @@ export const IndividualLinkButtonContainer = styled.div`
   padding: 1rem 0;
 `;
 
-export const ButtonLink = styled(Link)`
+export const ButtonLink = styled.button`
   color: #000000;
   text-decoration: none;
   text-transform: uppercase;
   font-family: "Lato", sans-serif;
   font-weight: bold;
 `;
+
+export const IndividualPriceInformationContainer = styled.div``;
 
 export const IndividualProductCardContainer = styled.div`
   background-color: #005e9b;
