@@ -3,8 +3,6 @@ import UseCartStore from "../../components/ShoppingCart/UseCartStore";
 import * as Styles from "./index.styles";
 
 function CartPage() {
-  const clearProductCart = UseCartStore((state) => state.clearProductCart);
-
   return (
     <>
       <h1>Hello From the Cart page</h1>
@@ -13,9 +11,7 @@ function CartPage() {
         <Styles.ButtonLink to={"/checkout"}>Checkout</Styles.ButtonLink>
       </Styles.IndividualLinkButtonContainer>
       <Styles.IndividualLinkButtonContainer>
-        <Styles.ClearCartButton onClick={clearProductCart}>
-          Clear shopping cart
-        </Styles.ClearCartButton>
+        <Styles.ClearCartButton>Clear shopping cart</Styles.ClearCartButton>
       </Styles.IndividualLinkButtonContainer>
     </>
   );
