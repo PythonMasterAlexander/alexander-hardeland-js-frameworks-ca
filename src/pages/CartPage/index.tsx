@@ -1,8 +1,13 @@
 import ShoppingCart from "../../components/ShoppingCart";
-import UseCartStore from "../../components/ShoppingCart/UseCartStore";
 import * as Styles from "./index.styles";
 
+import UseCartStore from "../../components/ShoppingCart/UseCartStore";
+
 function CartPage() {
+  const clearAllProductsFromCartStore = UseCartStore(
+    (state) => state.clearAllProductsFromCartStore
+  );
+
   return (
     <>
       <h1>Hello From the Cart page</h1>
@@ -11,7 +16,9 @@ function CartPage() {
         <Styles.ButtonLink to={"/checkout"}>Checkout</Styles.ButtonLink>
       </Styles.IndividualLinkButtonContainer>
       <Styles.IndividualLinkButtonContainer>
-        <Styles.ClearCartButton>Clear shopping cart</Styles.ClearCartButton>
+        <Styles.ClearCartButton onClick={() => clearAllProductsFromCartStore()}>
+          Clear shopping cart
+        </Styles.ClearCartButton>
       </Styles.IndividualLinkButtonContainer>
     </>
   );

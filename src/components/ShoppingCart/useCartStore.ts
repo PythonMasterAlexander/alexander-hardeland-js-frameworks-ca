@@ -22,7 +22,7 @@ interface CartStore {
   addProductToCartStore: (product: Product) => void;
 
   //removeProductFromCartStore: () => void;
-  //clearAllProductsFromCartStore: () => void;
+  clearAllProductsFromCartStore: () => void;
 }
 
 const UseCartStore = Zustand.create<CartStore>()(
@@ -30,13 +30,19 @@ const UseCartStore = Zustand.create<CartStore>()(
     persist(
       (set) => ({
         numberOfProductsInCartStore: 0,
-
         cartStore: [],
-        addProductToCartStore: (product) =>
-          set((state) => ({ cartStore: [...state.cartStore, product] })),
-        //removeProductFromCartStore: () => set((state) => ({})),
-        //clearAllProductsFromCartStore: () => set((state) => ({})),
         totalProductPrice: 0,
+
+        addProductToCartStore: (product) =>
+          set((state) => ({
+            cartStore: [...state.cartStore, product],
+            numberOfProductsInCartStore: state.cartStore.length + 1,
+          })),
+
+        clearAllProductsFromCartStore: () =>
+          set((state) => ({ cartStore: [], numberOfProductsInCartStore: 0 })),
+
+        //removeProductFromCartStore: () => set((state) => ({})),
       }),
       {
         name: "cartStore",
