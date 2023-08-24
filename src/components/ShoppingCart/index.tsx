@@ -22,9 +22,7 @@ function ShoppingCart() {
       <Styles.RemoveProductButton onClick={removeProductFromCart}>
         Remove product
       </Styles.RemoveProductButton>
-      <Styles.AddProductToCart onClick={addProductToCart}>
-        Add product to cart
-      </Styles.AddProductToCart>
+      <Styles.AddProductToCart>Add product to cart</Styles.AddProductToCart>
     </>
   );
 }
