@@ -1,15 +1,15 @@
 import * as Zustand from "zustand";
 import { devtools, persist } from "zustand/middleware";
 
-interface CartState {
-  totalProductsInCart: number;
+interface CartStore {
+  numberOfProductsInCartStore: number;
 }
 
-const UseCartStore = Zustand.create<CartState>()(
+const UseCartStore = Zustand.create<CartStore>()(
   devtools(
     persist(
       (set) => ({
-        totalProductsInCart: 0,
+        numberOfProductsInCartStore: 0,
       }),
       {
         name: "cartStore",
