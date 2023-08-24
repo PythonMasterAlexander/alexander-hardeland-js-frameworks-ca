@@ -40,7 +40,9 @@ function IndividualProduct() {
             <span>Put price here</span>
           </Styles.IndividualPriceInformationContainer>
           <Styles.IndividualLinkButtonContainer>
-            <Styles.ButtonLink onClick={() => addProductToCartStore()}>
+            <Styles.ButtonLink
+              onClick={() => addProductToCartStore(individualProductData)}
+            >
               Add to cart
             </Styles.ButtonLink>
           </Styles.IndividualLinkButtonContainer>
