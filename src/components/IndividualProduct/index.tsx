@@ -12,9 +12,9 @@ function IndividualProduct() {
   const { isLoading, individualProductData, isError } =
     GetIndividualProductData(id);
 
-  function AddProductToCart() {
-    console.log("hello World");
-  }
+  const addProductToCartStore = UseCartStore(
+    (state) => state.addProductToCartStore
+  );
 
   if (isLoading || !individualProductData || isError) {
     return (
@@ -40,7 +40,7 @@ function IndividualProduct() {
             <span>Put price here</span>
           </Styles.IndividualPriceInformationContainer>
           <Styles.IndividualLinkButtonContainer>
-            <Styles.ButtonLink onClick={AddProductToCart}>
+            <Styles.ButtonLink onClick={() => addProductToCartStore()}>
               Add to cart
             </Styles.ButtonLink>
           </Styles.IndividualLinkButtonContainer>
