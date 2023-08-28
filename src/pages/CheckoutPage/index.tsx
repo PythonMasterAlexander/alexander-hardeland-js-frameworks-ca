@@ -28,9 +28,6 @@ function CheckoutPage() {
       <h1>Hello From the Checkout page</h1>
       <ShoppingCart />
       <Styles.IndividualLinkButtonContainer>
-        <Styles.ButtonLink to={"/checkout"}>Checkout</Styles.ButtonLink>
-      </Styles.IndividualLinkButtonContainer>
-      <Styles.IndividualLinkButtonContainer>
         <Styles.ClearCartButton onClick={() => clearAllProductsFromCartStore()}>
           Clear shopping cart
         </Styles.ClearCartButton>
