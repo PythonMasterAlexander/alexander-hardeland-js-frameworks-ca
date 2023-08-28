@@ -14,9 +14,6 @@ function Nav() {
           <Link to="/checkout">Checkout</Link>
         </li>
         <li>
-          <Link to="/cart">Cart</Link>
-        </li>
-        <li>
           <Link to="/checkout-was-success">Checkout Success</Link>
         </li>
       </ul>
