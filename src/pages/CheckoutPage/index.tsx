@@ -10,6 +10,15 @@ function CheckoutPage() {
   const cartStore = UseCartStore((state) => state.cartStore);
   console.log(cartStore);
 
+  interface CartStoreProducts {
+    title: string;
+    imageUrl: string;
+    price: number;
+    discountedPrice: number;
+  }
+  const { title, imageUrl, price, discountedPrice } = cartStore;
+  console.log(title);
+
   return (
     <>
       <h1>Hello From the Checkout page</h1>
