@@ -15,17 +15,19 @@ interface CartStore {
   numberOfProductsInCartStore: number;
   cartStore: Array<Product | null>;
   totalProductPrice: number;
+}
 
+interface CartStoreActions {
   //Function takes one parameter > product with a type of the Product interface
   //which are the object added when clicking the add product to cart button
   //If other parameters are needed, just add them here
   addProductToCartStore: (product: Product) => void;
 
-  //removeProductFromCartStore: () => void;
+  removeProductFromCartStore: () => void;
   clearAllProductsFromCartStore: () => void;
 }
 
-const UseCartStore = Zustand.create<CartStore>()(
+const UseCartStore = Zustand.create<CartStore & CartStoreActions>()(
   devtools(
     persist(
       (set) => ({
@@ -40,9 +42,9 @@ const UseCartStore = Zustand.create<CartStore>()(
           })),
 
         clearAllProductsFromCartStore: () =>
-          set((state) => ({ cartStore: [], numberOfProductsInCartStore: 0 })),
+          set(() => ({ cartStore: [], numberOfProductsInCartStore: 0 })),
 
-        //removeProductFromCartStore: () => set((state) => ({})),
+        removeProductFromCartStore: () => set((state) => ({})),
       }),
       {
         name: "cartStore",
