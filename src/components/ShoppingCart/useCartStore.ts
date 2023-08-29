@@ -13,7 +13,7 @@ interface Product {
 
 interface CartStore {
   numberOfProductsInCartStore: number;
-  cartStore: Array<Product | null>;
+  cartStore: Array<Product>;
   totalProductPrice: number;
 }
 
