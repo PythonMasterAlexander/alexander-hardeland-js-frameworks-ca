@@ -1,12 +1,16 @@
-import UseCartStore from "../ShoppingCart/UseCartStore";
-
-const cartStore = UseCartStore((state) => state.cartStore);
-function ShowProductsInCart() {
+interface ProductsInCart {
+  id: number;
+  price: number;
+  discountedPrice: number;
+  title: string;
+  imageUrl: string;
+}
+function ShowProductsInCart(productsInCart: Array<ProductsInCart>) {
   return (
     <div>
       <ul>
-        {cartStore.map((productInCartStore) => (
-          <li key={productInCartStore.id}>{productInCartStore.title}</li>
+        {productsInCart.map((productInCart) => (
+          <li key={productInCart.id}>{productInCart.title}</li>
         ))}
       </ul>
     </div>
