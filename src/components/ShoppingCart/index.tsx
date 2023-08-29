@@ -1,23 +1,11 @@
 import * as Styles from "./index.styles";
+import ShowProductsInCart from "../ShowProductsInCart";
 import UseCartStore from "./UseCartStore";
 
 function ShoppingCart() {
   const clearAllProductsFromCartStore = UseCartStore(
     (state) => state.clearAllProductsFromCartStore
   );
-
-  const cartStore = UseCartStore((state) => state.cartStore);
-  function ShowProductsInCart() {
-    return (
-      <div>
-        <ul>
-          {cartStore.map((productInCartStore) => (
-            <li key={productInCartStore.id}>{productInCartStore.title}</li>
-          ))}
-        </ul>
-      </div>
-    );
-  }
 
   return (
     <>
