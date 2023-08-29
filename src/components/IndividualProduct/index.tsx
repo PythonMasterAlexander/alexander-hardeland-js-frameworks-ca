@@ -8,7 +8,6 @@ import UseCartStore from "../ShoppingCart/UseCartStore";
 function IndividualProduct() {
   const { id } = useParams();
   //This is how I will try and add the object in individualProductData to the cart when button is clicked
-
   const { isLoading, individualProductData, isError } =
     GetIndividualProductData(id);
 
