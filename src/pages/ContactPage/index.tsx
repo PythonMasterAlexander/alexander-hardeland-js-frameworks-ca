@@ -1,42 +1,59 @@
-import * as React from "react";
+import * as ReactHookForm from "react-hook-form";
+import * as yup from "yup";
+import { yupResolver } from "@hookform/resolvers/yup";
+
+interface FormData {
+  fullName: string;
+  subject: string;
+  email: string;
+  bodyText: string;
+}
+
+const schema = yup
+  .object({
+    fullName: yup.string().min(3).max(10).required(),
+  })
+  .required();
 
 function ContactPage() {
-  const [fullName, setFullName] = React.useState<string>("");
-  const [email, setEmail] = React.useState<string>("");
-  const [body, setBody] = React.useState<string>("");
+  const { register, handleSubmit } = ReactHookForm.useForm<FormData>();
+
+  const onSubmit: ReactHookForm.SubmitHandler<FormData> = (data) => {
+    console.log(data);
+  };
 
   return (
     <>
       <h1>If you will like to tell us anything</h1>
-      <form>
+      <form onSubmit={handleSubmit(onSubmit)}>
         <fieldset>
           <legend>Contact</legend>
           <div>
             <label>
               Full name
-              <input />
+              <input {...register("fullName")} />
             </label>
           </div>
           <div>
             <label>
               Subject
-              <textarea></textarea>
+              <input {...register("subject")} />
             </label>
           </div>
           <div>
             <label>
               Email
-              <input />
+              <input {...register("email")} />
             </label>
           </div>
           <div>
             <label>
               Body
-              <input />
+              <input {...register("bodyText")} />
             </label>
           </div>
           <div>
-            <button>Submit</button>
+            <button type="submit">Submit</button>
           </div>
         </fieldset>
       </form>
