@@ -7,7 +7,6 @@ import ProductPage from "./pages/ProductPage";
 import ContactPage from "./pages/ContactPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import CheckoutPage from "./pages/CheckoutPage";
-import CartPage from "./pages/CartPage";
 import CheckoutPageSuccess from "./pages/CheckoutPageSuccess";
 
 function App() {
@@ -20,7 +19,6 @@ function App() {
           <Route path="product/:id" element={<ProductPage />} />
           <Route path="contact" element={<ContactPage />} />
           <Route path="checkout" element={<CheckoutPage />} />
-          <Route path="cart" element={<CartPage />} />
           <Route
             path="checkout-was-success"
             element={<CheckoutPageSuccess />}
