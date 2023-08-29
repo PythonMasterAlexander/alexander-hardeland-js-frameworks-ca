@@ -2,21 +2,26 @@ import * as ReactHookForm from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 
-interface FormData {
-  fullName: string;
-  subject: string;
-  email: string;
-  bodyText: string;
-}
-
-const schema = yup
-  .object({
-    fullName: yup.string().min(3).max(10).required(),
-  })
-  .required();
-
 function ContactPage() {
-  const { register, handleSubmit } = ReactHookForm.useForm<FormData>();
+  interface FormData {
+    fullName: string;
+    subject: string;
+    email: string;
+    bodyText: string;
+  }
+  const schema = yup
+    .object({
+      fullName: yup.string().min(3).max(10).required(),
+      subject: yup.string().min(3).max(10).required(),
+      email: yup.string().min(3).max(10).required(),
+      bodyText: yup.string().min(3).max(10).required(),
+    })
+    .required();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = ReactHookForm.useForm<FormData>({ resolver: yupResolver(schema) });
 
   const onSubmit: ReactHookForm.SubmitHandler<FormData> = (data) => {
     console.log(data);
