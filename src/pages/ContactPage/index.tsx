@@ -9,14 +9,22 @@ function ContactPage() {
     email: string;
     bodyText: string;
   }
+
   const schema = yup
     .object({
-      fullName: yup.string().min(3).max(10).required(),
-      subject: yup.string().min(3).max(10).required(),
-      email: yup.string().min(3).max(10).required(),
-      bodyText: yup.string().min(3).max(10).required(),
+      fullName: yup
+        .string()
+        .min(3, "Your full name must be at least 3 characters.")
+        .required("Please enter your full name"),
+      subject: yup
+        .string()
+        .min(3, "The subject must be at least 3 characters.")
+        .required(),
+      email: yup.string().email("Must be a valid email address.").required(),
+      bodyText: yup.string().min(3, "Must be at least 3 characters").required(),
     })
     .required();
+
   const {
     register,
     handleSubmit,
@@ -37,24 +45,28 @@ function ContactPage() {
             <label>
               Full name
               <input {...register("fullName")} />
+              <span>{errors.fullName?.message}</span>
             </label>
           </div>
           <div>
             <label>
               Subject
               <input {...register("subject")} />
+              <span>{errors.subject?.message}</span>
             </label>
           </div>
           <div>
             <label>
               Email
               <input {...register("email")} />
+              <span>{errors.email?.message}</span>
             </label>
           </div>
           <div>
             <label>
               Body
               <input {...register("bodyText")} />
+              <span>{errors.bodyText?.message}</span>
             </label>
           </div>
           <div>
