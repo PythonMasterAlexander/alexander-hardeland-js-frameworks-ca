@@ -4,6 +4,14 @@ import GetIndividualProductData from "./GetIndividualProductData";
 import { useParams } from "react-router-dom";
 import UseCartStore from "../ShoppingCart/UseCartStore";
 
+function checkForReview(listOfReviews: Array<object>) {
+  if (Array.isArray(listOfReviews) && listOfReviews.length !== 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
 function IndividualProduct() {
   const { id } = useParams();
   const { isLoading, individualProductData, isError } =
@@ -22,6 +30,9 @@ function IndividualProduct() {
   } else {
     // TODO Call a function that fetch the reviews
     const { title, description, imageUrl, reviews } = individualProductData;
+    // find out if a review exist
+    const isReviewOnProduct = checkForReview(reviews);
+    // if review exist, show the reviews
 
     return (
       <>
