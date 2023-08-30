@@ -24,6 +24,7 @@ function IndividualProduct() {
   } else {
     const { title, description, imageUrl, reviews } = individualProductData;
     const isReviewOnProduct = checkForReview(reviews);
+    console.log(reviews);
 
     return (
       <>
@@ -34,6 +35,8 @@ function IndividualProduct() {
             <p>{description}</p>
             <div>
               <h4>Product Review</h4>
+              {/* This is where I am trying to pass in the variable "reviews" as a prop. I used this "data={reviews}"
+                    The Component ShowProductReview */}
               {isReviewOnProduct ? (
                 <ShowProductReview />
               ) : (
