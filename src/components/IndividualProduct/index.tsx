@@ -5,6 +5,7 @@ import UseCartStore from "../ShoppingCart/UseCartStore";
 import ShowProductReview from "../ShowProductReview";
 import checkForReview from "./checkForReview";
 import checkForDiscount from "./checkForDiscount";
+import { noDiscount } from "./variables";
 import { useParams } from "react-router-dom";
 
 function IndividualProduct() {
@@ -28,7 +29,6 @@ function IndividualProduct() {
 
     const isDiscount: boolean = checkForDiscount(price, discountedPrice);
     const discountedDifference: number = price - discountedPrice;
-    const noDiscount: string = "There is no discount on this product";
 
     const isReviewOnProduct = checkForReview(reviews);
     console.log(reviews);
