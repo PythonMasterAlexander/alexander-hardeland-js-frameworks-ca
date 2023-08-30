@@ -2,6 +2,7 @@ import * as Styles from "./index.styles";
 import NotFoundPage from "../../pages/NotFoundPage";
 import GetIndividualProductData from "./GetIndividualProductData";
 import UseCartStore from "../ShoppingCart/UseCartStore";
+import ShowProductReview from "../ShowProductReview";
 import checkForReview from "./checkForReview";
 import { useParams } from "react-router-dom";
 
@@ -21,12 +22,8 @@ function IndividualProduct() {
       </>
     );
   } else {
-    // TODO Call a function that fetch the reviews
     const { title, description, imageUrl, reviews } = individualProductData;
-    // find out if a review exist
     const isReviewOnProduct = checkForReview(reviews);
-
-    // if review exist, show the reviews
 
     return (
       <>
@@ -35,8 +32,14 @@ function IndividualProduct() {
           <Styles.IndividualProductCardBody>
             <h3>{title}</h3>
             <p>{description}</p>
-            <h4>Product Review</h4>
-            <p>Put product review here</p>
+            <div>
+              <h4>Product Review</h4>
+              {isReviewOnProduct ? (
+                <ShowProductReview />
+              ) : (
+                <p>There are no reviews for this product</p>
+              )}
+            </div>
           </Styles.IndividualProductCardBody>
           <Styles.IndividualPriceInformationContainer>
             <p>Product price</p>
