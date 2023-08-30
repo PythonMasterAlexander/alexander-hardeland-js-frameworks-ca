@@ -9,7 +9,12 @@ function GetIndividualProductData(id: string | undefined) {
     description: string;
     discountedPrice: number;
     price: number;
-    reviews: Array<object>;
+    reviews: Array<{
+      id: string;
+      username: string;
+      rating: number;
+      description: string;
+    }>;
   }
 
   const [individualProductData, setIndividualProductData] =

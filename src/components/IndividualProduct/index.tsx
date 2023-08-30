@@ -1,13 +1,15 @@
 import * as Styles from "./index.styles";
-import * as React from "react";
 import NotFoundPage from "../../pages/NotFoundPage";
 import GetIndividualProductData from "./GetIndividualProductData";
-import { useParams } from "react-router-dom";
 import UseCartStore from "../ShoppingCart/UseCartStore";
+import ShowProductReview from "../ShowProductReview";
+import checkForReview from "./checkForReview";
+import checkForDiscount from "./checkForDiscount";
+import { noDiscount } from "./variables";
+import { useParams } from "react-router-dom";
 
 function IndividualProduct() {
   const { id } = useParams();
-  //This is how I will try and add the object in individualProductData to the cart when button is clicked
   const { isLoading, individualProductData, isError } =
     GetIndividualProductData(id);
 
@@ -22,8 +24,15 @@ function IndividualProduct() {
       </>
     );
   } else {
-    const { title, description, imageUrl } = individualProductData;
-    // TODO Call a function that fetch the reviews
+    const { title, description, imageUrl, reviews, price, discountedPrice } =
+      individualProductData;
+
+    const isDiscount: boolean = checkForDiscount(price, discountedPrice);
+    const discountedDifference: number = price - discountedPrice;
+
+    const isReviewOnProduct = checkForReview(reviews);
+    console.log(reviews);
+
     return (
       <>
         <Styles.IndividualProductCardContainer>
@@ -31,12 +40,27 @@ function IndividualProduct() {
           <Styles.IndividualProductCardBody>
             <h3>{title}</h3>
             <p>{description}</p>
-            <h4>Product Review</h4>
-            <p>Put product review here</p>
+            <div>
+              <h4>Product Review</h4>
+              {/* This is where I am trying to pass in the variable "reviews" as a prop. I used this "data={reviews}"
+                    The Component ShowProductReview */}
+              {isReviewOnProduct ? (
+                <ShowProductReview />
+              ) : (
+                <p>There are no reviews for this product</p>
+              )}
+            </div>
           </Styles.IndividualProductCardBody>
           <Styles.IndividualPriceInformationContainer>
-            <p>Product price</p>
-            <span>Put price here</span>
+            <h5>Product price</h5>
+            <div>
+              <h6>Price</h6>
+              <p>{isDiscount ? discountedPrice : price}</p>
+            </div>
+            <div>
+              <h6>Your discount on this purchase</h6>
+              <p>{isDiscount ? discountedDifference : noDiscount}</p>
+            </div>
           </Styles.IndividualPriceInformationContainer>
           <Styles.IndividualLinkButtonContainer>
             <Styles.ButtonLink
