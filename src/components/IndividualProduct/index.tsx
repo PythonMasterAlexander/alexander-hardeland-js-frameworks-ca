@@ -1,5 +1,4 @@
 import * as Styles from "./index.styles";
-import * as React from "react";
 import NotFoundPage from "../../pages/NotFoundPage";
 import GetIndividualProductData from "./GetIndividualProductData";
 import { useParams } from "react-router-dom";
@@ -7,7 +6,6 @@ import UseCartStore from "../ShoppingCart/UseCartStore";
 
 function IndividualProduct() {
   const { id } = useParams();
-  //This is how I will try and add the object in individualProductData to the cart when button is clicked
   const { isLoading, individualProductData, isError } =
     GetIndividualProductData(id);
 
@@ -22,8 +20,9 @@ function IndividualProduct() {
       </>
     );
   } else {
-    const { title, description, imageUrl } = individualProductData;
     // TODO Call a function that fetch the reviews
+    const { title, description, imageUrl, reviews } = individualProductData;
+
     return (
       <>
         <Styles.IndividualProductCardContainer>
