@@ -3,6 +3,22 @@ import UseCartStore from "./UseCartStore";
 
 function ShoppingCart() {
   const cartStore = UseCartStore((state) => state.cartStore);
+  console.log(cartStore);
+
+  function getPricesFromCart() {
+    let price: number = 0;
+    let discountedPrice: number = 0;
+
+    for (let i: number = 0; i < cartStore.length; i++) {
+      price = cartStore[i].price;
+      discountedPrice = cartStore[i].price;
+    }
+
+    return { price, discountedPrice };
+  }
+
+  const { price, discountedPrice } = getPricesFromCart();
+  console.log(price, discountedPrice);
 
   function ShowProductsInCart() {
     return (
