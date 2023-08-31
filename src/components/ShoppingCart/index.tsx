@@ -1,24 +1,14 @@
 import * as Styles from "./index.styles";
 import UseCartStore from "./UseCartStore";
+import getPricesFromCart from "./getPricesFromCart";
 
 function ShoppingCart() {
   const cartStore = UseCartStore((state) => state.cartStore);
+
   console.log(cartStore);
-
-  function getPricesFromCart() {
-    let price: number = 0;
-    let discountedPrice: number = 0;
-
-    for (let i: number = 0; i < cartStore.length; i++) {
-      price = cartStore[i].price;
-      discountedPrice = cartStore[i].price;
-    }
-
-    return { price, discountedPrice };
-  }
-
-  const { price, discountedPrice } = getPricesFromCart();
-  console.log(price, discountedPrice);
+  const { totalPrice, totalDiscountedPrice } = getPricesFromCart(cartStore);
+  console.log(totalPrice);
+  console.log(totalDiscountedPrice);
 
   function ShowProductsInCart() {
     return (
