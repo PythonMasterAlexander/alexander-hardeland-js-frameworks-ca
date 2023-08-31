@@ -4,11 +4,7 @@ import getPricesFromCart from "./getPricesFromCart";
 
 function ShoppingCart() {
   const cartStore = UseCartStore((state) => state.cartStore);
-
-  console.log(cartStore);
-  const { totalPrice, totalDiscountedPrice } = getPricesFromCart(cartStore);
-  console.log(totalPrice);
-  console.log(totalDiscountedPrice);
+  const total: number = getPricesFromCart(cartStore);
 
   function ShowProductsInCart() {
     return (
@@ -34,6 +30,7 @@ function ShoppingCart() {
       <h2>Your Shopping cart</h2>
       <ShowProductsInCart />
       <h4>Total</h4>
+      <p>{total}</p>
       <Styles.RemoveProductButton>Remove product</Styles.RemoveProductButton>
     </>
   );

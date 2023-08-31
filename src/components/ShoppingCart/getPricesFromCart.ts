@@ -13,12 +13,14 @@ function getPricesFromCart(cartStore: Array<Product>) {
   let totalDiscountedPrice: number = 0;
 
   for (let i = 0; i < cartStore.length; i++) {
+    totalDiscountedPrice += cartStore[i].discountedPrice;
     totalPrice += cartStore[i].price;
   }
 
-  for (let i = 0; i < cartStore.length; i++) {
-    totalDiscountedPrice += cartStore[i].discountedPrice;
+  if (totalDiscountedPrice < totalPrice) {
+    return totalDiscountedPrice;
+  } else {
+    return totalPrice;
   }
-  return { totalPrice, totalDiscountedPrice };
 }
 export default getPricesFromCart;
