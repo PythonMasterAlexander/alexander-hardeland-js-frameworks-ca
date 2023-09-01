@@ -1,8 +1,10 @@
 import * as Styles from "./index.styles";
 import UseCartStore from "./UseCartStore";
+import getPricesFromCart from "./getPricesFromCart";
 
 function ShoppingCart() {
   const cartStore = UseCartStore((state) => state.cartStore);
+  const total: number = getPricesFromCart(cartStore);
 
   function ShowProductsInCart() {
     return (
@@ -28,6 +30,7 @@ function ShoppingCart() {
       <h2>Your Shopping cart</h2>
       <ShowProductsInCart />
       <h4>Total</h4>
+      <p>{total}</p>
       <Styles.RemoveProductButton>Remove product</Styles.RemoveProductButton>
     </>
   );

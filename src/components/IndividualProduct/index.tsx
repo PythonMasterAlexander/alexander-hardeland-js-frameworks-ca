@@ -29,9 +29,16 @@ function IndividualProduct() {
 
     const isDiscount: boolean = checkForDiscount(price, discountedPrice);
     const discountedDifference: number = price - discountedPrice;
-
     const isReviewOnProduct = checkForReview(reviews);
-    console.log(reviews);
+
+    let reviewUserName: string = "";
+    let reviewRating: number = 0;
+    let reviewDescription: string = "";
+    for (let i = 0; i < reviews.length; i++) {
+      reviewUserName = reviews[i].username;
+      reviewRating = reviews[i].rating;
+      reviewDescription = reviews[i].description;
+    }
 
     return (
       <>
@@ -42,10 +49,12 @@ function IndividualProduct() {
             <p>{description}</p>
             <div>
               <h4>Product Review</h4>
-              {/* This is where I am trying to pass in the variable "reviews" as a prop. I used this "data={reviews}"
-                    The Component ShowProductReview */}
               {isReviewOnProduct ? (
-                <ShowProductReview />
+                <ShowProductReview
+                  username={reviewUserName}
+                  rating={reviewRating}
+                  description={reviewDescription}
+                />
               ) : (
                 <p>There are no reviews for this product</p>
               )}
