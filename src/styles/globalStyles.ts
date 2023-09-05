@@ -9,7 +9,7 @@ const GlobalStyles = createGlobalStyle`
   }
   
   body, html, #root {
-    //background: hsla(200, 60%, 70%, 0.2);
+    background: hsla(200, 60%, 70%, 0.2);
     height: 100%;
   }
 
