@@ -1,34 +1,33 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
-  * {
-    border: 0;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto Mono', monospace;
   }
-  
+
   html, body, #root {
     height: 100%;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Roboto Mono', monospace;
+  html {
+    background: hsla(200, 60%, 70%, 0.4);
   }
 
   p {
     font-family: 'Lato', sans-serif;
   }
 
-  main {
-    flex-grow: 1;
+  * {
+    border: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
   }
 
   #root {
-    background: hsla(200, 60%, 70%, 0.4);
     display: flex;
     flex-direction: column;
-    font-size: 1rem;
   }
 `;
 
