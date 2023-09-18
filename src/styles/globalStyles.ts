@@ -8,7 +8,7 @@ const GlobalStyles = createGlobalStyle`
     padding: 0;
   }
   
-  body, html {
+  html, body, #root {
     height: 100%;
   }
 
