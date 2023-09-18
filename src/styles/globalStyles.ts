@@ -8,7 +8,7 @@ const GlobalStyles = createGlobalStyle`
     padding: 0;
   }
   
-  body, html, #root {
+  body, html {
     height: 100%;
   }
 
@@ -25,11 +25,10 @@ const GlobalStyles = createGlobalStyle`
   }
 
   #root {
+    background: hsla(200, 60%, 70%, 0.4);
     display: flex;
     flex-direction: column;
     font-size: 1rem;
-    width: 90%;
-    margin: 2% auto;
   }
 `;
 
