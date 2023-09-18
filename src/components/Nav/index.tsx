@@ -1,14 +1,13 @@
-import { Link } from "react-router-dom";
-
+import * as Styles from "./index.styles";
 function Nav() {
   return (
     <nav>
       <ul>
         <li>
-          <Link to="/">Home</Link>
+          <Styles.LinkStyle to="/">Home</Styles.LinkStyle>
         </li>
         <li>
-          <Link to="/contact">Contact</Link>
+          <Styles.LinkStyle to="/contact">Contact</Styles.LinkStyle>
         </li>
       </ul>
     </nav>
