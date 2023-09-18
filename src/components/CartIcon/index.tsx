@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import * as Styles from "./index.styles";
 import UseCartStore from "../ShoppingCart/UseCartStore";
 
 function CartIcon() {
@@ -9,9 +10,9 @@ function CartIcon() {
     <>
       <section>
         <Link to="/checkout">
-          <i className="fa-solid fa-cart-shopping fa-2xl">
-            <span>{numberOfItemsInCart}</span>
-          </i>
+          <Styles.CartIcon className="fa-solid fa-cart-shopping fa-2xl">
+            <Styles.ItemsInCart>{numberOfItemsInCart}</Styles.ItemsInCart>
+          </Styles.CartIcon>
         </Link>
       </section>
     </>
