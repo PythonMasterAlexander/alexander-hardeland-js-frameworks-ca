@@ -10,12 +10,6 @@ function Nav() {
         <li>
           <Link to="/contact">Contact</Link>
         </li>
-        <li>
-          <Link to="/checkout">Checkout</Link>
-        </li>
-        <li>
-          <Link to="/checkout-was-success">Checkout Success</Link>
-        </li>
       </ul>
     </nav>
   );

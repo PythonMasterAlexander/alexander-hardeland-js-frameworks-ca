@@ -9,3 +9,6 @@ export const Footer = style.footer`
   gap: 36px;
   padding-bottom: 2%;
 `;
+
+export const PageLinkContainer = style.section`
+`;
