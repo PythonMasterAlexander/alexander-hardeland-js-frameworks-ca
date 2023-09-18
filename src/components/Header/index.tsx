@@ -6,9 +6,11 @@ import CartIcon from "../CartIcon";
 function Header() {
   return (
     <Styles.Header>
-      <section>Page Logo goes here</section>
-      <Nav />
-      <CartIcon />
+      <Styles.MarginContainer>
+        <section>Page Logo goes here</section>
+        <Nav />
+        <CartIcon />
+      </Styles.MarginContainer>
     </Styles.Header>
   );
 }
