@@ -5,6 +5,10 @@ const GlobalStyles = createGlobalStyle`
     font-family: 'Roboto Mono', monospace;
   }
 
+  p, a, span {
+    font-family: 'Lato', sans-serif;
+  }
+
   html, body, #root {
     height: 100%;
   }
@@ -13,8 +17,8 @@ const GlobalStyles = createGlobalStyle`
     background: hsla(200, 60%, 70%, 0.4);
   }
 
-  p {
-    font-family: 'Lato', sans-serif;
+  li {
+    list-style-type: none;
   }
 
   * {

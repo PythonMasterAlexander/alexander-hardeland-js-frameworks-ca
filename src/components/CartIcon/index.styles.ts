@@ -6,4 +6,5 @@ export const CartIcon = styled.i`
 
 export const ItemsInCart = styled.span`
   padding-left: 0.5rem;
+  font-size: 1.5rem;
 `;
