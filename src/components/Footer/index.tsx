@@ -1,6 +1,4 @@
 import * as Styles from "./index.styles";
-import { Link } from "react-router-dom";
-
 function Footer() {
   return (
     <Styles.Footer>
@@ -8,16 +6,18 @@ function Footer() {
       <Styles.PageLinkContainer>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Styles.LinkStyle to="/">Home</Styles.LinkStyle>
           </li>
           <li>
-            <Link to="/contact">Contact</Link>
+            <Styles.LinkStyle to="/contact">Contact</Styles.LinkStyle>
           </li>
           <li>
-            <Link to="/checkout">Checkout</Link>
+            <Styles.LinkStyle to="/checkout">Checkout</Styles.LinkStyle>
           </li>
           <li>
-            <Link to="/checkout-was-success">Checkout Success</Link>
+            <Styles.LinkStyle to="/checkout-was-success">
+              Checkout Success
+            </Styles.LinkStyle>
           </li>
         </ul>
       </Styles.PageLinkContainer>

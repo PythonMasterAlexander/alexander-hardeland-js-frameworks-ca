@@ -1,8 +1,6 @@
 import * as Styles from "./index.styles";
-
 import Nav from "../Nav";
 import CartIcon from "../CartIcon";
-
 function Header() {
   return (
     <Styles.Header>

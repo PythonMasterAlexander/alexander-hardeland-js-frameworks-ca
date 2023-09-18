@@ -1,4 +1,5 @@
 import style from "styled-components";
+import { Link } from "react-router-dom";
 
 export const Footer = style.footer`
   background: hsla(0, 0%, 0%, 1);
@@ -11,4 +12,8 @@ export const Footer = style.footer`
 `;
 
 export const PageLinkContainer = style.section`
+`;
+
+export const LinkStyle = style(Link)`
+  color: hsla(0, 0%, 100%, 1);
 `;
