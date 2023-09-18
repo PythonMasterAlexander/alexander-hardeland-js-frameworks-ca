@@ -11,5 +11,5 @@ export const MarginContainer = styled.div`
   gap: 36px;
   justify-content: space-between;
   margin: 0 auto;
-  width: 85%;
+  width: 75%;
 `;

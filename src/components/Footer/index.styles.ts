@@ -8,21 +8,28 @@ export const Footer = style.footer`
 `;
 
 export const MarginContainer = style.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 36px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%;
   margin: 0 auto;
-  width: 85%;
+  width: 75%;
 `;
 
 export const PageLogoContainer = style.section`
 `;
 
-export const PageLinkContainer = style.section`
+export const ToToppContainer = style.section`
+  justify-self: end;
+`;
+
+export const UnorderedListContainer = style.ul`
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
+  justify-content: space-between;
+`;
+
+export const PageLinkContainer = style.section`
+  grid-column: 1 / 3;
 `;
 
 export const LinkStyle = style(Link)`
