@@ -23,6 +23,10 @@ export const UlElement = style.ul`
   display: flex;
 `;
 
+export const LiElement = style.li`
+  padding-bottom: 0.75rem;
+`;
+
 export const ContactContainer = style.section`
   justify-self: center;
 `;
@@ -40,7 +44,13 @@ export const LinkStyle = style(Link)`
   padding-right: 0.75rem;
 `;
 
-export const FooterHeading = style.h3`
+export const FooterPageLogo = style.span`
+  font-family: 'Roboto Mono', monospace;
+  font-weight: bolder;
+`;
+
+export const ContactHeader = style.h4`
+  padding-bottom: 1rem;
 `;
 
 export const SpanElement = style.span`
