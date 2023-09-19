@@ -44,4 +44,11 @@ export const FooterHeading = style.h3`
 `;
 
 export const SpanElement = style.span`
+  padding-right: 0.75rem;
+`;
+
+export const HoverElement = style.div`
+  :hover {
+    cursor: pointer;
+  }
 `;

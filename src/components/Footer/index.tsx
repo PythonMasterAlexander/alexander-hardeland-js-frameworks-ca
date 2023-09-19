@@ -52,10 +52,14 @@ function Footer() {
           </ul>
         </Styles.ContactContainer>
         <Styles.GoToToppContainer>
-          <span>To topp</span>
-          <span>
-            <i className="fa-solid fa-arrow-up fa-xl"></i>
-          </span>
+          <div>
+            <Styles.HoverElement>
+              <Styles.SpanElement>To topp</Styles.SpanElement>
+              <span>
+                <i className="fa-solid fa-arrow-up fa-xl"></i>
+              </span>
+            </Styles.HoverElement>
+          </div>
         </Styles.GoToToppContainer>
         <Styles.PageLinkContainer>
           <Styles.UlElement>
