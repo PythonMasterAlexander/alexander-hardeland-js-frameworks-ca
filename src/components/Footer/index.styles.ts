@@ -47,7 +47,7 @@ export const SpanElement = style.span`
   padding-right: 0.75rem;
 `;
 
-export const HoverElement = style.div`
+export const ToToppButton = style.a`
   :hover {
     cursor: pointer;
   }
