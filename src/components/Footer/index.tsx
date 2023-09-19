@@ -8,31 +8,67 @@ function Footer() {
             This is where the footer logo goes
           </Styles.FooterHeading>
         </Styles.PageLogoContainer>
-        <Styles.ToToppContainer>
+        <Styles.ContactContainer>
+          <h3>Contact</h3>
+          <ul>
+            <li>
+              <a>
+                <Styles.SpanElement>
+                  <i className="fa-solid fa-envelope fa-xl"></i>
+                </Styles.SpanElement>
+                <Styles.SpanElement>Email</Styles.SpanElement>
+              </a>
+            </li>
+            <li>
+              <Styles.SpanElement>
+                <i className="fa-solid fa-phone fa-xl"></i>
+              </Styles.SpanElement>
+              <Styles.SpanElement>+47 967-00-89</Styles.SpanElement>
+            </li>
+            <li>
+              <Styles.SpanElement>
+                <strong>Norway</strong>
+              </Styles.SpanElement>
+              <>+47 967-00-89</>
+            </li>
+            <li>
+              <Styles.SpanElement>
+                <strong>Germany</strong>
+              </Styles.SpanElement>
+              <Styles.SpanElement>+49 (6)122 / 900 899 35</Styles.SpanElement>
+            </li>
+            <li>
+              <Styles.SpanElement>
+                <strong>UK</strong>
+              </Styles.SpanElement>
+              <Styles.SpanElement>(067)-5555-3333</Styles.SpanElement>
+            </li>
+            <li>
+              <Styles.SpanElement>
+                <strong>USA</strong>
+              </Styles.SpanElement>
+              <Styles.SpanElement>0-700-455-9999</Styles.SpanElement>
+            </li>
+          </ul>
+        </Styles.ContactContainer>
+        <Styles.GoToToppContainer>
           <span>To topp</span>
-          <i className="fa-solid fa-arrow-up fa-2xl"></i>
-        </Styles.ToToppContainer>
+          <span>
+            <i className="fa-solid fa-arrow-up fa-xl"></i>
+          </span>
+        </Styles.GoToToppContainer>
         <Styles.PageLinkContainer>
-          <Styles.UnorderedListContainer>
-            <div>
-              <li>
-                <Styles.LinkStyle to="/">Home</Styles.LinkStyle>
-              </li>
-              <li>
-                <Styles.LinkStyle to="/contact">Contact</Styles.LinkStyle>
-              </li>
-            </div>
-            <div>
-              <li>
-                <Styles.LinkStyle to="/checkout">Checkout</Styles.LinkStyle>
-              </li>
-              <li>
-                <Styles.LinkStyle to="/checkout-was-success">
-                  Checkout Success
-                </Styles.LinkStyle>
-              </li>
-            </div>
-          </Styles.UnorderedListContainer>
+          <Styles.UlElement>
+            <li>
+              <Styles.LinkStyle to="/">Home</Styles.LinkStyle>
+            </li>
+            <li>
+              <Styles.LinkStyle to="/contact">Contact</Styles.LinkStyle>
+            </li>
+            <li>
+              <Styles.LinkStyle to="/checkout">Checkout</Styles.LinkStyle>
+            </li>
+          </Styles.UlElement>
         </Styles.PageLinkContainer>
       </Styles.MarginContainer>
     </Styles.Footer>
