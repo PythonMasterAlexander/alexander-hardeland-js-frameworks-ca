@@ -4,14 +4,14 @@ import { Link } from "react-router-dom";
 export const Footer = style.footer`
   background: hsla(0, 0%, 20%, 1);
   color: hsla(0, 100%, 100%, 0.78);
-  padding: 4% 0 2%;
+  padding: 3% 0 3%;
 `;
 
 export const MarginContainer = style.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
-  row-gap: 1.5rem;
+  row-gap: 1.875rem;
   margin: 0 auto;
   width: 75%;
 `;
@@ -36,13 +36,14 @@ export const GoToToppContainer = style.section`
 `;
 
 export const PageLinkContainer = style.section`
-  grid-column: 1 / 4;
+  grid-column: 1 / 3;
 `;
 
 export const LinkStyle = style(Link)`
   color: hsla(0, 0%, 100%, 1);
   font-size: 1.125rem;
   padding-right: 0.75rem;
+  text-decoration: none;
 `;
 
 export const FooterPageLogo = style.span`
@@ -72,5 +73,5 @@ export const ToToppButton = style.a`
 `;
 
 export const CopyRightInformationContainer = style.section`
-
+  justify-self: end;
 `;

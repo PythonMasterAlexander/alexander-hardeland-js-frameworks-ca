@@ -44,7 +44,7 @@ function Footer() {
               <Styles.SpanElement>
                 <strong>Norway</strong>
               </Styles.SpanElement>
-              <>+47 967-00-89</>
+              <Styles.SpanElement>+47 967-00-89</Styles.SpanElement>
             </Styles.LiElement>
             <Styles.LiElement>
               <Styles.SpanElement>
@@ -69,7 +69,9 @@ function Footer() {
         <Styles.GoToToppContainer>
           <div>
             <Styles.ToToppButton onClick={clickToGoToToppOfPage}>
-              <Styles.ToToppSpanElement>To topp</Styles.ToToppSpanElement>
+              <Styles.ToToppSpanElement>
+                <strong>To topp</strong>
+              </Styles.ToToppSpanElement>
               <span>
                 <i className="fa-solid fa-arrow-up fa-xl"></i>
               </span>
@@ -90,7 +92,9 @@ function Footer() {
           </Styles.UlElement>
         </Styles.PageLinkContainer>
         <Styles.CopyRightInformationContainer>
-          <span>&copy; Shop With Us</span>
+          <span>
+            <strong>&copy;</strong> Shop With Us
+          </span>
         </Styles.CopyRightInformationContainer>
       </Styles.MarginContainer>
     </Styles.Footer>
