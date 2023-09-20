@@ -71,7 +71,7 @@ function Footer() {
         <Styles.GoToTopContainer>
           <Styles.TakeUserToTopButton onClick={clickToGoToTopOfPage}>
             <Styles.ScrollToTopSpan>
-              <strong>To topp</strong>
+              <strong>To top</strong>
             </Styles.ScrollToTopSpan>
           </Styles.TakeUserToTopButton>
           <span>
