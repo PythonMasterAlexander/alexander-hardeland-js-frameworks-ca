@@ -3,7 +3,7 @@ import { clickToGoToToppOfPage } from "./clickToGoToToppOfPage";
 function Footer() {
   return (
     <Styles.Footer>
-      <Styles.MarginContainer>
+      <Styles.FooterGridContainer>
         <Styles.PageLogoContainer>
           <Styles.FooterPageLogo>
             <svg
@@ -96,7 +96,7 @@ function Footer() {
             <strong>&copy;</strong> Shop With Us
           </span>
         </Styles.CopyRightInformationContainer>
-      </Styles.MarginContainer>
+      </Styles.FooterGridContainer>
     </Styles.Footer>
   );
 }

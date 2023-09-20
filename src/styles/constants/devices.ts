@@ -5,5 +5,5 @@ export const devices = {
   md: `(min-width: ${breakpoints.md})`,
   lg: `(min-width: ${breakpoints.lg})`,
   xl: `(min-width: ${breakpoints.xl})`,
-  "2xl": `(min-width: ${breakpoints["2xl"]})`,
+  xxl: `(min-width: ${breakpoints.xxl})`,
 };

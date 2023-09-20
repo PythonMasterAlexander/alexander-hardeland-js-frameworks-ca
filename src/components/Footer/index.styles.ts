@@ -1,4 +1,5 @@
 import style from "styled-components";
+import { devices } from "../../styles/constants/devices";
 import { Link } from "react-router-dom";
 
 export const Footer = style.footer`
@@ -7,13 +8,22 @@ export const Footer = style.footer`
   padding: 3% 0 3%;
 `;
 
-export const MarginContainer = style.div`
+export const FooterGridContainer = style.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  row-gap: 1.875rem;
+  row-gap: 2.25rem;
   margin: 0 auto;
   width: 75%;
+
+  @media only screen and ${devices.xl}  {
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 1fr;
+  }
+
+  @media only screen and (${devices.md}) and (max-width: 1199px) {
+  }
+
+  @media only screen and (${devices.xs}) and (max-width: 767px) {
+  }
 `;
 
 export const PageLogoContainer = style.section`
