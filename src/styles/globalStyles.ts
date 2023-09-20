@@ -29,6 +29,11 @@ const GlobalStyles = createGlobalStyle`
     font-size: 1rem;
   }
 
+  footer span {
+    font-size: 0.938rem;
+    padding-right: 0.75rem;
+  }
+
   #root {
     display: flex;
     flex-direction: column;

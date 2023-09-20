@@ -1,8 +1,8 @@
 import * as Styles from "./index.styles";
-import { clickToGoToToppOfPage } from "./clickToGoToToppOfPage";
+import { clickToGoToTopOfPage } from "./clickToGoToTopOfPage";
 function Footer() {
   return (
-    <Styles.Footer>
+    <Styles.PageFooterContainer>
       <Styles.FooterGridContainer>
         <section>
           <Styles.FooterPageLogo>
@@ -23,63 +23,63 @@ function Footer() {
             </svg>
           </Styles.FooterPageLogo>
         </section>
-        <Styles.ContactContainer>
-          <Styles.ContactHeader>Contact</Styles.ContactHeader>
+        <Styles.FooterContactContainer>
+          <Styles.ContactInformationHeader>
+            Contact
+          </Styles.ContactInformationHeader>
           <ul>
-            <Styles.LiElement>
+            <Styles.ContactListItem>
               <a>
-                <Styles.SpanElement>
+                <span>
                   <i className="fa-solid fa-envelope fa-xl"></i>
-                </Styles.SpanElement>
-                <Styles.SpanElement>Email</Styles.SpanElement>
+                </span>
+                <span>Email</span>
               </a>
-            </Styles.LiElement>
-            <Styles.LiElement>
-              <Styles.SpanElement>
-                <i className="fa-solid fa-phone fa-xl"></i>
-              </Styles.SpanElement>
-              <Styles.SpanElement>+47 967-00-89</Styles.SpanElement>
-            </Styles.LiElement>
-            <Styles.LiElement>
-              <Styles.SpanElement>
-                <strong>Norway</strong>
-              </Styles.SpanElement>
-              <Styles.SpanElement>+47 967-00-89</Styles.SpanElement>
-            </Styles.LiElement>
-            <Styles.LiElement>
-              <Styles.SpanElement>
-                <strong>Germany</strong>
-              </Styles.SpanElement>
-              <Styles.SpanElement>+49 (6)122 / 900 899 35</Styles.SpanElement>
-            </Styles.LiElement>
-            <Styles.LiElement>
-              <Styles.SpanElement>
-                <strong>UK</strong>
-              </Styles.SpanElement>
-              <Styles.SpanElement>(067)-5555-3333</Styles.SpanElement>
-            </Styles.LiElement>
-            <Styles.LiElement>
-              <Styles.SpanElement>
-                <strong>USA</strong>
-              </Styles.SpanElement>
-              <Styles.SpanElement>0-700-455-9999</Styles.SpanElement>
-            </Styles.LiElement>
-          </ul>
-        </Styles.ContactContainer>
-        <Styles.GoToToppContainer>
-          <div>
-            <Styles.ToToppButton onClick={clickToGoToToppOfPage}>
-              <Styles.ToToppSpanElement>
-                <strong>To topp</strong>
-              </Styles.ToToppSpanElement>
+            </Styles.ContactListItem>
+            <Styles.ContactListItem>
               <span>
-                <i className="fa-solid fa-arrow-up fa-xl"></i>
+                <i className="fa-solid fa-phone fa-xl"></i>
               </span>
-            </Styles.ToToppButton>
-          </div>
-        </Styles.GoToToppContainer>
+              <span>+47 967-00-89</span>
+            </Styles.ContactListItem>
+            <Styles.ContactListItem>
+              <span>
+                <strong>Norway</strong>
+              </span>
+              <span>+47 967-00-89</span>
+            </Styles.ContactListItem>
+            <Styles.ContactListItem>
+              <span>
+                <strong>Germany</strong>
+              </span>
+              <span>+49 (6)122 / 900 899 35</span>
+            </Styles.ContactListItem>
+            <Styles.ContactListItem>
+              <span>
+                <strong>UK</strong>
+              </span>
+              <span>(067)-5555-3333</span>
+            </Styles.ContactListItem>
+            <Styles.ContactListItem>
+              <span>
+                <strong>USA</strong>
+              </span>
+              <span>0-700-455-9999</span>
+            </Styles.ContactListItem>
+          </ul>
+        </Styles.FooterContactContainer>
+        <Styles.GoToTopContainer>
+          <Styles.TakeUserToTopButton onClick={clickToGoToTopOfPage}>
+            <Styles.ScrollToTopSpan>
+              <strong>To topp</strong>
+            </Styles.ScrollToTopSpan>
+          </Styles.TakeUserToTopButton>
+          <span>
+            <i className="fa-solid fa-arrow-up fa-xl"></i>
+          </span>
+        </Styles.GoToTopContainer>
         <Styles.PageLinkContainer>
-          <Styles.UlElement>
+          <Styles.UnorderedListLinkContainer>
             <li>
               <Styles.LinkStyle to="/">Home</Styles.LinkStyle>
             </li>
@@ -89,7 +89,7 @@ function Footer() {
             <li>
               <Styles.LinkStyle to="/checkout">Checkout</Styles.LinkStyle>
             </li>
-          </Styles.UlElement>
+          </Styles.UnorderedListLinkContainer>
         </Styles.PageLinkContainer>
         <Styles.CopyRightInformationContainer>
           <span>
@@ -97,7 +97,7 @@ function Footer() {
           </span>
         </Styles.CopyRightInformationContainer>
       </Styles.FooterGridContainer>
-    </Styles.Footer>
+    </Styles.PageFooterContainer>
   );
 }
 export default Footer;

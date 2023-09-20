@@ -1,7 +1,7 @@
 import style from "styled-components";
 import { devices } from "../../styles/constants/devices";
 import { Link } from "react-router-dom";
-export const Footer = style.footer`
+export const PageFooterContainer = style.footer`
   background: hsla(0, 0%, 20%, 1);
   color: hsla(0, 100%, 100%, 0.78);
   padding-block: min(20vh, 3.375rem);
@@ -28,7 +28,7 @@ export const FooterGridContainer = style.div`
     grid-template-rows: none;
   }
 `;
-export const ContactContainer = style.section`
+export const FooterContactContainer = style.section`
   justify-self: center;
 
   @media only screen and (${devices.md}) and (max-width: 1199px) {
@@ -39,7 +39,7 @@ export const ContactContainer = style.section`
   }
 `;
 
-export const GoToToppContainer = style.section`
+export const GoToTopContainer = style.section`
   justify-self: end;
 
   @media only screen and (${devices.md}) and (max-width: 1199px) {
@@ -73,11 +73,11 @@ export const CopyRightInformationContainer = style.section`
   }
 `;
 
-export const UlElement = style.ul`
+export const UnorderedListLinkContainer = style.ul`
   display: flex;
 `;
 
-export const LiElement = style.li`
+export const ContactListItem = style.li`
   padding-bottom: 0.75rem;
 `;
 
@@ -86,6 +86,9 @@ export const LinkStyle = style(Link)`
   font-size: 1.125rem;
   padding-right: 0.75rem;
   text-decoration: none;
+  &:hover {
+    color: hsla(0, 0%, 60%, 0.8);
+  }
 `;
 
 export const FooterPageLogo = style.span`
@@ -93,23 +96,19 @@ export const FooterPageLogo = style.span`
   font-weight: bolder;
 `;
 
-export const ContactHeader = style.h4`
+export const ContactInformationHeader = style.h4`
   font-size: 1.125rem;
   padding-bottom: 1rem;
 `;
 
-export const SpanElement = style.span`
-  font-size: 0.938rem;
-  padding-right: 0.75rem;
-`;
-
-export const ToToppSpanElement = style.span`
+export const ScrollToTopSpan = style.span`
   font-size: 1.125rem;
   padding-right: 0.75rem;
 `;
 
-export const ToToppButton = style.a`
+export const TakeUserToTopButton = style.a`
   :hover {
     cursor: pointer;
+    color: hsla(0, 0%, 60%, 0.8);
   }
 `;
