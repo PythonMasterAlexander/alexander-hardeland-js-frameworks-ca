@@ -4,7 +4,7 @@ function Footer() {
   return (
     <Styles.Footer>
       <Styles.FooterGridContainer>
-        <Styles.PageLogoContainer>
+        <section>
           <Styles.FooterPageLogo>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -22,7 +22,7 @@ function Footer() {
               />
             </svg>
           </Styles.FooterPageLogo>
-        </Styles.PageLogoContainer>
+        </section>
         <Styles.ContactContainer>
           <Styles.ContactHeader>Contact</Styles.ContactHeader>
           <ul>

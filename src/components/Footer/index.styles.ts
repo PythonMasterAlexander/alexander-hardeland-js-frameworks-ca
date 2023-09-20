@@ -1,11 +1,10 @@
 import style from "styled-components";
 import { devices } from "../../styles/constants/devices";
 import { Link } from "react-router-dom";
-
 export const Footer = style.footer`
   background: hsla(0, 0%, 20%, 1);
   color: hsla(0, 100%, 100%, 0.78);
-  padding: 3% 0 3%;
+  padding-block: min(20vh, 3.375rem);
 `;
 
 export const FooterGridContainer = style.div`
@@ -20,13 +19,58 @@ export const FooterGridContainer = style.div`
   }
 
   @media only screen and (${devices.md}) and (max-width: 1199px) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
   }
 
   @media only screen and (${devices.xs}) and (max-width: 767px) {
+    grid-template-columns: 1fr; 
+    grid-template-rows: none;
+  }
+`;
+export const ContactContainer = style.section`
+  justify-self: center;
+
+  @media only screen and (${devices.md}) and (max-width: 1199px) {
+    justify-self: start;
+  }
+  @media only screen and (${devices.xs}) and (max-width: 767px) {
+    justify-self: start;
   }
 `;
 
-export const PageLogoContainer = style.section`
+export const GoToToppContainer = style.section`
+  justify-self: end;
+
+  @media only screen and (${devices.md}) and (max-width: 1199px) {
+    justify-self: start;
+  }
+  @media only screen and (${devices.xs}) and (max-width: 767px) {
+    justify-self: start;
+  }
+`;
+
+export const PageLinkContainer = style.section`
+  grid-column: 1 / 3;
+
+  @media only screen and (${devices.md}) and (max-width: 1199px) {
+    grid-column: 1;
+    justify-self: start;
+  }
+  @media only screen and (${devices.xs}) and (max-width: 767px) {
+    grid-column: 1;
+  }
+`;
+
+export const CopyRightInformationContainer = style.section`
+  justify-self: end;
+
+  @media only screen and (${devices.md}) and (max-width: 1199px) {
+    justify-self: start;
+  }
+  @media only screen and (${devices.xs}) and (max-width: 767px) {
+    justify-self: start;
+  }
 `;
 
 export const UlElement = style.ul`
@@ -35,18 +79,6 @@ export const UlElement = style.ul`
 
 export const LiElement = style.li`
   padding-bottom: 0.75rem;
-`;
-
-export const ContactContainer = style.section`
-  justify-self: center;
-`;
-
-export const GoToToppContainer = style.section`
-  justify-self: end;
-`;
-
-export const PageLinkContainer = style.section`
-  grid-column: 1 / 3;
 `;
 
 export const LinkStyle = style(Link)`
@@ -80,8 +112,4 @@ export const ToToppButton = style.a`
   :hover {
     cursor: pointer;
   }
-`;
-
-export const CopyRightInformationContainer = style.section`
-  justify-self: end;
 `;
