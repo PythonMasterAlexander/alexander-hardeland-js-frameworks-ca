@@ -41,6 +41,7 @@ export const PageLinkContainer = style.section`
 
 export const LinkStyle = style(Link)`
   color: hsla(0, 0%, 100%, 1);
+  font-size: 1.125rem;
   padding-right: 0.75rem;
 `;
 
@@ -50,10 +51,17 @@ export const FooterPageLogo = style.span`
 `;
 
 export const ContactHeader = style.h4`
+  font-size: 1.125rem;
   padding-bottom: 1rem;
 `;
 
 export const SpanElement = style.span`
+  font-size: 0.938rem;
+  padding-right: 0.75rem;
+`;
+
+export const ToToppSpanElement = style.span`
+  font-size: 1.125rem;
   padding-right: 0.75rem;
 `;
 
@@ -61,4 +69,8 @@ export const ToToppButton = style.a`
   :hover {
     cursor: pointer;
   }
+`;
+
+export const CopyRightInformationContainer = style.section`
+
 `;

@@ -1,5 +1,5 @@
 import * as Styles from "./index.styles";
-import clickToGoToToppOfPage from "./clickToGoToToppOfPage";
+import { clickToGoToToppOfPage } from "./clickToGoToToppOfPage";
 function Footer() {
   return (
     <Styles.Footer>
@@ -69,7 +69,7 @@ function Footer() {
         <Styles.GoToToppContainer>
           <div>
             <Styles.ToToppButton onClick={clickToGoToToppOfPage}>
-              <Styles.SpanElement>To topp</Styles.SpanElement>
+              <Styles.ToToppSpanElement>To topp</Styles.ToToppSpanElement>
               <span>
                 <i className="fa-solid fa-arrow-up fa-xl"></i>
               </span>
@@ -89,6 +89,9 @@ function Footer() {
             </li>
           </Styles.UlElement>
         </Styles.PageLinkContainer>
+        <Styles.CopyRightInformationContainer>
+          <span>&copy; Shop With Us</span>
+        </Styles.CopyRightInformationContainer>
       </Styles.MarginContainer>
     </Styles.Footer>
   );
