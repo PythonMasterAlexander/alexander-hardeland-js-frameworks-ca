@@ -28,6 +28,9 @@ function Header() {
           <Nav />
         </Styles.NavigationContainer>
         <Styles.CartIconContainer>
+          <Styles.MobileHamburgerNavigationContainer>
+            <i className="fa-solid fa-bars fa-2xl"></i>
+          </Styles.MobileHamburgerNavigationContainer>
           <CartIcon />
         </Styles.CartIconContainer>
       </Styles.HeaderFlexContainer>
