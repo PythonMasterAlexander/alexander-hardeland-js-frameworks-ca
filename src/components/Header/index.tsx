@@ -3,8 +3,8 @@ import Nav from "../Nav";
 import CartIcon from "../CartIcon";
 function Header() {
   return (
-    <Styles.Header>
-      <Styles.MarginContainer>
+    <Styles.PageHeaderContainer>
+      <Styles.HeaderGridContainer>
         <section>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -26,8 +26,8 @@ function Header() {
         </section>
         <Nav />
         <CartIcon />
-      </Styles.MarginContainer>
-    </Styles.Header>
+      </Styles.HeaderGridContainer>
+    </Styles.PageHeaderContainer>
   );
 }
 export default Header;
