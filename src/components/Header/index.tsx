@@ -4,7 +4,7 @@ import CartIcon from "../CartIcon";
 function Header() {
   return (
     <Styles.PageHeaderContainer>
-      <Styles.HeaderGridContainer>
+      <Styles.HeaderFlexContainer>
         <section>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -24,9 +24,13 @@ function Header() {
             />
           </svg>
         </section>
-        <Nav />
-        <CartIcon />
-      </Styles.HeaderGridContainer>
+        <Styles.NavigationContainer>
+          <Nav />
+        </Styles.NavigationContainer>
+        <Styles.CartIconContainer>
+          <CartIcon />
+        </Styles.CartIconContainer>
+      </Styles.HeaderFlexContainer>
     </Styles.PageHeaderContainer>
   );
 }

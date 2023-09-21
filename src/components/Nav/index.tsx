@@ -3,12 +3,12 @@ function Nav() {
   return (
     <nav>
       <Styles.UnorderedListLinkContainer>
-        <li>
+        <Styles.LinkListItem>
           <Styles.LinkStyle to="/">Home</Styles.LinkStyle>
-        </li>
-        <li>
+        </Styles.LinkListItem>
+        <Styles.LinkListItem>
           <Styles.LinkStyle to="/contact">Contact</Styles.LinkStyle>
-        </li>
+        </Styles.LinkListItem>
       </Styles.UnorderedListLinkContainer>
     </nav>
   );
