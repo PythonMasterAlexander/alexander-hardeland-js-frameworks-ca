@@ -11,7 +11,11 @@ function Footer() {
               width="185"
               height="32"
               fill="none"
+              role="img"
             >
+              <title>
+                Shop With Us logo placed in the footer of the webpage
+              </title>
               <path fill="#FF5000" d="M0 6a6 6 0 1 1 12 0A6 6 0 1 1 0 6Z" />
               <path fill="#00AFFF" d="M13 0h12v12H13V0Z" />
               <path fill="#FF5000" d="M13 21a6 6 0 0 1 12 0 6 6 0 0 1-12 0Z" />
@@ -27,46 +31,56 @@ function Footer() {
           <Styles.ContactInformationHeader>
             Contact
           </Styles.ContactInformationHeader>
-          <ul>
-            <Styles.ContactListItem>
-              <a>
+          <address>
+            <ul>
+              <Styles.ContactListItem>
+                <a>
+                  <span>
+                    <i
+                      className="fa-solid fa-envelope fa-xl"
+                      role="img"
+                      aria-label="Envelope symbol indicating to the user that they can write an email to the company"
+                    ></i>
+                  </span>
+                  <span>Email</span>
+                </a>
+              </Styles.ContactListItem>
+              <Styles.ContactListItem>
                 <span>
-                  <i className="fa-solid fa-envelope fa-xl"></i>
+                  <i
+                    className="fa-solid fa-phone fa-xl"
+                    role="img"
+                    aria-label="A phone symbol indicating to the user that this is a phone number the user can use to contact the company"
+                  ></i>
                 </span>
-                <span>Email</span>
-              </a>
-            </Styles.ContactListItem>
-            <Styles.ContactListItem>
-              <span>
-                <i className="fa-solid fa-phone fa-xl"></i>
-              </span>
-              <span>+47 967-00-89</span>
-            </Styles.ContactListItem>
-            <Styles.ContactListItem>
-              <span>
-                <strong>Norway</strong>
-              </span>
-              <span>+47 967-00-89</span>
-            </Styles.ContactListItem>
-            <Styles.ContactListItem>
-              <span>
-                <strong>Germany</strong>
-              </span>
-              <span>+49 (6)122 / 900 899 35</span>
-            </Styles.ContactListItem>
-            <Styles.ContactListItem>
-              <span>
-                <strong>UK</strong>
-              </span>
-              <span>(067)-5555-3333</span>
-            </Styles.ContactListItem>
-            <Styles.ContactListItem>
-              <span>
-                <strong>USA</strong>
-              </span>
-              <span>0-700-455-9999</span>
-            </Styles.ContactListItem>
-          </ul>
+                <span>+47 967-00-89</span>
+              </Styles.ContactListItem>
+              <Styles.ContactListItem>
+                <span>
+                  <strong>Norway</strong>
+                </span>
+                <span>+47 967-00-89</span>
+              </Styles.ContactListItem>
+              <Styles.ContactListItem>
+                <span>
+                  <strong>Germany</strong>
+                </span>
+                <span>+49 (6)122 / 900 899 35</span>
+              </Styles.ContactListItem>
+              <Styles.ContactListItem>
+                <span>
+                  <strong>UK</strong>
+                </span>
+                <span>(067)-5555-3333</span>
+              </Styles.ContactListItem>
+              <Styles.ContactListItem>
+                <span>
+                  <strong>USA</strong>
+                </span>
+                <span>0-700-455-9999</span>
+              </Styles.ContactListItem>
+            </ul>
+          </address>
         </Styles.FooterContactContainer>
         <Styles.GoToTopContainer>
           <Styles.TakeUserToTopButton onClick={clickToGoToTopOfPage}>
@@ -75,7 +89,11 @@ function Footer() {
             </Styles.ScrollToTopSpan>
           </Styles.TakeUserToTopButton>
           <span>
-            <i className="fa-solid fa-arrow-up fa-xl"></i>
+            <i
+              className="fa-solid fa-arrow-up fa-xl"
+              role="img"
+              aria-label="One Arrow with the pointer up and if the user clicks the text the user will be taken to the top"
+            ></i>
           </span>
         </Styles.GoToTopContainer>
         <Styles.PageLinkContainer>
