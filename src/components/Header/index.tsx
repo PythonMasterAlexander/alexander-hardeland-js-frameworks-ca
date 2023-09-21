@@ -11,7 +11,9 @@ function Header() {
             width="185"
             height="32"
             fill="none"
+            role="img"
           >
+            <title>Shop With Us logo placed in the header of the webpage</title>
             <path fill="#FF5000" d="M0 6a6 6 0 1 1 12 0A6 6 0 1 1 0 6Z" />
             <path fill="#00AFFF" d="M13 0h12v12H13V0Z" />
             <path fill="#FF5000" d="M13 21a6 6 0 0 1 12 0 6 6 0 0 1-12 0Z" />
