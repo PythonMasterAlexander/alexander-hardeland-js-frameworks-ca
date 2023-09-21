@@ -12,8 +12,9 @@ function Header() {
             height="32"
             fill="none"
             role="img"
+            aria-label="Shop With Us logo placed in the header of the webpage"
           >
-            <title>Shop With Us logo placed in the header of the webpage</title>
+            <title>Shop With Us logo</title>
             <path fill="#FF5000" d="M0 6a6 6 0 1 1 12 0A6 6 0 1 1 0 6Z" />
             <path fill="#00AFFF" d="M13 0h12v12H13V0Z" />
             <path fill="#FF5000" d="M13 21a6 6 0 0 1 12 0 6 6 0 0 1-12 0Z" />
@@ -24,9 +25,9 @@ function Header() {
             />
           </svg>
         </section>
-        <Styles.NavigationContainer>
+        <Styles.PageLinkNavigationContainer>
           <Nav />
-        </Styles.NavigationContainer>
+        </Styles.PageLinkNavigationContainer>
         <Styles.CartIconContainer>
           <Styles.MobileHamburgerNavigationContainer>
             <i
