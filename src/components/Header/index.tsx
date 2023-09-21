@@ -29,7 +29,11 @@ function Header() {
         </Styles.NavigationContainer>
         <Styles.CartIconContainer>
           <Styles.MobileHamburgerNavigationContainer>
-            <i className="fa-solid fa-bars fa-2xl"></i>
+            <i
+              className="fa-solid fa-bars fa-2xl"
+              role="img"
+              aria-label="Hamburger symbol the user can push click to get into the menu when the user are on mobile or tablet format"
+            ></i>
           </Styles.MobileHamburgerNavigationContainer>
           <CartIcon />
         </Styles.CartIconContainer>
