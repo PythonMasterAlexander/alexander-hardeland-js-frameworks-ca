@@ -13,7 +13,6 @@ const justifyStartOnMediumAndBelow = `
 export const PageFooterContainer = style.footer`
   background: hsla(0, 0%, 20%, 1);
   color: hsla(0, 100%, 100%, 0.78);
-  padding-block: min(20vh, 3.375rem);
 `;
 export const FooterGridContainer = style.div`
   display: grid;
