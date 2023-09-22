@@ -33,6 +33,10 @@ const GlobalStyles = createGlobalStyle`
     padding-block: min(20vh, 3.375rem);
   }
 
+  form input {
+    display: block;
+  }
+
   footer span {
     font-size: 0.938rem;
     padding-right: 0.75rem;

@@ -69,22 +69,15 @@ function ContactPage() {
         </Styles.ContactPageDisclaimerInformationContainer>
         <Styles.ContactPageFormContainer>
           <form onSubmit={handleSubmit(onSubmit)}>
-            <fieldset>
+            <Styles.FormContainerFieldsetFlexContainer>
               <Styles.FormContainerHeading>
                 Contact us
               </Styles.FormContainerHeading>
               <div>
                 <label>
-                  Full name
+                  Your Full name
                   <input {...register("fullName")} />
                   <span>{errors.fullName?.message}</span>
-                </label>
-              </div>
-              <div>
-                <label>
-                  Subject
-                  <input {...register("subject")} />
-                  <span>{errors.subject?.message}</span>
                 </label>
               </div>
               <div>
@@ -96,7 +89,14 @@ function ContactPage() {
               </div>
               <div>
                 <label>
-                  Body
+                  What is it about
+                  <input {...register("subject")} />
+                  <span>{errors.subject?.message}</span>
+                </label>
+              </div>
+              <div>
+                <label>
+                  Anything else?
                   <input {...register("bodyText")} />
                   <span>{errors.bodyText?.message}</span>
                 </label>
@@ -104,7 +104,7 @@ function ContactPage() {
               <div>
                 <button type="submit">Submit</button>
               </div>
-            </fieldset>
+            </Styles.FormContainerFieldsetFlexContainer>
           </form>
         </Styles.ContactPageFormContainer>
       </Styles.ContactPageGridContainer>
