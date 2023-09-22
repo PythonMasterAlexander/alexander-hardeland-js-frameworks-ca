@@ -8,13 +8,11 @@ function CartIcon() {
   );
   return (
     <>
-      <section>
-        <Link to="/checkout">
-          <Styles.CartIcon className="fa-solid fa-cart-shopping fa-2xl">
-            <Styles.ItemsInCart>{numberOfItemsInCart}</Styles.ItemsInCart>
-          </Styles.CartIcon>
-        </Link>
-      </section>
+      <Link to="/checkout">
+        <Styles.CartIcon className="fa-solid fa-cart-shopping fa-2xl">
+          <Styles.ItemsInCart>{numberOfItemsInCart}</Styles.ItemsInCart>
+        </Styles.CartIcon>
+      </Link>
     </>
   );
 }

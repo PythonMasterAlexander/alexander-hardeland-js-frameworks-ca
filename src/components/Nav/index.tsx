@@ -2,14 +2,14 @@ import * as Styles from "./index.styles";
 function Nav() {
   return (
     <nav>
-      <ul>
-        <li>
+      <Styles.UnorderedListLinkContainer>
+        <Styles.LinkListItem>
           <Styles.LinkStyle to="/">Home</Styles.LinkStyle>
-        </li>
-        <li>
+        </Styles.LinkListItem>
+        <Styles.LinkListItem>
           <Styles.LinkStyle to="/contact">Contact</Styles.LinkStyle>
-        </li>
-      </ul>
+        </Styles.LinkListItem>
+      </Styles.UnorderedListLinkContainer>
     </nav>
   );
 }

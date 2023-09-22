@@ -28,6 +28,10 @@ const GlobalStyles = createGlobalStyle`
     padding: 0;
     font-size: 1rem;
   }
+  
+  header, footer {
+    padding-block: min(20vh, 3.375rem);
+  }
 
   footer span {
     font-size: 0.938rem;

@@ -3,15 +3,18 @@ import Nav from "../Nav";
 import CartIcon from "../CartIcon";
 function Header() {
   return (
-    <Styles.Header>
-      <Styles.MarginContainer>
+    <Styles.PageHeaderContainer>
+      <Styles.HeaderFlexContainer>
         <section>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="185"
             height="32"
             fill="none"
+            role="img"
+            aria-label="Shop With Us logo placed in the header of the webpage"
           >
+            <title>Shop With Us logo</title>
             <path fill="#FF5000" d="M0 6a6 6 0 1 1 12 0A6 6 0 1 1 0 6Z" />
             <path fill="#00AFFF" d="M13 0h12v12H13V0Z" />
             <path fill="#FF5000" d="M13 21a6 6 0 0 1 12 0 6 6 0 0 1-12 0Z" />
@@ -22,10 +25,21 @@ function Header() {
             />
           </svg>
         </section>
-        <Nav />
-        <CartIcon />
-      </Styles.MarginContainer>
-    </Styles.Header>
+        <Styles.PageLinkNavigationContainer>
+          <Nav />
+        </Styles.PageLinkNavigationContainer>
+        <Styles.CartIconContainer>
+          <Styles.MobileHamburgerNavigationContainer>
+            <i
+              className="fa-solid fa-bars fa-2xl"
+              role="img"
+              aria-label="Hamburger symbol the user can push click to get into the menu when the user are on mobile or tablet format"
+            ></i>
+          </Styles.MobileHamburgerNavigationContainer>
+          <CartIcon />
+        </Styles.CartIconContainer>
+      </Styles.HeaderFlexContainer>
+    </Styles.PageHeaderContainer>
   );
 }
 export default Header;

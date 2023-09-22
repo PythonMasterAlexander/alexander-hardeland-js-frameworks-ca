@@ -1,10 +1,11 @@
 import styled from "styled-components";
 
 export const CartIcon = styled.i`
-  color: black;
+  color: hsla(220, 36%, 21%, 1);
 `;
 
 export const ItemsInCart = styled.span`
-  padding-left: 0.5rem;
-  font-size: 1.5rem;
+  color: hsla(220, 36%, 21%, 1);
+  padding-left: 0.375rem;
+  font-size: 1.25rem;
 `;
