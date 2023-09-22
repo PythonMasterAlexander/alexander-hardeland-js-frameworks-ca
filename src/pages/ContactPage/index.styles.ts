@@ -66,3 +66,11 @@ export const DisclaimerInformationContainerText = styled.p`
   font-style: italic;
   padding-bottom: 1rem;
 `;
+
+export const FormContainerInputName = styled.label`
+  font-size: clamp(0.5rem, 1vw + 3vw, 1rem);
+`;
+
+export const FormAsterixSymbol = styled.span`
+  /*Create a condition for if no name is enter change color to red*/
+`;

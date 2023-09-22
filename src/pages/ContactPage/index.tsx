@@ -74,32 +74,33 @@ function ContactPage() {
                 Contact us
               </Styles.FormContainerHeading>
               <div>
-                <label>
-                  Your Full name<span>*</span>
+                <Styles.FormContainerInputName>
+                  Full name
+                  <Styles.FormAsterixSymbol>*</Styles.FormAsterixSymbol>
                   <input {...register("fullName")} />
                   <span>{errors.fullName?.message}</span>
-                </label>
+                </Styles.FormContainerInputName>
               </div>
               <div>
-                <label>
+                <Styles.FormContainerInputName>
                   Email<span>*</span>
                   <input {...register("email")} />
                   <span>{errors.email?.message}</span>
-                </label>
+                </Styles.FormContainerInputName>
               </div>
               <div>
-                <label>
+                <Styles.FormContainerInputName>
                   What is it about<span>*</span>
                   <input {...register("subject")} />
                   <span>{errors.subject?.message}</span>
-                </label>
+                </Styles.FormContainerInputName>
               </div>
               <div>
-                <label>
+                <Styles.FormContainerInputName>
                   Anything else?<span>*</span>
                   <input {...register("bodyText")} />
                   <span>{errors.bodyText?.message}</span>
-                </label>
+                </Styles.FormContainerInputName>
               </div>
               <div>
                 <button type="submit">Submit</button>
