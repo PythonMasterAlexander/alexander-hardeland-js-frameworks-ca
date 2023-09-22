@@ -40,7 +40,9 @@ function ContactPage() {
     <>
       <Styles.ContactPageGridContainer>
         <Styles.ContactPageInformationContainer>
-          <h1>Contact us if you need help with our products</h1>
+          <Styles.InformationContainerHeading>
+            You need help?
+          </Styles.InformationContainerHeading>
           <p>
             We'd love to hear from you! Please feel free to get in touch with us
             using the contact form below. Whether you have questions, feedback,
@@ -65,10 +67,12 @@ function ContactPage() {
             privileged or confidential.
           </p>
         </Styles.ContactPageDisclaimerInformationContainer>
-        <section>
+        <Styles.ContactPageFormContainer>
           <form onSubmit={handleSubmit(onSubmit)}>
             <fieldset>
-              <legend>Contact</legend>
+              <Styles.FormContainerHeading>
+                Contact us
+              </Styles.FormContainerHeading>
               <div>
                 <label>
                   Full name
@@ -102,7 +106,7 @@ function ContactPage() {
               </div>
             </fieldset>
           </form>
-        </section>
+        </Styles.ContactPageFormContainer>
       </Styles.ContactPageGridContainer>
     </>
   );
