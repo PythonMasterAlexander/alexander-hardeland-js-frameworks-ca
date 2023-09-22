@@ -57,7 +57,7 @@ export const FormContainerHeading = styled.legend`
 
 export const InformationContainerText = styled.p`
   font-size: clamp(1rem, 1vw + 3vw, 1.313rem);
-  line-height: 1.5rem;
+  line-height: min(2rem, 7vw);
   letter-spacing: 0.06rem;
   padding-bottom: 1rem;
 `;

@@ -75,28 +75,28 @@ function ContactPage() {
               </Styles.FormContainerHeading>
               <div>
                 <label>
-                  Your Full name
+                  Your Full name<span>*</span>
                   <input {...register("fullName")} />
                   <span>{errors.fullName?.message}</span>
                 </label>
               </div>
               <div>
                 <label>
-                  Email
+                  Email<span>*</span>
                   <input {...register("email")} />
                   <span>{errors.email?.message}</span>
                 </label>
               </div>
               <div>
                 <label>
-                  What is it about
+                  What is it about<span>*</span>
                   <input {...register("subject")} />
                   <span>{errors.subject?.message}</span>
                 </label>
               </div>
               <div>
                 <label>
-                  Anything else?
+                  Anything else?<span>*</span>
                   <input {...register("bodyText")} />
                   <span>{errors.bodyText?.message}</span>
                 </label>
