@@ -50,12 +50,13 @@ function ContactPage() {
             We value your feedback and will get back to you as soon as possible.
             Thank you for reaching out to us!
           </p>
-
+        </Styles.ContactPageInformationContainer>
+        <Styles.ContactPageDisclaimerInformationContainer>
           <p>
-            Disclaimer: By submitting this contact form, you acknowledge that
-            the information you provide will be used solely for the purpose of
-            responding to your inquiry or feedback. We respect your privacy and
-            will not share your information with third parties.
+            <strong>Disclaimer:</strong> By submitting this contact form, you
+            acknowledge that the information you provide will be used solely for
+            the purpose of responding to your inquiry or feedback. We respect
+            your privacy and will not share your information with third parties.
           </p>
 
           <p>
@@ -63,7 +64,7 @@ function ContactPage() {
             this form. Communications through this form may not be considered
             privileged or confidential.
           </p>
-        </Styles.ContactPageInformationContainer>
+        </Styles.ContactPageDisclaimerInformationContainer>
         <section>
           <form onSubmit={handleSubmit(onSubmit)}>
             <fieldset>

@@ -8,3 +8,8 @@ export const ContactPageGridContainer = styled.div`
 `;
 
 export const ContactPageInformationContainer = styled.article``;
+export const ContactPageDisclaimerInformationContainer = styled.section`
+  @media only screen and (${devices.xs}) and (max-width: 992px) {
+    grid-row: 3 / 4;
+  }
+`;
