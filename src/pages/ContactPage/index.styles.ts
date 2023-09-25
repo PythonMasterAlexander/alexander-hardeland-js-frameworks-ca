@@ -73,7 +73,7 @@ export const FormTextAreaFlexGrowContainer = styled.div`
 `;
 
 export const FormButtonContainer = styled.div`
-  background: black;
+  background: ${(props) => props.theme.background.primary};
   padding: 50px;
   text-align: center;
   width: 50%;

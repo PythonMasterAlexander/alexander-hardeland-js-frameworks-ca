@@ -1,5 +1,5 @@
-import { ThemeProvider } from "styled-components";
 import * as React from "react";
+import { ThemeProvider } from "styled-components";
 
 interface Theme {
   background: {
