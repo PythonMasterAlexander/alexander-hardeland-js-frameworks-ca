@@ -74,33 +74,36 @@ function ContactPage() {
                 Contact us
               </Styles.FormContainerHeading>
               <div>
-                <Styles.FormContainerInputName>
+                <Styles.FormNameInputLabel htmlFor="fullName">
                   Full name
-                  <Styles.FormAsterixSymbol>*</Styles.FormAsterixSymbol>
-                  <input {...register("fullName")} />
-                  <span>{errors.fullName?.message}</span>
-                </Styles.FormContainerInputName>
+                </Styles.FormNameInputLabel>
+                <Styles.FormAsterixSymbol>*</Styles.FormAsterixSymbol>
+                <Styles.FormInputField {...register("fullName")} />
+                <span>{errors.fullName?.message}</span>
               </div>
               <div>
-                <Styles.FormContainerInputName>
-                  Email<span>*</span>
-                  <input {...register("email")} />
-                  <span>{errors.email?.message}</span>
-                </Styles.FormContainerInputName>
+                <Styles.FormNameInputLabel htmlFor="email">
+                  Email
+                </Styles.FormNameInputLabel>
+                <Styles.FormAsterixSymbol>*</Styles.FormAsterixSymbol>
+                <Styles.FormInputField {...register("email")} />
+                <span>{errors.email?.message}</span>
               </div>
               <div>
-                <Styles.FormContainerInputName>
-                  What is it about<span>*</span>
-                  <input {...register("subject")} />
-                  <span>{errors.subject?.message}</span>
-                </Styles.FormContainerInputName>
+                <Styles.FormNameInputLabel htmlFor="subject">
+                  What is it about
+                </Styles.FormNameInputLabel>
+                <Styles.FormAsterixSymbol>*</Styles.FormAsterixSymbol>
+                <Styles.FormInputField {...register("subject")} />
+                <span>{errors.subject?.message}</span>
               </div>
               <div>
-                <Styles.FormContainerInputName>
-                  Anything else?<span>*</span>
-                  <input {...register("bodyText")} />
-                  <span>{errors.bodyText?.message}</span>
-                </Styles.FormContainerInputName>
+                <Styles.FormNameInputLabel htmlFor="bodyText">
+                  Anything else?
+                </Styles.FormNameInputLabel>
+                <Styles.FormAsterixSymbol>*</Styles.FormAsterixSymbol>
+                <Styles.FormInputField {...register("bodyText")} />
+                <span>{errors.bodyText?.message}</span>
               </div>
               <div>
                 <button type="submit">Submit</button>
