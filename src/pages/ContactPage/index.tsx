@@ -46,8 +46,8 @@ function ContactPage() {
           <Styles.InformationContainerText>
             <strong>We'd love to hear from you!</strong>
             <br /> Please feel free to get in touch with us using the contact
-            form below. Whether you have questions, feedback, or just want to
-            say hello, we're here to help.
+            form. Whether you have questions, feedback, or just want to say
+            hello, we're here to help.
           </Styles.InformationContainerText>
           <Styles.InformationContainerText>
             We value your feedback and will get back to you as soon as possible.
@@ -76,37 +76,45 @@ function ContactPage() {
               <div>
                 <Styles.FormNameInputLabel htmlFor="fullName">
                   Full name
+                  <span>*</span>
                 </Styles.FormNameInputLabel>
-                <Styles.FormAsterixSymbol>*</Styles.FormAsterixSymbol>
                 <Styles.FormInputField {...register("fullName")} />
-                <span>{errors.fullName?.message}</span>
+                <Styles.FormErrorMessage>
+                  {errors.fullName?.message}
+                </Styles.FormErrorMessage>
               </div>
               <div>
                 <Styles.FormNameInputLabel htmlFor="email">
                   Email
+                  <span>*</span>
                 </Styles.FormNameInputLabel>
-                <Styles.FormAsterixSymbol>*</Styles.FormAsterixSymbol>
                 <Styles.FormInputField {...register("email")} />
-                <span>{errors.email?.message}</span>
+                <Styles.FormErrorMessage>
+                  {errors.email?.message}
+                </Styles.FormErrorMessage>
               </div>
               <div>
                 <Styles.FormNameInputLabel htmlFor="subject">
-                  What is it about
+                  Subject
+                  <span>*</span>
                 </Styles.FormNameInputLabel>
-                <Styles.FormAsterixSymbol>*</Styles.FormAsterixSymbol>
                 <Styles.FormInputField {...register("subject")} />
-                <span>{errors.subject?.message}</span>
+                <Styles.FormErrorMessage>
+                  {errors.subject?.message}
+                </Styles.FormErrorMessage>
               </div>
               <Styles.FormTextAreaFlexGrowContainer>
                 <Styles.FormNameInputLabel htmlFor="bodyText">
                   Anything else?
+                  <span>*</span>
                 </Styles.FormNameInputLabel>
-                <Styles.FormAsterixSymbol>*</Styles.FormAsterixSymbol>
                 <Styles.FormTextAreaField {...register("bodyText")} />
-                <span>{errors.bodyText?.message}</span>
+                <Styles.FormErrorMessage>
+                  {errors.bodyText?.message}
+                </Styles.FormErrorMessage>
               </Styles.FormTextAreaFlexGrowContainer>
               <Styles.FormButtonContainer>
-                <button type="submit">Submit</button>
+                <Styles.FormButton type="submit">Submit</Styles.FormButton>
               </Styles.FormButtonContainer>
             </Styles.FormContainerFieldsetFlexContainer>
           </form>

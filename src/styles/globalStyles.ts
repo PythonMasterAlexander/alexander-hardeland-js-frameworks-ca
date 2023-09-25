@@ -1,10 +1,10 @@
 import { createGlobalStyle } from "styled-components";
 const GlobalStyles = createGlobalStyle`
-  h1, h2, h3, h4, h5, h6 {
+  h1, h2, h3, h4, h5, h6, legend {
     font-family: 'Roboto Mono', monospace;
   }
 
-  p, a, span {
+  p, a, span, button {
     font-family: 'Lato', sans-serif;
   }
 
@@ -13,9 +13,12 @@ const GlobalStyles = createGlobalStyle`
   }
 
   :root {
-    //put css variables here, then use them in the theming in ./constants/theme.ts
     --background-color: hsla(200, 60%, 70%, 0.4);
     --button-background-color: hsla(0, 0%, 100%, 1);
+    --input-padding-vertical: 7px;
+    --input-padding-horizontal: 10px;
+    --page-border-radius: 5px;
+    --button-padding-horizontal: 15px;
   }
 
   html {
@@ -24,6 +27,10 @@ const GlobalStyles = createGlobalStyle`
 
   li {
     list-style-type: none;
+  }
+
+  button {
+    background: none;
   }
 
   * {
@@ -39,7 +46,6 @@ const GlobalStyles = createGlobalStyle`
 
   form input, form textarea {
     display: block;
-    width: 27.5rem;
   }
 
   footer span {

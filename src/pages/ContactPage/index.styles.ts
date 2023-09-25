@@ -24,7 +24,7 @@ export const ContactPageDisclaimerInformationContainer = styled.section`
   @media only screen and ${devices.xl} {
     justify-self: end;
   }
-  @media only screen and (${devices.xs}) and (max-width: 992px) {
+  @media only screen and (${devices.xs}) and (max-width: 1200px) {
     grid-row: 3 / 4;
     max-width: 100%;
   }
@@ -52,7 +52,6 @@ export const InformationContainerHeading = styled.h1`
 
 export const FormContainerHeading = styled.legend`
   font-size: clamp(1.313rem, 1vw + 3vw, 1.75rem);
-  font-family: "Roboto Mono", monospace;
   padding-block: 1.5rem;
 `;
 
@@ -74,19 +73,47 @@ export const FormTextAreaFlexGrowContainer = styled.div`
 
 export const FormButtonContainer = styled.div`
   background: ${(props) => props.theme.color.buttonBackgroundColor};
-  padding: 50px;
+  border-radius: var(--page-border-radius);
   text-align: center;
   width: 50%;
+  @media only screen and (${devices.xs}) and (max-width: 1200px) {
+    width: 100%;
+  }
 `;
 
 export const FormNameInputLabel = styled.label`
   font-size: clamp(0.5rem, 1vw + 3vw, 1rem);
+  display: block;
+  margin-bottom: 6px;
 `;
 
-export const FormInputField = styled.input``;
+export const FormInputField = styled.input`
+  border-radius: var(--page-border-radius);
+  padding: var(--input-padding-horizontal) var(--input-padding-vertical)
+    var(--input-padding-horizontal);
+  width: 100%;
+`;
 
-export const FormTextAreaField = styled.textarea``;
+export const FormTextAreaField = styled.textarea`
+  border-radius: var(--page-border-radius);
+  padding: var(--input-padding-horizontal) var(--input-padding-vertical)
+    var(--input-padding-horizontal);
+  height: 100px;
+  width: 100%;
+`;
 
-export const FormAsterixSymbol = styled.span`
-  /*Create a condition for if no name is enter change color to red*/
+export const FormButton = styled.button`
+  font-weight: 700;
+  cursor: pointer;
+  padding: var(--button-padding-horizontal) 0;
+  width: 100%;
+  &:hover {
+    background: gray;
+  }
+`;
+
+export const FormErrorMessage = styled.span`
+  display: block;
+  color: red;
+  margin-top: 6px;
 `;
