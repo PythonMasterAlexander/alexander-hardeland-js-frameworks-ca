@@ -97,17 +97,17 @@ function ContactPage() {
                 <Styles.FormInputField {...register("subject")} />
                 <span>{errors.subject?.message}</span>
               </div>
-              <div>
+              <Styles.FormTextAreaFlexGrowContainer>
                 <Styles.FormNameInputLabel htmlFor="bodyText">
                   Anything else?
                 </Styles.FormNameInputLabel>
                 <Styles.FormAsterixSymbol>*</Styles.FormAsterixSymbol>
-                <Styles.FormInputField {...register("bodyText")} />
+                <Styles.FormTextAreaField {...register("bodyText")} />
                 <span>{errors.bodyText?.message}</span>
-              </div>
-              <div>
+              </Styles.FormTextAreaFlexGrowContainer>
+              <Styles.FormButtonContainer>
                 <button type="submit">Submit</button>
-              </div>
+              </Styles.FormButtonContainer>
             </Styles.FormContainerFieldsetFlexContainer>
           </form>
         </Styles.ContactPageFormContainer>

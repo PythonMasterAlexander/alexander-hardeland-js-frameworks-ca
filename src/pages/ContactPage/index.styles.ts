@@ -6,7 +6,6 @@ export const ContactPageGridContainer = styled.div`
   padding-block: clamp(1rem, 1vw + 3vw, 6rem);
   @media only screen and ${devices.xl} {
     grid-template-columns: minmax(auto, 1fr) minmax(auto, 1fr);
-    justify-items: center;
   }
 `;
 export const ContactPageInformationContainer = styled.article`
@@ -41,6 +40,8 @@ export const ContactPageFormContainer = styled.section`
 export const FormContainerFieldsetFlexContainer = styled.fieldset`
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
   gap: 1.5rem;
 `;
 
@@ -67,11 +68,24 @@ export const DisclaimerInformationContainerText = styled.p`
   padding-bottom: 1rem;
 `;
 
+export const FormTextAreaFlexGrowContainer = styled.div`
+  flex-grow: 2;
+`;
+
+export const FormButtonContainer = styled.div`
+  background: black;
+  padding: 50px;
+  text-align: center;
+  width: 50%;
+`;
+
 export const FormNameInputLabel = styled.label`
   font-size: clamp(0.5rem, 1vw + 3vw, 1rem);
 `;
 
 export const FormInputField = styled.input``;
+
+export const FormTextAreaField = styled.textarea``;
 
 export const FormAsterixSymbol = styled.span`
   /*Create a condition for if no name is enter change color to red*/

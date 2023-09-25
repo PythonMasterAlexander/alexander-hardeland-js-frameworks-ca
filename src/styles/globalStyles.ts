@@ -9,7 +9,7 @@ const GlobalStyles = createGlobalStyle`
     font-family: 'Lato', sans-serif;
   }
 
-  html, body, #root {
+  html, body, #root, form {
     height: 100%;
   }
 
@@ -32,8 +32,9 @@ const GlobalStyles = createGlobalStyle`
     padding-block: min(20vh, 3.375rem);
   }
 
-  form input {
+  form input, form textarea {
     display: block;
+    width: 27.5rem;
   }
 
   footer span {
