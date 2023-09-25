@@ -62,10 +62,12 @@ function HomePage() {
 
   return (
     <React.Fragment>
-      <section>
-        <Styles.Input onChange={HandleInputChange} />
-        <button>Search</button>
-      </section>
+      <Styles.HomePageSearchProductContainer>
+        <Styles.SearchProductFlexContainer>
+          <Styles.SearchProductText>Search</Styles.SearchProductText>
+          <Styles.SearchProductInputField onChange={HandleInputChange} />
+        </Styles.SearchProductFlexContainer>
+      </Styles.HomePageSearchProductContainer>
       <Styles.HeadingOne>Hello from the home page</Styles.HeadingOne>
       <Styles.HomePageMainContainer>
         <FilteredProductCard />
