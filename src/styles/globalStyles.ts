@@ -12,8 +12,14 @@ const GlobalStyles = createGlobalStyle`
     height: 100%;
   }
 
+  :root {
+    //put css variables here, then use them in the theming in ./constants/theme.ts
+    --background-color: hsla(200, 60%, 70%, 0.4);
+    --button-background-color: hsla(0, 0%, 100%, 1);
+  }
+
   html {
-    background: hsla(200, 60%, 70%, 0.4);
+    background: var(--background-color);
   }
 
   li {

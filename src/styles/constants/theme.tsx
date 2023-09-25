@@ -2,14 +2,14 @@ import * as React from "react";
 import { ThemeProvider } from "styled-components";
 
 interface Theme {
-  background: {
-    primary: string;
+  color: {
+    buttonBackgroundColor: string;
   };
 }
 
 const theme: Theme = {
-  background: {
-    primary: "red",
+  color: {
+    buttonBackgroundColor: "var(--button-background-color)",
   },
 };
 
