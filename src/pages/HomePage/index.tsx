@@ -31,7 +31,7 @@ function HomePage() {
     }
   });
 
-  function FilteredProductCard() {
+  function OutputProductOnHomePage() {
     return (
       <>
         {filteredProducts.map((product) => (
@@ -74,7 +74,7 @@ function HomePage() {
       </Styles.HomePageSearchProductContainer>
       <Styles.HeadingOne>Hello from the home page</Styles.HeadingOne>
       <Styles.HomePageMainContainer>
-        <FilteredProductCard />
+        <OutputProductOnHomePage />
       </Styles.HomePageMainContainer>
     </React.Fragment>
   );
