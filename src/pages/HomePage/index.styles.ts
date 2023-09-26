@@ -17,8 +17,8 @@ export const HomePageMainContainer = styled.section`
   }
 `;
 
-export const ProductCardContainer = styled.div`
-  background-color: #005e9b;
+export const ProductCardContainer = styled.article`
+  background-color: var(--card-product-background-color);
   border-radius: 0.375rem;
   color: #ffffff;
   display: flex;
@@ -29,7 +29,7 @@ export const ProductCardContainer = styled.div`
   width: 100%;
 `;
 
-export const LinkButtonContainer = styled.div`
+export const ProductCardLinkContainer = styled.div`
   border-radius: 0.375rem;
   background-color: #ffffff;
   text-align: center;
@@ -42,7 +42,7 @@ export const SearchProductFlexContainer = styled.div`
   display: flex;
 `;
 
-export const HeadingTwo = styled.h2`
+export const ProductCardTextHeading = styled.h2`
   font-size: clamp(1.3rem, 1vw + 2vw, 1.5rem);
   letter-spacing: -0.031rem;
   margin-bottom: 1rem;
@@ -73,7 +73,7 @@ export const SearchProductInputField = styled.input`
   }
 `;
 
-export const Img = styled.img`
+export const ProductImage = styled.img`
   height: 9.375rem;
   object-fit: contain;
   max-width: 100%;
@@ -83,11 +83,11 @@ export const ProductCardBody = styled.div`
   flex-grow: 1;
 `;
 
-export const CardText = styled.p`
+export const ProductCardText = styled.p`
   font-size: clamp(0.75rem, 1vw + 2vw, 1.3rem);
 `;
 
-export const ButtonLink = styled(Link)`
+export const ProductCardButtonLink = styled(Link)`
   color: #000000;
   font-family: "Lato", sans-serif;
   font-weight: bold;
