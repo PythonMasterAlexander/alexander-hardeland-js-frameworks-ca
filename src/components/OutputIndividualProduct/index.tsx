@@ -9,7 +9,7 @@ import checkForDiscount from "./checkForDiscount";
 import { noDiscount } from "./variables";
 import { useParams } from "react-router-dom";
 
-function IndividualProduct() {
+function OutputIndividualProduct() {
   const { id } = useParams();
   const { isLoading, individualProductData, isError } =
     GetIndividualProductData(id);
@@ -86,4 +86,4 @@ function IndividualProduct() {
     );
   }
 }
-export default IndividualProduct;
+export default OutputIndividualProduct;

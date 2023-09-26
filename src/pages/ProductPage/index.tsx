@@ -1,4 +1,4 @@
-import IndividualProduct from "../../components/IndividualProduct";
+import OutputIndividualProduct from "../../components/OutputIndividualProduct";
 import * as React from "react";
 import * as Styles from "./index.styles";
 
@@ -9,7 +9,7 @@ function ProductPage() {
         Hello From Product Page
       </Styles.ProductPageHeading>
       <section>
-        <IndividualProduct />
+        <OutputIndividualProduct />
       </section>
     </React.Fragment>
   );
