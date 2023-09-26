@@ -8,9 +8,7 @@ function ProductPage() {
       <Styles.ProductPageHeading>
         Hello From Product Page
       </Styles.ProductPageHeading>
-      <section>
-        <OutputIndividualProduct />
-      </section>
+      <OutputIndividualProduct />
     </React.Fragment>
   );
 }

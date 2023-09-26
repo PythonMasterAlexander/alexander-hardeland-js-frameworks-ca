@@ -43,7 +43,7 @@ function OutputIndividualProduct() {
 
     return (
       <React.Fragment>
-        <Styles.IndividualProductCardContainer>
+        <Styles.IndividualProductGridContainer>
           <hgroup>
             <Styles.Img src={imageUrl} alt={description} />
             <h3>{title}</h3>
@@ -81,7 +81,7 @@ function OutputIndividualProduct() {
               </Styles.CartButtonLink>
             </Styles.CartLinkButtonContainer>
           </Styles.IndividualProductCardBody>
-        </Styles.IndividualProductCardContainer>
+        </Styles.IndividualProductGridContainer>
       </React.Fragment>
     );
   }

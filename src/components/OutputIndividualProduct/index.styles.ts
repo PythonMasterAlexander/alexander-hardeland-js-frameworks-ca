@@ -1,6 +1,5 @@
 import styled from "styled-components";
-export const IndividualProductCardContainer = styled.article`
-  background-color: #005e9b;
+export const IndividualProductGridContainer = styled.article`
   border-radius: 0.375rem;
   display: grid;
   grid-gap: 1.5rem;
@@ -11,9 +10,7 @@ export const IndividualProductCardContainer = styled.article`
 
 export const PriceInformationContainer = styled.div``;
 
-export const IndividualProductCardBody = styled.section`
-  grid-column: 2;
-`;
+export const IndividualProductCardBody = styled.section``;
 
 export const CartLinkButtonContainer = styled.div`
   align-self: end;
