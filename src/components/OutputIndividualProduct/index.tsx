@@ -44,12 +44,14 @@ function OutputIndividualProduct() {
     return (
       <React.Fragment>
         <Styles.IndividualProductGridContainer>
+          <Styles.ImageContainer>
+            <Styles.ProductImage src={imageUrl} alt={description} />
+          </Styles.ImageContainer>
           <hgroup>
-            <Styles.Img src={imageUrl} alt={description} />
             <h3>{title}</h3>
             <p>{description}</p>
           </hgroup>
-          <Styles.IndividualProductCardBody>
+          <Styles.IndividualProductBody>
             <div>
               <h4>Product Review</h4>
               {isReviewOnProduct ? (
@@ -80,7 +82,7 @@ function OutputIndividualProduct() {
                 Add to cart
               </Styles.CartButtonLink>
             </Styles.CartLinkButtonContainer>
-          </Styles.IndividualProductCardBody>
+          </Styles.IndividualProductBody>
         </Styles.IndividualProductGridContainer>
       </React.Fragment>
     );

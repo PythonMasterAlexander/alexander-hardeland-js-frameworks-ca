@@ -1,16 +1,24 @@
 import styled from "styled-components";
+import { devices } from "../../styles/constants/devices";
 export const IndividualProductGridContainer = styled.article`
-  border-radius: 0.375rem;
   display: grid;
-  grid-gap: 1.5rem;
-  padding: 1rem;
-  max-width: 80%;
-  margin: 0 auto;
+  @media only screen and ${devices.lg} {
+    grid-template-columns: minmax(auto, 1fr) minmax(auto, 1fr);
+  }
 `;
 
-export const PriceInformationContainer = styled.div``;
+export const PriceInformationContainer = styled.div`
+  align-self: end;
+`;
 
-export const IndividualProductCardBody = styled.section``;
+export const IndividualProductBody = styled.section`
+  grid-column: 2 / 3;
+`;
+
+export const ImageContainer = styled.section`
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+`;
 
 export const CartLinkButtonContainer = styled.div`
   align-self: end;
@@ -19,10 +27,16 @@ export const CartLinkButtonContainer = styled.div`
   text-align: center;
   padding: 1rem 0;
 `;
-export const Img = styled.img`
-  max-width: 100%;
+export const ProductImage = styled.img`
+  max-width: 60%;
   object-fit: contain;
   grid-column: 1;
+  @media only screen and ${devices.xl} {
+    max-width: 50%;
+  }
+  @media only screen and ${devices.xs} and (max-width: 1200px) {
+    max-width: 70%;
+  }
 `;
 
 export const CartButtonLink = styled.button`
