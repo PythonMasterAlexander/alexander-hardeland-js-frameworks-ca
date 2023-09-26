@@ -21,6 +21,7 @@ const GlobalStyles = createGlobalStyle`
     --page-border-radius: 5px;
     --button-padding-horizontal: 15px;
     --search-background-color: hsla(220, 36%, 21%, 1);
+    --main-heading-responsive-font-size: clamp(1.75rem, 1vw + 3vw, 3.125rem);
   }
 
   html {

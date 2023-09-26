@@ -1,3 +1,4 @@
+import * as React from "react";
 interface ProductsInCart {
   id: number;
   price: number;
@@ -7,13 +8,15 @@ interface ProductsInCart {
 }
 function ShowProductsInCart(productsInCart: Array<ProductsInCart>) {
   return (
-    <div>
-      <ul>
-        {productsInCart.map((productInCart) => (
-          <li key={productInCart.id}>{productInCart.title}</li>
-        ))}
-      </ul>
-    </div>
+    <React.Fragment>
+      <div>
+        <ul>
+          {productsInCart.map((productInCart) => (
+            <li key={productInCart.id}>{productInCart.title}</li>
+          ))}
+        </ul>
+      </div>
+    </React.Fragment>
   );
 }
 export default ShowProductsInCart;

@@ -48,8 +48,8 @@ export const ProductCardTextHeading = styled.h2`
   margin-bottom: 1rem;
 `;
 
-export const HeadingOne = styled.h1`
-  color: red;
+export const HomePageHeading = styled.h1`
+  font-size: var(--main-heading-responsive-font-size);
 `;
 
 export const SearchProductText = styled.span`

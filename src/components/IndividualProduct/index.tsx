@@ -1,3 +1,4 @@
+import * as React from "react";
 import * as Styles from "./index.styles";
 import NotFoundPage from "../../pages/NotFoundPage";
 import GetIndividualProductData from "./GetIndividualProductData";
@@ -41,7 +42,7 @@ function IndividualProduct() {
     }
 
     return (
-      <>
+      <React.Fragment>
         <Styles.IndividualProductCardContainer>
           <Styles.Img src={imageUrl} alt={description} />
           <Styles.IndividualProductCardBody>
@@ -79,7 +80,7 @@ function IndividualProduct() {
             </Styles.ButtonLink>
           </Styles.IndividualLinkButtonContainer>
         </Styles.IndividualProductCardContainer>
-      </>
+      </React.Fragment>
     );
   }
 }

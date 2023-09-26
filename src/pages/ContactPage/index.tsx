@@ -1,3 +1,4 @@
+import * as React from "react";
 import * as ReactHookForm from "react-hook-form";
 import * as Styles from "./index.styles";
 import * as yup from "yup";
@@ -37,7 +38,7 @@ function ContactPage() {
   };
 
   return (
-    <>
+    <React.Fragment>
       <Styles.ContactPageGridContainer>
         <Styles.ContactPageInformationContainer>
           <Styles.InformationContainerHeading>
@@ -120,7 +121,7 @@ function ContactPage() {
           </form>
         </Styles.ContactPageFormContainer>
       </Styles.ContactPageGridContainer>
-    </>
+    </React.Fragment>
   );
 }
 export default ContactPage;

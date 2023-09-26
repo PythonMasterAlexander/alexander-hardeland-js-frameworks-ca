@@ -33,7 +33,7 @@ function HomePage() {
 
   function OutputProductOnHomePage() {
     return (
-      <>
+      <React.Fragment>
         {filteredProducts.map((product) => (
           <Styles.ProductCardContainer key={product.id}>
             <hgroup>
@@ -57,7 +57,7 @@ function HomePage() {
             </Styles.ProductCardLinkContainer>
           </Styles.ProductCardContainer>
         ))}
-      </>
+      </React.Fragment>
     );
   }
 
@@ -73,7 +73,7 @@ function HomePage() {
           />
         </Styles.SearchProductFlexContainer>
       </Styles.HomePageSearchProductContainer>
-      <Styles.HeadingOne>Hello from the home page</Styles.HeadingOne>
+      <Styles.HomePageHeading>Welcome to Us</Styles.HomePageHeading>
       <Styles.HomePageMainContainer>
         <OutputProductOnHomePage />
       </Styles.HomePageMainContainer>
