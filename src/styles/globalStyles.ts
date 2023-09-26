@@ -19,6 +19,7 @@ const GlobalStyles = createGlobalStyle`
     --input-padding-horizontal: 10px;
     --page-border-radius: 5px;
     --button-padding-horizontal: 15px;
+    --search-background-color: hsla(220, 36%, 21%, 1);
   }
 
   html {
