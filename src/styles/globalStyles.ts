@@ -1,24 +1,36 @@
 import { createGlobalStyle } from "styled-components";
-
 const GlobalStyles = createGlobalStyle`
-  h1, h2, h3, h4, h5, h6 {
+  h1, h2, h3, h4, h5, h6, legend {
     font-family: 'Roboto Mono', monospace;
   }
 
-  p, a, span {
+  p, a, span, button {
     font-family: 'Lato', sans-serif;
   }
 
-  html, body, #root {
+  html, body, #root, form {
     height: 100%;
   }
 
+  :root {
+    --background-color: hsla(200, 60%, 70%, 0.4);
+    --button-background-color: hsla(0, 0%, 100%, 1);
+    --input-padding-vertical: 7px;
+    --input-padding-horizontal: 10px;
+    --page-border-radius: 5px;
+    --button-padding-horizontal: 15px;
+  }
+
   html {
-    background: hsla(200, 60%, 70%, 0.4);
+    background: var(--background-color);
   }
 
   li {
     list-style-type: none;
+  }
+
+  button {
+    background: none;
   }
 
   * {
@@ -26,11 +38,14 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-size: 1rem;
   }
   
   header, footer {
     padding-block: min(20vh, 3.375rem);
+  }
+
+  form input, form textarea {
+    display: block;
   }
 
   footer span {
@@ -43,5 +58,4 @@ const GlobalStyles = createGlobalStyle`
     flex-direction: column;
   }
 `;
-
 export default GlobalStyles;
