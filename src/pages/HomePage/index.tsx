@@ -50,11 +50,11 @@ function HomePage() {
                 {product.description}
               </Styles.ProductCardText>
             </Styles.ProductCardBody>
-            <Styles.ProductCardLinkContainer>
-              <Styles.ProductCardButtonLink to={`/product/${product.id}`}>
+            <Styles.ProductLinkContainer>
+              <Styles.ProductButtonLink to={`/product/${product.id}`}>
                 View product
-              </Styles.ProductCardButtonLink>
-            </Styles.ProductCardLinkContainer>
+              </Styles.ProductButtonLink>
+            </Styles.ProductLinkContainer>
           </Styles.ProductCardContainer>
         ))}
       </React.Fragment>

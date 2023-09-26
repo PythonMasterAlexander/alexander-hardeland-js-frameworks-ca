@@ -5,7 +5,9 @@ import * as Styles from "./index.styles";
 function ProductPage() {
   return (
     <React.Fragment>
-      <Styles.HeadingOne>Hello From Product Page</Styles.HeadingOne>
+      <Styles.ProductPageHeading>
+        Hello From Product Page
+      </Styles.ProductPageHeading>
       <section>
         <IndividualProduct />
       </section>

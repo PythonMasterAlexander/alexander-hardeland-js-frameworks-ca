@@ -44,10 +44,12 @@ function IndividualProduct() {
     return (
       <React.Fragment>
         <Styles.IndividualProductCardContainer>
-          <Styles.Img src={imageUrl} alt={description} />
-          <Styles.IndividualProductCardBody>
+          <hgroup>
+            <Styles.Img src={imageUrl} alt={description} />
             <h3>{title}</h3>
             <p>{description}</p>
+          </hgroup>
+          <Styles.IndividualProductCardBody>
             <div>
               <h4>Product Review</h4>
               {isReviewOnProduct ? (
@@ -60,25 +62,25 @@ function IndividualProduct() {
                 <p>There are no reviews for this product</p>
               )}
             </div>
+            <Styles.PriceInformationContainer>
+              <h5>Product price</h5>
+              <div>
+                <span>Price</span>
+                <span>{isDiscount ? discountedPrice : price}</span>
+              </div>
+              <div>
+                <p>Your discount on this purchase</p>
+                <span>{isDiscount ? discountedDifference : noDiscount}</span>
+              </div>
+            </Styles.PriceInformationContainer>
+            <Styles.CartLinkButtonContainer>
+              <Styles.CartButtonLink
+                onClick={() => addProductToCartStore(individualProductData)}
+              >
+                Add to cart
+              </Styles.CartButtonLink>
+            </Styles.CartLinkButtonContainer>
           </Styles.IndividualProductCardBody>
-          <Styles.IndividualPriceInformationContainer>
-            <h5>Product price</h5>
-            <div>
-              <h6>Price</h6>
-              <p>{isDiscount ? discountedPrice : price}</p>
-            </div>
-            <div>
-              <h6>Your discount on this purchase</h6>
-              <p>{isDiscount ? discountedDifference : noDiscount}</p>
-            </div>
-          </Styles.IndividualPriceInformationContainer>
-          <Styles.IndividualLinkButtonContainer>
-            <Styles.ButtonLink
-              onClick={() => addProductToCartStore(individualProductData)}
-            >
-              Add to cart
-            </Styles.ButtonLink>
-          </Styles.IndividualLinkButtonContainer>
         </Styles.IndividualProductCardContainer>
       </React.Fragment>
     );

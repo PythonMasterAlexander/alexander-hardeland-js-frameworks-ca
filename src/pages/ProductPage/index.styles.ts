@@ -1,5 +1,5 @@
 import styled from "styled-components";
 
-export const HeadingOne = styled.h1`
-  text-align: center;
+export const ProductPageHeading = styled.h1`
+  font-size: var(--main-heading-responsive-font-size);
 `;

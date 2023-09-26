@@ -29,7 +29,7 @@ export const ProductCardContainer = styled.article`
   width: 100%;
 `;
 
-export const ProductCardLinkContainer = styled.div`
+export const ProductLinkContainer = styled.div`
   border-radius: 0.375rem;
   background-color: #ffffff;
   text-align: center;
@@ -87,7 +87,7 @@ export const ProductCardText = styled.p`
   font-size: clamp(0.75rem, 1vw + 2vw, 1.3rem);
 `;
 
-export const ProductCardButtonLink = styled(Link)`
+export const ProductButtonLink = styled(Link)`
   color: #000000;
   font-family: "Lato", sans-serif;
   font-weight: bold;
