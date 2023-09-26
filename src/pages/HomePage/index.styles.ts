@@ -52,9 +52,26 @@ export const HeadingOne = styled.h1`
   color: red;
 `;
 
-export const SearchProductText = styled.span``;
+export const SearchProductText = styled.span`
+  font-size: clamp(1rem, 1vw + 3vw, 1.313rem);
+  font-weight: 700;
+  color: white;
+  background: var(--search-background-color);
+  border-radius: var(--page-border-radius) 0 0 var(--page-border-radius);
+  padding: var(--input-padding-horizontal) var(--input-padding-vertical);
+`;
 
-export const SearchProductInputField = styled.input``;
+export const SearchProductInputField = styled.input`
+  flex-grow: 2;
+  border-radius: 0 var(--page-border-radius) var(--page-border-radius) 0;
+  padding-left: var(--input-padding-vertical);
+
+  &:focus {
+    outline-color: var(--search-background-color);
+    outline-style: solid;
+    outline-width: 2px;
+  }
+`;
 
 export const Img = styled.img`
   height: 9.375rem;

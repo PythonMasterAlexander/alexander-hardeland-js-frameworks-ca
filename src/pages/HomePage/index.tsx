@@ -65,7 +65,11 @@ function HomePage() {
       <Styles.HomePageSearchProductContainer>
         <Styles.SearchProductFlexContainer>
           <Styles.SearchProductText>Search</Styles.SearchProductText>
-          <Styles.SearchProductInputField onChange={HandleInputChange} />
+          <Styles.SearchProductInputField
+            type="text"
+            placeholder="For products"
+            onChange={HandleInputChange}
+          />
         </Styles.SearchProductFlexContainer>
       </Styles.HomePageSearchProductContainer>
       <Styles.HeadingOne>Hello from the home page</Styles.HeadingOne>
