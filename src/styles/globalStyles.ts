@@ -14,12 +14,16 @@ const GlobalStyles = createGlobalStyle`
 
   :root {
     --background-color: hsla(200, 60%, 70%, 0.4);
+    --card-product-background-color: hsla(220, 36%, 21%, 1);
     --button-background-color: hsla(0, 0%, 100%, 1);
     --input-padding-vertical: 7px;
     --input-padding-horizontal: 10px;
     --page-border-radius: 5px;
     --button-padding-horizontal: 15px;
     --search-background-color: hsla(220, 36%, 21%, 1);
+    --main-heading-responsive-font-size: clamp(1.75rem, 1vw + 3vw, 3.125rem);
+    --second-heading-responsive-font-size: clamp(1.3rem, 1vw + 2vw, 1.5rem);
+    --third-heading-responsive-font-size: clamp(1rem, 1vw + 2vw, 1.3rem);
   }
 
   html {
@@ -52,6 +56,10 @@ const GlobalStyles = createGlobalStyle`
   footer span {
     font-size: 0.938rem;
     padding-right: 0.75rem;
+  }
+
+  .product-review__list-container li {
+    margin-bottom: 0.375rem;
   }
 
   #root {

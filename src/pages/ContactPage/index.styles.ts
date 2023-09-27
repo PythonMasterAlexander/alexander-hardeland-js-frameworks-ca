@@ -47,7 +47,7 @@ export const FormContainerFieldsetFlexContainer = styled.fieldset`
 
 export const InformationContainerHeading = styled.h1`
   padding-bottom: 1.5rem;
-  font-size: clamp(1.75rem, 1vw + 3vw, 3.125rem);
+  font-size: var(--main-heading-responsive-font-size);
 `;
 
 export const FormContainerHeading = styled.legend`

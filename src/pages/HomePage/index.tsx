@@ -31,32 +31,33 @@ function HomePage() {
     }
   });
 
-  function FilteredProductCard() {
+  function OutputProductOnHomePage() {
     return (
-      <>
+      <React.Fragment>
         {filteredProducts.map((product) => (
           <Styles.ProductCardContainer key={product.id}>
-            <Styles.Img
-              className="product-image"
-              src={product.imageUrl}
-              alt={product.description}
-            />
-            <Styles.ProductCardBody>
-              <Styles.HeadingTwo className="card-title">
+            <hgroup>
+              <Styles.ProductImage
+                src={product.imageUrl}
+                alt={product.description}
+              />
+              <Styles.ProductCardTextHeading>
                 {product.title}
-              </Styles.HeadingTwo>
-              <Styles.CardText className="card-info">
+              </Styles.ProductCardTextHeading>
+            </hgroup>
+            <Styles.ProductCardBody>
+              <Styles.ProductCardText>
                 {product.description}
-              </Styles.CardText>
+              </Styles.ProductCardText>
             </Styles.ProductCardBody>
-            <Styles.LinkButtonContainer>
-              <Styles.ButtonLink to={`/product/${product.id}`}>
+            <Styles.ProductLinkContainer>
+              <Styles.ProductButtonLink to={`/product/${product.id}`}>
                 View product
-              </Styles.ButtonLink>
-            </Styles.LinkButtonContainer>
+              </Styles.ProductButtonLink>
+            </Styles.ProductLinkContainer>
           </Styles.ProductCardContainer>
         ))}
-      </>
+      </React.Fragment>
     );
   }
 
@@ -72,9 +73,9 @@ function HomePage() {
           />
         </Styles.SearchProductFlexContainer>
       </Styles.HomePageSearchProductContainer>
-      <Styles.HeadingOne>Hello from the home page</Styles.HeadingOne>
+      <Styles.HomePageHeading>Welcome to Us</Styles.HomePageHeading>
       <Styles.HomePageMainContainer>
-        <FilteredProductCard />
+        <OutputProductOnHomePage />
       </Styles.HomePageMainContainer>
     </React.Fragment>
   );

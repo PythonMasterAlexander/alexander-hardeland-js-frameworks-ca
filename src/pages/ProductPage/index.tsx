@@ -1,14 +1,11 @@
-import IndividualProduct from "../../components/IndividualProduct";
-import * as Styles from "./index.styles";
+import * as React from "react";
+import OutputIndividualProduct from "../../components/OutputIndividualProduct";
 
 function ProductPage() {
   return (
-    <>
-      <Styles.HeadingOne>Hello From Product Page</Styles.HeadingOne>
-      <section>
-        <IndividualProduct />
-      </section>
-    </>
+    <React.Fragment>
+      <OutputIndividualProduct />
+    </React.Fragment>
   );
 }
 export default ProductPage;
