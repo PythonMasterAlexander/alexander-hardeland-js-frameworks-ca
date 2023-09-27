@@ -5,7 +5,6 @@ export const HomePageMainContainer = styled.section`
   justify-content: space-between;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 1.5rem;
-
   @media (max-width: 1240px) {
     grid-template-columns: repeat(3, 1fr);
   }

@@ -4,6 +4,7 @@ import { breakpoints } from "../../styles/constants/breakpoints";
 export const IndividualProductGridContainer = styled.article`
   display: grid;
   grid-gap: 1.5rem;
+  padding-block: clamp(1rem, 1vw + 3vw, 6rem);
   @media only screen and ${devices.lg} {
     grid-template-columns: minmax(auto, 1fr) minmax(auto, 1fr);
   }
