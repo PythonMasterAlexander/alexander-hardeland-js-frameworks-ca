@@ -48,8 +48,10 @@ function OutputIndividualProduct() {
             <Styles.ProductImage src={imageUrl} alt={description} />
           </Styles.ImageContainer>
           <hgroup>
-            <h1>{title}</h1>
-            <p>{description}</p>
+            <Styles.ProductItemHeading>{title}</Styles.ProductItemHeading>
+            <Styles.ProductItemDescription>
+              {description}
+            </Styles.ProductItemDescription>
           </hgroup>
           <Styles.ProductBodyFlexContainer>
             <div>
