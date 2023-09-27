@@ -43,7 +43,7 @@ export const SearchProductFlexContainer = styled.div`
 `;
 
 export const ProductCardTextHeading = styled.h2`
-  font-size: clamp(1.3rem, 1vw + 2vw, 1.5rem);
+  font-size: var(--second-heading-responsive-font-size);
   letter-spacing: -0.031rem;
   margin-bottom: 1rem;
 `;

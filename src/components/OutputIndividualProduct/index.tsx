@@ -55,7 +55,9 @@ function OutputIndividualProduct() {
           </hgroup>
           <Styles.ProductBodyFlexContainer>
             <div>
-              <h2>Product Review</h2>
+              <Styles.ProductItemReviewHeading>
+                Product Review
+              </Styles.ProductItemReviewHeading>
               {isReviewOnProduct ? (
                 <ShowProductReview
                   username={reviewUserName}
@@ -67,14 +69,20 @@ function OutputIndividualProduct() {
               )}
             </div>
             <Styles.PriceInformationContainer>
-              <h3>Product price</h3>
+              <Styles.ProductItemPriceHeading>
+                Product price
+              </Styles.ProductItemPriceHeading>
               <div>
-                <span>Price</span>
-                <span>{isDiscount ? discountedPrice : price}</span>
+                <span>
+                  <strong>Price :</strong>{" "}
+                  {isDiscount ? discountedPrice : price} $
+                </span>
               </div>
               <div>
-                <p>Your discount on this purchase</p>
-                <span>{isDiscount ? discountedDifference : noDiscount}</span>
+                <p>
+                  <strong>Discount :</strong>
+                  {isDiscount ? discountedDifference : noDiscount} $
+                </p>
               </div>
             </Styles.PriceInformationContainer>
             <Styles.CartLinkButtonContainer>

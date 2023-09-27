@@ -3,6 +3,7 @@ import { devices } from "../../styles/constants/devices";
 import { breakpoints } from "../../styles/constants/breakpoints";
 export const IndividualProductGridContainer = styled.article`
   display: grid;
+  grid-gap: 1.5rem;
   @media only screen and ${devices.lg} {
     grid-template-columns: minmax(auto, 1fr) minmax(auto, 1fr);
   }
@@ -22,6 +23,7 @@ export const ProductBodyFlexContainer = styled.section`
   grid-column: 2 / 3;
   justify-content: space-between;
   display: flex;
+  gap: 1.5rem;
   flex-direction: column;
   @media only screen and ${devices.xs} and (max-width: ${breakpoints.lg}) {
     grid-row: 3 / 4;
@@ -61,6 +63,16 @@ export const ProductItemDescription = styled.p`
   font-size: clamp(1rem, 1vw + 3vw, 1.313rem);
   line-height: min(2rem, 7vw);
   letter-spacing: 0.06rem;
+`;
+
+export const ProductItemReviewHeading = styled.h2`
+  font-size: var(--second-heading-responsive-font-size);
+  padding-bottom: 0.375rem;
+`;
+
+export const ProductItemPriceHeading = styled.h3`
+  font-size: var(--third-heading-responsive-font-size);
+  padding-bottom: 0.375rem;
 `;
 
 export const CartButtonLink = styled.button`

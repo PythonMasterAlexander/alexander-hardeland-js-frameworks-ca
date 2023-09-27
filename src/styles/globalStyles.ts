@@ -22,6 +22,8 @@ const GlobalStyles = createGlobalStyle`
     --button-padding-horizontal: 15px;
     --search-background-color: hsla(220, 36%, 21%, 1);
     --main-heading-responsive-font-size: clamp(1.75rem, 1vw + 3vw, 3.125rem);
+    --second-heading-responsive-font-size: clamp(1.3rem, 1vw + 2vw, 1.5rem);
+    --third-heading-responsive-font-size: clamp(1rem, 1vw + 2vw, 1.3rem);
   }
 
   html {
