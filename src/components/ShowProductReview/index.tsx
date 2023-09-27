@@ -1,4 +1,5 @@
 import * as React from "react";
+import * as Styles from "./index.styles";
 interface reviewData {
   username: string;
   rating: number;
@@ -8,17 +9,21 @@ function ShowProductReview(review: reviewData) {
   return (
     <React.Fragment>
       <div>
-        <ul>
+        <ul className="product-review__list-container">
           <li>
-            <span>
+            <Styles.ProductReviewStrongMarkedTextHeader>
               <strong>Username :</strong> {review.username}
-            </span>
-            <p>
+            </Styles.ProductReviewStrongMarkedTextHeader>
+          </li>
+          <li>
+            <Styles.ProductReviewText>
               <strong>Description :</strong> {review.description}
-            </p>
-            <span>
+            </Styles.ProductReviewText>
+          </li>
+          <li>
+            <Styles.ProductReviewStrongMarkedTextHeader>
               <strong>Rating :</strong> {review.rating}
-            </span>
+            </Styles.ProductReviewStrongMarkedTextHeader>
           </li>
         </ul>
       </div>

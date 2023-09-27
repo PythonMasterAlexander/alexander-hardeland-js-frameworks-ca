@@ -33,10 +33,9 @@ export const ProductBodyFlexContainer = styled.section`
 `;
 
 export const CartLinkButtonContainer = styled.div`
-  background-color: #ffffff;
+  background: var(--button-background-color);
   border-radius: 0.375rem;
   text-align: center;
-  padding: 1rem 0;
 `;
 
 export const ImageContainer = styled.section`
@@ -47,11 +46,20 @@ export const ImageContainer = styled.section`
   grid-row: 1 / 3;
   @media only screen and ${devices.xs} and (max-width: ${breakpoints.lg}) {
     grid-row: 2 / 3;
+    justify-content: flex-start;
   }
+`;
+
+export const PriceInformationFlexContainer = styled.ul`
+  display: flex;
+  gap: 0.75rem;
 `;
 
 export const ProductImage = styled.img`
   max-width: 40%;
+  @media only screen and (max-width: 500px) {
+    max-width: 70%;
+  }
 `;
 
 export const ProductItemHeading = styled.h1`
@@ -75,10 +83,20 @@ export const ProductItemPriceHeading = styled.h3`
   padding-bottom: 0.375rem;
 `;
 
+export const ProductPriceListItemText = styled.span`
+  font-size: clamp(0.7rem, 1vw + 2vw, 1rem);
+`;
+
+export const NoReviewText = styled.p`
+  font-size: var(--third-heading-responsive-font-size);
+`;
+
 export const CartButtonLink = styled.button`
   color: #000000;
   text-decoration: none;
   text-transform: uppercase;
   font-family: "Lato", sans-serif;
   font-weight: bold;
+  padding-block: 1rem;
+  /*Create cursor of pointer*/
 `;

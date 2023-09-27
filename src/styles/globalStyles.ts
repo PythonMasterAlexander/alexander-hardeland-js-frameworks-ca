@@ -58,6 +58,10 @@ const GlobalStyles = createGlobalStyle`
     padding-right: 0.75rem;
   }
 
+  .product-review__list-container li {
+    margin-bottom: 0.375rem;
+  }
+
   #root {
     display: flex;
     flex-direction: column;
