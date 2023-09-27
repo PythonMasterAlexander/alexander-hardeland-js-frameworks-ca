@@ -5,37 +5,51 @@ export const IndividualProductGridContainer = styled.article`
   @media only screen and ${devices.lg} {
     grid-template-columns: minmax(auto, 1fr) minmax(auto, 1fr);
   }
+  @media only screen and ${devices.xs} and (max-width: 992px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 50% 1fr 1fr;
+  }
 `;
 
 export const PriceInformationContainer = styled.div`
-  align-self: end;
+  @media only screen and ${devices.xs} and (max-width: 992px) {
+    grid-row: 2 / 3;
+  }
 `;
 
-export const IndividualProductBody = styled.section`
+export const ProductBodyFlexContainer = styled.section`
   grid-column: 2 / 3;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  @media only screen and ${devices.xs} and (max-width: 992px) {
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
+    gap: 0.75rem;
+  }
 `;
 
 export const ImageContainer = styled.section`
   grid-column: 1 / 2;
   grid-row: 1 / 3;
+  @media only screen and ${devices.xs} and (max-width: 992px) {
+    grid-row: 1 / 2;
+  }
 `;
 
 export const CartLinkButtonContainer = styled.div`
-  align-self: end;
   background-color: #ffffff;
   border-radius: 0.375rem;
   text-align: center;
   padding: 1rem 0;
 `;
 export const ProductImage = styled.img`
-  max-width: 60%;
-  object-fit: contain;
-  grid-column: 1;
+  max-width: 70%;
   @media only screen and ${devices.xl} {
-    max-width: 50%;
+    max-width: 80%;
   }
-  @media only screen and ${devices.xs} and (max-width: 1200px) {
-    max-width: 70%;
+  @media only screen and ${devices.xs} and (max-width: 992px) {
+    max-width: 50%;
   }
 `;
 

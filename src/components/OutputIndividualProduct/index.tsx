@@ -51,7 +51,7 @@ function OutputIndividualProduct() {
             <h3>{title}</h3>
             <p>{description}</p>
           </hgroup>
-          <Styles.IndividualProductBody>
+          <Styles.ProductBodyFlexContainer>
             <div>
               <h4>Product Review</h4>
               {isReviewOnProduct ? (
@@ -82,7 +82,7 @@ function OutputIndividualProduct() {
                 Add to cart
               </Styles.CartButtonLink>
             </Styles.CartLinkButtonContainer>
-          </Styles.IndividualProductBody>
+          </Styles.ProductBodyFlexContainer>
         </Styles.IndividualProductGridContainer>
       </React.Fragment>
     );
