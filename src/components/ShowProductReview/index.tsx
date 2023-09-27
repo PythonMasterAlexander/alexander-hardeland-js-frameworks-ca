@@ -10,8 +10,8 @@ function ShowProductReview(review: reviewData) {
       <div>
         <ul>
           <li>
-            <h5>Username: {review.username}</h5>
-            <p>Rating: {review.rating}</p>
+            <h4>Username: {review.username}</h4>
+            <span>Rating: {review.rating}</span>
             <p>Description: {review.description}</p>
           </li>
         </ul>

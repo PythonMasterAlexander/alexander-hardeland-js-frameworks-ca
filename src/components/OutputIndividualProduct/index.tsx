@@ -48,12 +48,12 @@ function OutputIndividualProduct() {
             <Styles.ProductImage src={imageUrl} alt={description} />
           </Styles.ImageContainer>
           <hgroup>
-            <h3>{title}</h3>
+            <h1>{title}</h1>
             <p>{description}</p>
           </hgroup>
           <Styles.ProductBodyFlexContainer>
             <div>
-              <h4>Product Review</h4>
+              <h2>Product Review</h2>
               {isReviewOnProduct ? (
                 <ShowProductReview
                   username={reviewUserName}
@@ -65,7 +65,7 @@ function OutputIndividualProduct() {
               )}
             </div>
             <Styles.PriceInformationContainer>
-              <h5>Product price</h5>
+              <h3>Product price</h3>
               <div>
                 <span>Price</span>
                 <span>{isDiscount ? discountedPrice : price}</span>
