@@ -7,18 +7,16 @@ function OutputShoppingCart() {
   const total: number = getPricesFromCart(cartStore);
   return (
     <React.Fragment>
-      <ul>
-        {cartStore.map((productInCart) => (
-          <li key={productInCart.id}>
-            <img src={productInCart.imageUrl} alt={productInCart.description} />
-            <h3>{productInCart.title}</h3>
-            <span>{productInCart.price}</span>
-          </li>
-        ))}
-      </ul>
-      <h4>Total</h4>
-      <p>{total}</p>
-      <Styles.RemoveProductButton>Remove product</Styles.RemoveProductButton>
+      {cartStore.map((productInCart) => (
+        <div key={productInCart.id}>
+          <img src={productInCart.imageUrl} alt={productInCart.description} />
+          <h3>{productInCart.title}</h3>
+          <span>{productInCart.price}</span>
+        </div>
+      ))}
+      <span>Total</span>
+      <span>{total}</span>
+      <button>Remove product</button>
     </React.Fragment>
   );
 }

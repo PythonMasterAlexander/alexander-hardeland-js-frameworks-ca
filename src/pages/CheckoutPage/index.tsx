@@ -7,19 +7,40 @@ function CheckoutPage() {
   const clearAllProductsFromCartStore = UseCartStore(
     (state) => state.clearAllProductsFromCartStore
   );
+  const numberOfProductsInCart = UseCartStore(
+    (state) => state.numberOfProductsInCartStore
+  );
+  console.log(numberOfProductsInCart);
   return (
     <React.Fragment>
       <Styles.ShoppingCartFlexContainer>
-        <h1>Hello From the Checkout page</h1>
-        <OutputShoppingCart />
-        <Styles.IndividualLinkButtonContainer>
-          <Styles.ClearCartButton
-            onClick={() => clearAllProductsFromCartStore()}
-          >
-            Clear shopping cart
-          </Styles.ClearCartButton>
-        </Styles.IndividualLinkButtonContainer>
-        <Link to="/checkout-was-success">Checkout</Link>
+        <Styles.ShoppingCartContainer>
+          <Styles.ShoppingCartHeader>Shopping Cart</Styles.ShoppingCartHeader>
+          <Styles.NumberOfProductsInCartText>
+            {numberOfProductsInCart} items
+          </Styles.NumberOfProductsInCartText>
+          <Styles.ShoppingCartListFlexContainer>
+            <li>
+              <OutputShoppingCart />
+            </li>
+          </Styles.ShoppingCartListFlexContainer>
+          <Styles.ShoppingCartClearCartContainer>
+            <Styles.ClearCartButton
+              onClick={() => clearAllProductsFromCartStore()}
+            >
+              Clear shopping cart
+            </Styles.ClearCartButton>
+          </Styles.ShoppingCartClearCartContainer>
+          <Styles.ShoppingCartContinueShoppingContainer>
+            <Link to="/">Continue Shopping</Link>
+          </Styles.ShoppingCartContinueShoppingContainer>
+        </Styles.ShoppingCartContainer>
+        <Styles.OrderSummaryContainer>
+          <h2>Order Summary</h2>
+          <Styles.OrderSummaryCheckoutContainer>
+            <Link to="/checkout-was-success">Checkout</Link>
+          </Styles.OrderSummaryCheckoutContainer>
+        </Styles.OrderSummaryContainer>
       </Styles.ShoppingCartFlexContainer>
     </React.Fragment>
   );
