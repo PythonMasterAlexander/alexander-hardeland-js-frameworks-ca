@@ -2,11 +2,9 @@ import * as React from "react";
 import * as Styles from "./index.styles";
 import UseCartStore from "./UseCartStore";
 import getPricesFromCart from "./getPricesFromCart";
-
 function OutputShoppingCart() {
   const cartStore = UseCartStore((state) => state.cartStore);
   const total: number = getPricesFromCart(cartStore);
-
   return (
     <React.Fragment>
       <ul>
