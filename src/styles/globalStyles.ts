@@ -13,6 +13,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   :root {
+    --black-text-color: hsla(0,0%, 0%, 1);
     --background-color: hsla(200, 60%, 70%, 0.4);
     --card-product-background-color: hsla(220, 36%, 21%, 1);
     --button-background-color: hsla(0, 0%, 100%, 1);
@@ -30,6 +31,14 @@ const GlobalStyles = createGlobalStyle`
 
   html {
     background: var(--background-color);
+  }
+
+  h1 {
+    font-size: var(--main-heading-responsive-font-size);
+  }
+
+  h2 {
+    font-size: var(--second-heading-responsive-font-size);
   }
 
   li {

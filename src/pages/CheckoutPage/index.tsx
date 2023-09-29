@@ -28,11 +28,14 @@ function CheckoutPage() {
       <Styles.ShoppingCartFlexContainer>
         <Styles.ShoppingCartContainer>
           <Styles.ShoppingCartHeader>Shopping Cart</Styles.ShoppingCartHeader>
-          <Styles.NumberOfProductsInCartText>
-            {numberOfProductsInCart} item
-          </Styles.NumberOfProductsInCartText>
           <Styles.ShoppingCartListFlexContainer>
-            {isCartEmpty ? <h2>Empty Cart</h2> : <OutputShoppingCart />}
+            {isCartEmpty ? (
+              <Styles.IfCartIsEmptyHeading>
+                Empty Cart
+              </Styles.IfCartIsEmptyHeading>
+            ) : (
+              <OutputShoppingCart />
+            )}
           </Styles.ShoppingCartListFlexContainer>
           <Styles.ContinueShoppingContainer>
             <i className="fa-solid fa-arrow-left fa-xl"></i>
@@ -45,17 +48,30 @@ function CheckoutPage() {
           <h2>Order Summary</h2>
           <Styles.SummaryInformationBeforeCheckout>
             <ul>
-              <li>
-                <span>ITEMS {numberOfProductsInCart}</span>
-              </li>
-              <li>
-                <span>Your discount</span>
-                <span>{totalDiscountPrice}</span>
-              </li>
-              <li>
-                <span>Total</span>
-                <span>{totalPrice}</span>
-              </li>
+              <Styles.SummaryInformationListItem>
+                <Styles.SummaryInformationListItemText>
+                  ITEMS
+                </Styles.SummaryInformationListItemText>
+                <Styles.SummaryInformationListItemPrice>
+                  {numberOfProductsInCart}
+                </Styles.SummaryInformationListItemPrice>
+              </Styles.SummaryInformationListItem>
+              <Styles.SummaryInformationListItem>
+                <Styles.SummaryInformationListItemText>
+                  Your discount
+                </Styles.SummaryInformationListItemText>
+                <Styles.SummaryInformationListItemPrice>
+                  {totalDiscountPrice}
+                </Styles.SummaryInformationListItemPrice>
+              </Styles.SummaryInformationListItem>
+              <Styles.SummaryInformationListItem>
+                <Styles.SummaryInformationListItemText>
+                  Total
+                </Styles.SummaryInformationListItemText>
+                <Styles.SummaryInformationListItemPrice>
+                  {totalPrice}
+                </Styles.SummaryInformationListItemPrice>
+              </Styles.SummaryInformationListItem>
             </ul>
           </Styles.SummaryInformationBeforeCheckout>
           <Styles.ClearCartContainer>
