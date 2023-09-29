@@ -33,7 +33,9 @@ export const ClearCartContainer = styled.div`
   text-align: center;
   cursor: pointer;
 `;
-export const ContinueShoppingContainer = styled.div``;
+export const ContinueShoppingContainer = styled.div`
+  margin-top: 1.5rem;
+`;
 export const SummaryInformationBeforeCheckout = styled.div`
   flex: 2;
 `;
