@@ -15,6 +15,7 @@ export const ShoppingCartContainer = styled.section`
 `;
 export const ShoppingCartListFlexContainer = styled.ul`
   display: flex;
+  gap: 1.5rem;
   flex-direction: column;
 `;
 export const OrderSummaryContainer = styled.section`

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 export const ProductListItemContainer = styled.div`
   display: flex;
+  background: var(--cart-list-item-background-color);
   justify-content: space-between;
   align-items: center;
 `;
@@ -9,7 +10,7 @@ export const ListItemProductHeading = styled.h2`
 `;
 export const ListItemProductImage = styled.img`
   width: 70px;
-  height: fit-content;
+  height: auto;
 `;
 export const ListItemPriceText = styled.h3`
   font-size: var(--list-item-product-font-size);
