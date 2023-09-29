@@ -19,10 +19,16 @@ export const ShoppingCartListFlexContainer = styled.ul`
 `;
 export const OrderSummaryContainer = styled.section`
   flex-shrink: 1;
+  justify-content: flex-end;
+  display: flex;
+  flex-direction: column;
 `;
-export const OrderSummaryCheckoutContainer = styled.div``;
-export const ShoppingCartClearCartContainer = styled.div``;
-export const ShoppingCartContinueShoppingContainer = styled.div``;
+export const ClearCartContainer = styled.div``;
+export const ContinueShoppingContainer = styled.div``;
+export const SummaryInformationBeforeCheckout = styled.div`
+  flex: 2;
+`;
+export const CheckoutContainer = styled.div``;
 
 export const ButtonLink = styled(Link)`
   color: #000000;
