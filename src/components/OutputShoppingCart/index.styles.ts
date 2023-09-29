@@ -4,6 +4,7 @@ export const ProductListItemContainer = styled.div`
   background: var(--cart-list-item-background-color);
   justify-content: space-between;
   align-items: center;
+  padding: 0.8rem;
 `;
 export const ListItemProductHeading = styled.h2`
   font-size: var(--list-item-product-font-size);

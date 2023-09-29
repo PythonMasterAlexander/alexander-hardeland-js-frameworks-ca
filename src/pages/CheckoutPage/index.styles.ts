@@ -31,15 +31,12 @@ export const SummaryInformationBeforeCheckout = styled.div`
 `;
 export const CheckoutContainer = styled.div``;
 
-export const ButtonLink = styled(Link)`
-  color: #000000;
+export const ContinueShoppingButtonLink = styled(Link)`
   text-decoration: none;
-  text-transform: uppercase;
-  font-family: "Lato", sans-serif;
-  font-weight: bold;
-  padding: 1rem;
 `;
-
+export const CheckoutButtonLink = styled(Link)`
+  text-decoration: none;
+`;
 export const ClearCartButton = styled.button`
   display: block;
 `;

@@ -3,7 +3,6 @@ import * as Styles from "./index.styles";
 import OutputShoppingCart from "../../components/OutputShoppingCart";
 import UseCartStore from "../../components/OutputShoppingCart/UseCartStore";
 import getPricesFromCart from "../../components/OutputShoppingCart/getPricesFromCart";
-import { Link } from "react-router-dom";
 function CheckoutPage() {
   const clearAllProductsFromCartStore = UseCartStore(
     (state) => state.clearAllProductsFromCartStore
@@ -11,6 +10,10 @@ function CheckoutPage() {
   const numberOfProductsInCart = UseCartStore(
     (state) => state.numberOfProductsInCartStore
   );
+  let isCartEmpty: boolean = false;
+  if (!numberOfProductsInCart) {
+    isCartEmpty = true;
+  }
   const cartStore = UseCartStore((state) => state.cartStore);
   let discountPriceNumber: number = 0;
   for (let i = 0; i < cartStore.length; i++) {
@@ -29,10 +32,13 @@ function CheckoutPage() {
             {numberOfProductsInCart} item
           </Styles.NumberOfProductsInCartText>
           <Styles.ShoppingCartListFlexContainer>
-            <OutputShoppingCart />
+            {isCartEmpty ? <h2>Empty Cart</h2> : <OutputShoppingCart />}
           </Styles.ShoppingCartListFlexContainer>
           <Styles.ContinueShoppingContainer>
-            <Link to="/">Continue Shopping</Link>
+            <i className="fa-solid fa-arrow-left fa-xl"></i>
+            <Styles.ContinueShoppingButtonLink to="/">
+              Continue Shopping
+            </Styles.ContinueShoppingButtonLink>
           </Styles.ContinueShoppingContainer>
         </Styles.ShoppingCartContainer>
         <Styles.OrderSummaryContainer>
@@ -60,7 +66,9 @@ function CheckoutPage() {
             </Styles.ClearCartButton>
           </Styles.ClearCartContainer>
           <Styles.CheckoutContainer>
-            <Link to="/checkout-was-success">Checkout</Link>
+            <Styles.CheckoutButtonLink to="/checkout-was-success">
+              Checkout
+            </Styles.CheckoutButtonLink>
           </Styles.CheckoutContainer>
         </Styles.OrderSummaryContainer>
       </Styles.ShoppingCartFlexContainer>
