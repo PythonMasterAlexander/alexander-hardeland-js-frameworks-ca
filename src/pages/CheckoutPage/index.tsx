@@ -17,12 +17,10 @@ function CheckoutPage() {
         <Styles.ShoppingCartContainer>
           <Styles.ShoppingCartHeader>Shopping Cart</Styles.ShoppingCartHeader>
           <Styles.NumberOfProductsInCartText>
-            {numberOfProductsInCart} items
+            {numberOfProductsInCart} item
           </Styles.NumberOfProductsInCartText>
           <Styles.ShoppingCartListFlexContainer>
-            <li>
-              <OutputShoppingCart />
-            </li>
+            <OutputShoppingCart />
           </Styles.ShoppingCartListFlexContainer>
           <Styles.ShoppingCartClearCartContainer>
             <Styles.ClearCartButton

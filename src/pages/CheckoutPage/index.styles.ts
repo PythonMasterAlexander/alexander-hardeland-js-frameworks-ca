@@ -4,21 +4,21 @@ import { breakpoints } from "../../styles/constants/breakpoints";
 import { devices } from "../../styles/constants/devices";
 export const ShoppingCartFlexContainer = styled.section`
   display: flex;
+  gap: 1.5rem;
   @media only screen and (max-width: ${breakpoints.lg}) {
     flex-direction: column;
   }
 `;
 export const ShoppingCartContainer = styled.section`
   position: relative;
-  padding: 1.5rem;
   flex: 1;
 `;
 export const ShoppingCartListFlexContainer = styled.ul`
   display: flex;
+  flex-direction: column;
 `;
 export const OrderSummaryContainer = styled.section`
-  flex: 1;
-  padding: 1.5rem;
+  flex-shrink: 1;
 `;
 export const OrderSummaryCheckoutContainer = styled.div``;
 export const ShoppingCartClearCartContainer = styled.div``;
@@ -42,6 +42,6 @@ export const ShoppingCartHeader = styled.h1`
 `;
 export const NumberOfProductsInCartText = styled.span`
   position: absolute;
-  top: 1.875rem;
+  top: 0;
   right: 0;
 `;

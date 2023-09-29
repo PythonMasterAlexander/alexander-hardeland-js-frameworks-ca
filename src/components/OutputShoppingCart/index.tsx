@@ -8,15 +8,29 @@ function OutputShoppingCart() {
   return (
     <React.Fragment>
       {cartStore.map((productInCart) => (
-        <div key={productInCart.id}>
-          <img src={productInCart.imageUrl} alt={productInCart.description} />
-          <h3>{productInCart.title}</h3>
-          <span>{productInCart.price}</span>
-        </div>
+        <li key={productInCart.id}>
+          <Styles.ProductListItemContainer>
+            <div>
+              <Styles.ListItemProductImage
+                src={productInCart.imageUrl}
+                alt={productInCart.description}
+              />
+            </div>
+            <div>
+              <Styles.ListItemProductHeading>
+                {productInCart.title}
+              </Styles.ListItemProductHeading>
+            </div>
+            <div>
+              <Styles.ListItemPriceHeading>Price</Styles.ListItemPriceHeading>
+              <span>{productInCart.price}$</span>
+            </div>
+            <div>
+              <button>Remove</button>
+            </div>
+          </Styles.ProductListItemContainer>
+        </li>
       ))}
-      <span>Total</span>
-      <span>{total}</span>
-      <button>Remove product</button>
     </React.Fragment>
   );
 }
