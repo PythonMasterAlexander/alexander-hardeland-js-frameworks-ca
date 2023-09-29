@@ -19,16 +19,16 @@ function OutputShoppingCart() {
                 {productInCart.title}
               </Styles.ListItemProductHeading>
             </div>
-            <div>
+            <Styles.RemoveOnMobile>
               <Styles.ListItemPriceText>Price</Styles.ListItemPriceText>
               <span>{productInCart.price}$</span>
-            </div>
-            <div>
+            </Styles.RemoveOnMobile>
+            <Styles.RemoveOnMobile>
               <Styles.ListItemPriceText>Discount</Styles.ListItemPriceText>
               <span>
                 {productInCart.price - productInCart.discountedPrice}$
               </span>
-            </div>
+            </Styles.RemoveOnMobile>
             <div>
               <button>Remove</button>
             </div>

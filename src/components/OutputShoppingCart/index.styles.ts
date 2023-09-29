@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { breakpoints } from "../../styles/constants/breakpoints";
 export const ProductListItemContainer = styled.div`
   display: flex;
   background: var(--cart-list-item-background-color);
@@ -15,4 +16,9 @@ export const ListItemProductImage = styled.img`
 `;
 export const ListItemPriceText = styled.h3`
   font-size: var(--list-item-product-font-size);
+`;
+export const RemoveOnMobile = styled.div`
+  @media only screen and (max-width: ${breakpoints.sm}) {
+    display: none;
+  }
 `;
