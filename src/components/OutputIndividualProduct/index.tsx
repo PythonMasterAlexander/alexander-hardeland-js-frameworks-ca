@@ -2,7 +2,7 @@ import * as React from "react";
 import * as Styles from "./index.styles";
 import NotFoundPage from "../../pages/NotFoundPage";
 import GetIndividualProductData from "./GetIndividualProductData";
-import UseCartStore from "../ShoppingCart/UseCartStore";
+import UseCartStore from "../OutputShoppingCart/UseCartStore";
 import ShowProductReview from "../ShowProductReview";
 import checkForReview from "./checkForReview";
 import checkForDiscount from "./checkForDiscount";
