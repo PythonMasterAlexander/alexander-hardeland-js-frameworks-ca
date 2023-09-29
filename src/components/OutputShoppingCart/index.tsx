@@ -20,8 +20,14 @@ function OutputShoppingCart() {
               </Styles.ListItemProductHeading>
             </div>
             <div>
-              <Styles.ListItemPriceHeading>Price</Styles.ListItemPriceHeading>
+              <Styles.ListItemPriceText>Price</Styles.ListItemPriceText>
               <span>{productInCart.price}$</span>
+            </div>
+            <div>
+              <Styles.ListItemPriceText>Discount</Styles.ListItemPriceText>
+              <span>
+                {productInCart.price - productInCart.discountedPrice}$
+              </span>
             </div>
             <div>
               <button>Remove</button>

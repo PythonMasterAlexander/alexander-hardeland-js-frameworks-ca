@@ -12,9 +12,14 @@ function CheckoutPage() {
     (state) => state.numberOfProductsInCartStore
   );
   const cartStore = UseCartStore((state) => state.cartStore);
+  let discountPriceNumber: number = 0;
+  for (let i = 0; i < cartStore.length; i++) {
+    const discount: number = cartStore[i].price - cartStore[i].discountedPrice;
+    discountPriceNumber += discount;
+  }
+  const totalDiscountPrice: string = discountPriceNumber.toFixed(2);
   const returnPriceNumber: number = getPricesFromCart(cartStore);
   const totalPrice: string = returnPriceNumber.toFixed(2);
-
   return (
     <React.Fragment>
       <Styles.ShoppingCartFlexContainer>
@@ -39,6 +44,7 @@ function CheckoutPage() {
               </li>
               <li>
                 <span>Your discount</span>
+                <span>{totalDiscountPrice}</span>
               </li>
               <li>
                 <span>Total</span>

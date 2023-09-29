@@ -11,6 +11,6 @@ export const ListItemProductImage = styled.img`
   width: 70px;
   height: fit-content;
 `;
-export const ListItemPriceHeading = styled.h3`
+export const ListItemPriceText = styled.h3`
   font-size: var(--list-item-product-font-size);
 `;
