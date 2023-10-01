@@ -1,6 +1,5 @@
 import * as React from "react";
 import { ThemeProvider } from "styled-components";
-
 interface Theme {
   color: {
     buttonBackgroundColor: string;

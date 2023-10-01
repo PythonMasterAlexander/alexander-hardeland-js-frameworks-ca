@@ -5,7 +5,6 @@ const justifyStartOnMediumAndBelow = `
   @media only screen and (${devices.md}) and (max-width: 1199px) {
     justify-self: start;
   }
-
   @media only screen and (${devices.xs}) and (max-width: 767px) {
     justify-self: start;
   }
@@ -37,7 +36,6 @@ export const FooterContactContainer = style.section`
   justify-self: center;
   ${justifyStartOnMediumAndBelow}
 `;
-
 export const GoToTopContainer = style.section`
   justify-self: end;
   ${justifyStartOnMediumAndBelow}

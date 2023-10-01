@@ -7,11 +7,11 @@ import ShowProductReview from "../ShowProductReview";
 import checkForReview from "./checkForReview";
 import checkForDiscount from "./checkForDiscount";
 import { useParams } from "react-router-dom";
-
 function OutputIndividualProduct() {
   const noDiscount = "No discount";
   const dollarSymbol = " $";
   const { id } = useParams();
+
   const { isLoading, individualProductData, isError } =
     GetIndividualProductData(id);
 
@@ -41,7 +41,6 @@ function OutputIndividualProduct() {
       reviewRating = reviews[i].rating;
       reviewDescription = reviews[i].description;
     }
-
     return (
       <React.Fragment>
         <Styles.IndividualProductGridContainer>

@@ -7,7 +7,6 @@ interface Product {
   price: number;
   reviews: Array<object>;
 }
-
 function getPricesFromCart(cartStore: Array<Product>) {
   let totalPrice: number = 0;
   let totalDiscountedPrice: number = 0;

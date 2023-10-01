@@ -1,5 +1,4 @@
 import * as React from "react";
-
 function GetIndividualProductData(id: string | undefined) {
   const url: string = `https://api.noroff.dev/api/v1/online-shop/${id}`;
   interface ApiReturnData {
@@ -19,7 +18,6 @@ function GetIndividualProductData(id: string | undefined) {
 
   const [individualProductData, setIndividualProductData] =
     React.useState<ApiReturnData | null>(null);
-
   const [isLoading, setIsLoading] = React.useState(false);
   const [isError, setIsError] = React.useState(false);
 
@@ -40,7 +38,6 @@ function GetIndividualProductData(id: string | undefined) {
     }
     getApiData();
   }, [id]);
-
   return { individualProductData, isLoading, isError };
 }
 export default GetIndividualProductData;
