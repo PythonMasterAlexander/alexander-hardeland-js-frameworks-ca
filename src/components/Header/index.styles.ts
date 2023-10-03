@@ -26,9 +26,3 @@ export const CartIconContainer = styled.section`
     align-self: flex-start;
   }
 `;
-export const MobileHamburgerNavigationContainer = styled.span`
-  margin-right: 1.5rem;
-  @media only screen and ${devices.md} {
-    display: none;
-  }
-`;

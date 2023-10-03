@@ -2,7 +2,6 @@ import * as React from "react";
 import * as Styles from "./index.styles";
 import Nav from "../Nav";
 import CartIcon from "../CartIcon";
-import MobileNavigationMenu from "../MobileNavigationMenu";
 function Header() {
   return (
     <React.Fragment>
@@ -32,14 +31,6 @@ function Header() {
             <Nav />
           </Styles.PageLinkNavigationContainer>
           <Styles.CartIconContainer>
-            <Styles.MobileHamburgerNavigationContainer>
-              <i
-                className="fa-solid fa-bars fa-2xl"
-                role="img"
-                aria-label="Hamburger symbol the user can push click to get into the menu when the user are on mobile or tablet format"
-              ></i>
-              <MobileNavigationMenu />
-            </Styles.MobileHamburgerNavigationContainer>
             <CartIcon />
           </Styles.CartIconContainer>
         </Styles.HeaderFlexContainer>
