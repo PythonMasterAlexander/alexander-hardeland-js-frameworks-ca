@@ -2,6 +2,7 @@ import * as React from "react";
 import * as Styles from "./index.styles";
 import Nav from "../Nav";
 import CartIcon from "../CartIcon";
+import MobileNavigationMenu from "../MobileNavigationMenu";
 function Header() {
   return (
     <React.Fragment>
@@ -27,6 +28,8 @@ function Header() {
               />
             </svg>
           </section>
+          <MobileNavigationMenu />
+          <section></section>
           <Styles.PageLinkNavigationContainer>
             <Nav />
           </Styles.PageLinkNavigationContainer>
