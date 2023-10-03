@@ -28,8 +28,6 @@ function Header() {
               />
             </svg>
           </section>
-          <MobileNavigationMenu />
-          <section></section>
           <Styles.PageLinkNavigationContainer>
             <Nav />
           </Styles.PageLinkNavigationContainer>
@@ -40,6 +38,7 @@ function Header() {
                 role="img"
                 aria-label="Hamburger symbol the user can push click to get into the menu when the user are on mobile or tablet format"
               ></i>
+              <MobileNavigationMenu />
             </Styles.MobileHamburgerNavigationContainer>
             <CartIcon />
           </Styles.CartIconContainer>
