@@ -3,8 +3,11 @@ import * as Styles from "./index.styles";
 function Nav() {
   return (
     <React.Fragment>
-      <section>
-        <input type="checkbox" id="toggle-mobile-menu" />
+      <Styles.MobileNavigationContainer>
+        <Styles.HamburgerMenuClickOnIcon
+          type="checkbox"
+          id="toggle-mobile-menu"
+        />
         <label htmlFor="toggle-mobile-menu">
           <i
             className="fa-solid fa-bars fa-2xl"
@@ -12,8 +15,8 @@ function Nav() {
             aria-label="Hamburger symbol the user can push click to get into the menu when the user are on mobile or tablet format"
           ></i>
         </label>
-      </section>
-      <nav>
+      </Styles.MobileNavigationContainer>
+      <Styles.LargeScreenNavigationSection>
         <Styles.UnorderedListLinkContainer>
           <Styles.LinkListItem>
             <Styles.LinkStyle to="/">Home</Styles.LinkStyle>
@@ -22,7 +25,7 @@ function Nav() {
             <Styles.LinkStyle to="/contact">Contact</Styles.LinkStyle>
           </Styles.LinkListItem>
         </Styles.UnorderedListLinkContainer>
-      </nav>
+      </Styles.LargeScreenNavigationSection>
     </React.Fragment>
   );
 }
