@@ -11,9 +11,16 @@ export const LargeScreenNavigationSection = style.section`
     display: none;
   }
 `;
-export const MobileNavigation = style.nav``;
+export const MobileNavigation = style.nav`
+  position: fixed;
+  top: 0;
+  left: -250px;
+`;
 export const HamburgerMenuClickOnIcon = style.input`
   display: none;
+  &:checked + ${MobileNavigation} {
+    left: 0;
+  }
 `;
 export const UnorderedListLinkContainer = style.ul``;
 export const LinkListItem = style.li`
