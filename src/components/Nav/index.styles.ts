@@ -11,7 +11,10 @@ export const LargeScreenNavigationSection = style.section`
     display: none;
   }
 `;
-export const HamburgerMenuClickOnIcon = style.input``;
+export const MobileNavigation = style.nav``;
+export const HamburgerMenuClickOnIcon = style.input`
+  display: none;
+`;
 export const UnorderedListLinkContainer = style.ul``;
 export const LinkListItem = style.li`
   display: inline-block;

@@ -16,9 +16,6 @@ export const HeaderFlexContainer = styled.div`
 `;
 export const PageLinkNavigationContainer = styled.section`
   align-self: flex-end;
-  @media only screen and (${devices.xs}) and (max-width: 768px) {
-    display: none;
-  }
 `;
 export const CartIconContainer = styled.section`
   align-self: center;

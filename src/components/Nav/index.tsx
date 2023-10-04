@@ -1,5 +1,6 @@
 import * as React from "react";
 import * as Styles from "./index.styles";
+import { Link } from "react-router-dom";
 function Nav() {
   return (
     <React.Fragment>
@@ -15,6 +16,16 @@ function Nav() {
             aria-label="Hamburger symbol the user can push click to get into the menu when the user are on mobile or tablet format"
           ></i>
         </label>
+        <Styles.MobileNavigation>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/contact">Contact</Link>
+            </li>
+          </ul>
+        </Styles.MobileNavigation>
       </Styles.MobileNavigationContainer>
       <Styles.LargeScreenNavigationSection>
         <Styles.UnorderedListLinkContainer>
