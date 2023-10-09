@@ -10,9 +10,6 @@ function CheckoutPage() {
   const numberOfProductsInCart = UseCartStore(
     (state) => state.numberOfProductsInCartStore
   );
-  //Create a function that removes a single product from the cart,
-  //const removeSingleProductFromCartStore = UseCartStore()
-  //
   let isCartEmpty: boolean = false;
   if (!numberOfProductsInCart) {
     isCartEmpty = true;
