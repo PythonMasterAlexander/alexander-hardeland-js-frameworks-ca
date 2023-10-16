@@ -1,6 +1,7 @@
 import * as React from "react";
 import * as Styles from "./index.styles";
-import Nav from "../Nav";
+import LargeScreenNavigation from "../LargeScreenNavigation";
+import MobileNavigation from "../MobileNavigation";
 import CartIcon from "../CartIcon";
 function Header() {
   return (
@@ -28,7 +29,7 @@ function Header() {
             </svg>
           </section>
           <Styles.PageLinkNavigationContainer>
-            <Nav />
+            <LargeScreenNavigation />
           </Styles.PageLinkNavigationContainer>
           <Styles.CartIconContainer>
             <CartIcon />

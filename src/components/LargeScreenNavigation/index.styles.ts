@@ -1,28 +1,11 @@
 import style from "styled-components";
 import { devices } from "../../styles/constants/devices";
 import { Link } from "react-router-dom";
-export const MobileNavigationContainer = style.section`
-  @media only screen and (${devices.md}) {
-    display: none;
-  }
-`;
 export const LargeScreenNavigationSection = style.section`
   @media only screen and (${devices.xs}) and (max-width: 768px) {
     display: none;
   }
 `;
-export const MobileNavigation = style.nav`
-  position: fixed;
-  top: 0;
-  left: -250px;
-`;
-export const HamburgerMenuClickOnIcon = style.input`
-  display: none;
-  &:checked + ${MobileNavigation} {
-    left: 0;
-  }
-`;
-export const UnorderedListLinkContainer = style.ul``;
 export const LinkListItem = style.li`
   display: inline-block;
   padding-right: 0.75rem; 
