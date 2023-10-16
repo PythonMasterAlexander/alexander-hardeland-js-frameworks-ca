@@ -17,10 +17,13 @@ function OutputShoppingCart() {
   const removeSingleProduct = UseCartStore(
     (state) => state.removeProductFromCartStore
   );
+
+  /*
   const handleRemoveSingleProduct = (product: Array<Product>) => {
     removeSingleProduct(product);
   };
   console.log(cartStore);
+  */
   return (
     <React.Fragment>
       {cartStore.map((productInCart) => (
@@ -48,7 +51,7 @@ function OutputShoppingCart() {
               </span>
             </Styles.RemoveOnMobile>
             <div>
-              <button onClick={() => handleRemoveSingleProduct()}>
+              <button /*onClick={() => handleRemoveSingleProduct()}*/>
                 Remove
               </button>
             </div>
