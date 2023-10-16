@@ -82,7 +82,10 @@ function CheckoutPage() {
             </Styles.ClearCartButton>
           </Styles.ClearCartContainer>
           <Styles.CheckoutContainer>
-            <Styles.CheckoutButtonLink to="/checkout-was-success">
+            <Styles.CheckoutButtonLink
+              to="/checkout-was-success"
+              onClick={() => clearAllProductsFromCartStore()}
+            >
               Checkout
             </Styles.CheckoutButtonLink>
           </Styles.CheckoutContainer>
