@@ -16,19 +16,10 @@ export const HeaderFlexContainer = styled.div`
 `;
 export const PageLinkNavigationContainer = styled.section`
   align-self: flex-end;
-  @media only screen and (${devices.xs}) and (max-width: 768px) {
-    display: none;
-  }
 `;
 export const CartIconContainer = styled.section`
   align-self: center;
   @media only screen and (max-width: 490px) {
     align-self: flex-start;
-  }
-`;
-export const MobileHamburgerNavigationContainer = styled.span`
-  margin-right: 1.5rem;
-  @media only screen and ${devices.md} {
-    display: none;
   }
 `;
