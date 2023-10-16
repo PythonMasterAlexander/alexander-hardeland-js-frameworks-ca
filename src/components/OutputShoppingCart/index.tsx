@@ -3,8 +3,6 @@ import * as Styles from "./index.styles";
 import UseCartStore from "./UseCartStore";
 function OutputShoppingCart() {
   const cartStore = UseCartStore((state) => state.cartStore);
-  //Create a function that removes a single product from the cart,
-  //const removeSingleProductFromCartStore = UseCartStore()
   interface Product {
     id: string;
     title: string;
@@ -18,12 +16,9 @@ function OutputShoppingCart() {
     (state) => state.removeProductFromCartStore
   );
 
-  /*
-  const handleRemoveSingleProduct = (product: Array<Product>) => {
+  const handleRemoveSingleProduct = (product: Product) => {
     removeSingleProduct(product);
   };
-  console.log(cartStore);
-  */
   return (
     <React.Fragment>
       {cartStore.map((productInCart) => (
@@ -51,7 +46,7 @@ function OutputShoppingCart() {
               </span>
             </Styles.RemoveOnMobile>
             <div>
-              <button /*onClick={() => handleRemoveSingleProduct()}*/>
+              <button onClick={() => handleRemoveSingleProduct(productInCart)}>
                 Remove
               </button>
             </div>

@@ -9,19 +9,16 @@ interface Product {
   price: number;
   reviews: Array<object>;
 }
-
 interface CartStore {
   numberOfProductsInCartStore: number;
   cartStore: Array<Product>;
   totalProductPrice: number;
 }
-
 interface CartStoreActions {
   addProductToCartStore: (product: Product) => void;
   removeProductFromCartStore: (productToRemove: Product) => void;
   clearAllProductsFromCartStore: () => void;
 }
-
 const UseCartStore = Zustand.create<CartStore & CartStoreActions>()(
   devtools(
     persist(
@@ -39,7 +36,6 @@ const UseCartStore = Zustand.create<CartStore & CartStoreActions>()(
         clearAllProductsFromCartStore: () =>
           set(() => ({ cartStore: [], numberOfProductsInCartStore: 0 })),
 
-        //Add a filter function that removes one product when the user click the remove product button
         removeProductFromCartStore: (productToRemove) =>
           set((state) => ({
             cartStore: state.cartStore.filter(
