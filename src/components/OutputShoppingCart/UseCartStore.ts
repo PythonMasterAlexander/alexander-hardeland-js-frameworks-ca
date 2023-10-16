@@ -37,12 +37,22 @@ const UseCartStore = Zustand.create<CartStore & CartStoreActions>()(
           set(() => ({ cartStore: [], numberOfProductsInCartStore: 0 })),
 
         removeProductFromCartStore: (productToRemove) =>
-          set((state) => ({
-            cartStore: state.cartStore.filter(
-              (product) => product.id !== productToRemove.id
-            ),
-            numberOfProductsInCartStore: state.cartStore.length - 1,
-          })),
+          set((state) => {
+            const productIndex = state.cartStore.findIndex(
+              (product) => product.id === productToRemove.id
+            );
+
+            if (productIndex !== -1) {
+              const updatedCartStore = [...state.cartStore];
+              updatedCartStore.splice(productIndex, 1);
+
+              return {
+                cartStore: updatedCartStore,
+                numberOfProductsInCartStore: state.cartStore.length - 1,
+              };
+            }
+            return state;
+          }),
       }),
       {
         name: "cartStore",
