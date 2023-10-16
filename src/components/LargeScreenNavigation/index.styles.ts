@@ -1,11 +1,5 @@
 import style from "styled-components";
-import { devices } from "../../styles/constants/devices";
 import { Link } from "react-router-dom";
-export const LargeScreenNavigationSection = style.section`
-  @media only screen and (${devices.xs}) and (max-width: 768px) {
-    display: none;
-  }
-`;
 export const LinkListItem = style.li`
   display: inline-block;
   padding-right: 0.75rem; 
