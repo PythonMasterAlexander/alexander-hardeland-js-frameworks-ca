@@ -1,10 +1,7 @@
 import style from "styled-components";
-export const MobileNavigationContainer = style.section`
-`;
+import { hamburgerOpen } from "./toggleHamburgerOnOff";
 export const MobileNavigation = style.nav`
-  position: fixed;
-  top: 0;
-  left: -250px;
+  display: ${hamburgerOpen ? "inline-block" : "none"};
 `;
 export const HamburgerMenuClickOnIcon = style.input`
   display: none;
