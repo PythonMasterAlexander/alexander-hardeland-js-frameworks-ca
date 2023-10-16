@@ -1,11 +1,16 @@
 import * as React from "react";
 import * as Styles from "./index.styles";
-import toggleHamburgerOnOff from "./toggleHamburgerOnOff";
 import { Link } from "react-router-dom";
 function MobileNavigation() {
+  const [isMobileNavigationClicked, setMobileNavigationClicked] =
+    React.useState(false);
+  function toggleHamburgerMenuOnOff() {
+    setMobileNavigationClicked(!isMobileNavigationClicked);
+  }
   return (
     <React.Fragment>
       <Styles.HamburgerMenuClickOnIcon
+        onClick={toggleHamburgerMenuOnOff}
         type="checkbox"
         id="toggle-mobile-menu"
       />
@@ -16,7 +21,9 @@ function MobileNavigation() {
           aria-label="Hamburger symbol the user can push click to get into the menu when the user are on mobile or tablet format"
         ></i>
       </label>
-      <Styles.MobileNavigation>
+      <Styles.MobileNavigation
+        style={{ display: isMobileNavigationClicked ? "inline" : "none" }}
+      >
         <ul>
           <li>
             <Link to="/">Home</Link>
