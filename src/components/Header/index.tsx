@@ -1,8 +1,24 @@
 import * as React from "react";
 import * as Styles from "./index.styles";
-import Nav from "../Nav";
+import LargeScreenNavigation from "../LargeScreenNavigation";
+import MobileNavigation from "../MobileNavigation";
 import CartIcon from "../CartIcon";
 function Header() {
+  const [isDeviceLargeScreen, setDeviceLargeScreen] = React.useState(
+    window.innerWidth > 768
+  );
+
+  const checkForWindowResize = () => {
+    setDeviceLargeScreen(window.innerWidth > 768);
+  };
+
+  React.useEffect(() => {
+    window.addEventListener("resize", checkForWindowResize);
+    return () => {
+      window.removeEventListener("resize", checkForWindowResize);
+    };
+  }, []);
+
   return (
     <React.Fragment>
       <Styles.PageHeaderContainer>
@@ -28,7 +44,11 @@ function Header() {
             </svg>
           </section>
           <Styles.PageLinkNavigationContainer>
-            <Nav />
+            {isDeviceLargeScreen ? (
+              <LargeScreenNavigation />
+            ) : (
+              <MobileNavigation />
+            )}
           </Styles.PageLinkNavigationContainer>
           <Styles.CartIconContainer>
             <CartIcon />
