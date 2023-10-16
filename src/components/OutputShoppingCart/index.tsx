@@ -21,8 +21,8 @@ function OutputShoppingCart() {
   };
   return (
     <React.Fragment>
-      {cartStore.map((productInCart) => (
-        <li key={productInCart.id}>
+      {cartStore.map((productInCart, index) => (
+        <li key={productInCart.id + index}>
           <Styles.ProductListItemContainer>
             <div>
               <Styles.ListItemProductImage
