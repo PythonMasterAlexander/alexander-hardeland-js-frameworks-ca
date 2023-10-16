@@ -1,6 +1,7 @@
 import * as React from "react";
 import * as Styles from "./index.styles";
 import UseCartStore from "./UseCartStore";
+import generateUniqueKeyOnEachProduct from "./generateUniqueKeyOnEachProduct";
 function OutputShoppingCart() {
   const cartStore = UseCartStore((state) => state.cartStore);
   interface Product {
@@ -21,8 +22,8 @@ function OutputShoppingCart() {
   };
   return (
     <React.Fragment>
-      {cartStore.map((productInCart, index) => (
-        <li key={productInCart.id + index}>
+      {cartStore.map((productInCart) => (
+        <li key={generateUniqueKeyOnEachProduct()}>
           <Styles.ProductListItemContainer>
             <div>
               <Styles.ListItemProductImage
