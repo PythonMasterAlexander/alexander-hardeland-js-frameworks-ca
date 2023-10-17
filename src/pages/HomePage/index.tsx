@@ -1,7 +1,6 @@
 import * as React from "react";
 import * as Styles from "./index.styles";
 import ApiCallData from "./ApiCallData";
-import { PrimaryLinkStyle } from "../../styles/sharedStyles";
 function HomePage() {
   const { products, isLoading, isError } = ApiCallData();
   const [filterValue, setFilterValue] = React.useState<string>("");
@@ -43,9 +42,9 @@ function HomePage() {
               </Styles.ProductCardText>
             </Styles.ProductCardBody>
             <Styles.ProductLinkContainer>
-              <PrimaryLinkStyle to={`/product/${product.id}`}>
+              <Styles.ProductLinkStyle to={`/product/${product.id}`}>
                 View product
-              </PrimaryLinkStyle>
+              </Styles.ProductLinkStyle>
             </Styles.ProductLinkContainer>
           </Styles.ProductCardContainer>
         ))}
