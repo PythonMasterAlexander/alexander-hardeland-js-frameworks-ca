@@ -84,7 +84,7 @@ function OutputIndividualProduct() {
                   <Styles.ProductPriceListItemText>
                     <strong>Discount :</strong>{" "}
                     {isDiscount
-                      ? discountedDifference + dollarSymbol
+                      ? discountedDifference.toFixed(2) + dollarSymbol
                       : noDiscount}
                   </Styles.ProductPriceListItemText>
                 </li>

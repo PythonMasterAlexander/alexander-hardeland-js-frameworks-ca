@@ -15,12 +15,10 @@ function GetIndividualProductData(id: string | undefined) {
       description: string;
     }>;
   }
-
   const [individualProductData, setIndividualProductData] =
     React.useState<ApiReturnData | null>(null);
   const [isLoading, setIsLoading] = React.useState(false);
   const [isError, setIsError] = React.useState(false);
-
   React.useEffect(() => {
     async function getApiData() {
       try {
