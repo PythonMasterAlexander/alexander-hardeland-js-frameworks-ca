@@ -16,7 +16,6 @@ function OutputShoppingCart() {
   const removeSingleProduct = UseCartStore(
     (state) => state.removeProductFromCartStore
   );
-
   const handleRemoveSingleProduct = (product: Product) => {
     removeSingleProduct(product);
   };
