@@ -49,11 +49,11 @@ function OutputShoppingCart() {
                 <span>{calculatedPrice}$</span>
               </Styles.RemoveOnMobile>
               <div>
-                <button
+                <Styles.RemoveSingleProductButton
                   onClick={() => handleRemoveSingleProduct(productInCart)}
                 >
                   Remove
-                </button>
+                </Styles.RemoveSingleProductButton>
               </div>
             </Styles.ProductListItemContainer>
           </li>
