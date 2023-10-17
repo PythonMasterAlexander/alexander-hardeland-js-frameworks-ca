@@ -7,6 +7,10 @@ export const PrimaryButtonContainer = styled.div`
 `;
 export const PrimaryButtonStyle = styled.button`
   color: ${(props) => props.theme.buttons.primary.textColor};
+  padding: ${(props) => props.theme.buttons.primary.padding};
+  font-weight: ${(props) => props.theme.buttons.primary.fontWeight};
+  text-decoration: ${(props) => props.theme.buttons.primary.textDecoration};
+  text-transform: ${(props) => props.theme.buttons.primary.textTransform};
 `;
 export const PrimaryLinkStyle = styled(Link)`
   color: ${(props) => props.theme.buttons.primary.textColor};

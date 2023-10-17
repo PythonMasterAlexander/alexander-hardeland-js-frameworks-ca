@@ -9,6 +9,7 @@ interface themeInterface {
       fontWeight: number;
       textDecoration: string;
       textTransform: string;
+      padding: string;
     };
   };
 }

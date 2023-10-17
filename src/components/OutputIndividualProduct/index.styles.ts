@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { PrimaryButtonStyle } from "../../styles/sharedStyles";
 import { devices } from "../../styles/constants/devices";
 import { breakpoints } from "../../styles/constants/breakpoints";
 export const IndividualProductGridContainer = styled.article`
@@ -29,12 +30,6 @@ export const ProductBodyFlexContainer = styled.section`
     grid-column: 1 / 2;
     gap: 0.75rem;
   }
-`;
-export const CartLinkButtonContainer = styled.div`
-  background: var(--button-background-color);
-  border-radius: 0.375rem;
-  text-align: center;
-  cursor: pointer;
 `;
 export const ImageContainer = styled.section`
   display: flex;
@@ -80,13 +75,7 @@ export const ProductPriceListItemText = styled.span`
 export const NoReviewText = styled.p`
   font-size: var(--third-heading-responsive-font-size);
 `;
-export const CartButtonLink = styled.button`
-  color: #000000;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-family: "Lato", sans-serif;
-  font-weight: bold;
-  padding-block: 1rem;
+export const CartButtonLink = styled(PrimaryButtonStyle)`
   cursor: pointer;
   width: 100%;
 `;

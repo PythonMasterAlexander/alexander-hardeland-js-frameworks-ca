@@ -6,6 +6,7 @@ import UseCartStore from "../OutputShoppingCart/UseCartStore";
 import ShowProductReview from "../ShowProductReview";
 import checkForReview from "./checkForReview";
 import checkForDiscount from "./checkForDiscount";
+import { PrimaryButtonContainer } from "../../styles/sharedStyles";
 import { useParams } from "react-router-dom";
 function OutputIndividualProduct() {
   const noDiscount = "No discount";
@@ -89,13 +90,13 @@ function OutputIndividualProduct() {
                 </li>
               </Styles.PriceInformationFlexContainer>
             </Styles.PriceInformationContainer>
-            <Styles.CartLinkButtonContainer>
+            <PrimaryButtonContainer>
               <Styles.CartButtonLink
                 onClick={() => addProductToCartStore(individualProductData)}
               >
                 Add to cart
               </Styles.CartButtonLink>
-            </Styles.CartLinkButtonContainer>
+            </PrimaryButtonContainer>
           </Styles.ProductBodyFlexContainer>
         </Styles.IndividualProductGridContainer>
       </React.Fragment>

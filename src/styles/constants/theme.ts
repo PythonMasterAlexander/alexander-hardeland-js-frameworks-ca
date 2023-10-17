@@ -10,6 +10,7 @@ export const theme: themeInterface = {
       fontWeight: 700,
       textDecoration: "none",
       textTransform: "uppercase",
+      padding: "var(--button-padding-horizontal) 0",
     },
   },
 };

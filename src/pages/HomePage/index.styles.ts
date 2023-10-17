@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { PrimaryButtonContainer } from "../../styles/sharedStyles";
 export const HomePageMainContainer = styled.section`
   display: grid;
   justify-content: space-between;
@@ -25,11 +26,9 @@ export const ProductCardContainer = styled.article`
   padding: 1rem;
   width: 100%;
 `;
-export const ProductLinkContainer = styled.div`
-  border-radius: 0.375rem;
-  background-color: #ffffff;
-  text-align: center;
-  padding: 1rem 0;
+export const ProductLinkContainer = styled(PrimaryButtonContainer)`
+  cursor: pointer;
+  padding: var(--button-padding-horizontal) 0;
 `;
 export const HomePageSearchProductContainer = styled.section``;
 export const SearchProductFlexContainer = styled.div`
