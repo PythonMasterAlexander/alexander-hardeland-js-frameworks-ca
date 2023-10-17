@@ -6,7 +6,7 @@ export const theme: themeInterface = {
       textColor: "var(--black-text-color)",
       borderRadius: "var(--page-border-radius)",
       textAlign: "center",
-      fontSize: "var(--third-heading-responsive-font-size)",
+      fontSize: "var(--button-font-size)",
       fontWeight: 700,
       textDecoration: "none",
       textTransform: "uppercase",

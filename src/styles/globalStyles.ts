@@ -27,6 +27,7 @@ const GlobalStyles = createGlobalStyle`
     --second-heading-responsive-font-size: clamp(1.3rem, 1vw + 2vw, 1.5rem);
     --third-heading-responsive-font-size: clamp(1rem, 1vw + 2vw, 1.3rem);
     --list-item-product-font-size: clamp(0.6rem, 1vw + 2vw, 1rem);
+    --button-font-size: clamp(1rem, 1vw + 2vw, 1rem);
   }
 
   html {

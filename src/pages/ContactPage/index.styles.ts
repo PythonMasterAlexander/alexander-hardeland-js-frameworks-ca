@@ -1,5 +1,8 @@
 import styled from "styled-components";
-import { PrimaryButtonContainer } from "../../styles/sharedStyles";
+import {
+  PrimaryButtonContainer,
+  PrimaryButtonStyle,
+} from "../../styles/sharedStyles";
 import { devices } from "../../styles/constants/devices";
 export const ContactPageGridContainer = styled.div`
   display: grid;
@@ -87,10 +90,8 @@ export const FormTextAreaField = styled.textarea`
   height: 100px;
   width: 100%;
 `;
-export const FormButton = styled.button`
-  font-weight: 700;
+export const FormButton = styled(PrimaryButtonStyle)`
   cursor: pointer;
-  padding: var(--button-padding-horizontal) 0;
   width: 100%;
   &:hover {
     background: gray;

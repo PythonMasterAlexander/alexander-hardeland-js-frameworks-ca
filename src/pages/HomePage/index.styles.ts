@@ -37,7 +37,9 @@ export const ProductLinkStyle = styled(PrimaryLinkStyle)`
   display: block;
   width: 100%;
 `;
-export const HomePageSearchProductContainer = styled.section``;
+export const HomePageSearchProductContainer = styled.section`
+  margin: 3rem 0;
+`;
 export const SearchProductFlexContainer = styled.div`
   display: flex;
 `;
@@ -48,6 +50,7 @@ export const ProductCardTextHeading = styled.h2`
 `;
 export const HomePageHeading = styled.h1`
   font-size: var(--main-heading-responsive-font-size);
+  margin-bottom: 1.5rem;
 `;
 export const SearchProductText = styled.span`
   font-size: clamp(1rem, 1vw + 3vw, 1.313rem);

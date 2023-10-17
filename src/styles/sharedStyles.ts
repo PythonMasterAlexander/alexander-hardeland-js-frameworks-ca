@@ -11,10 +11,11 @@ export const PrimaryButtonStyle = styled.button`
   font-weight: ${(props) => props.theme.buttons.primary.fontWeight};
   text-decoration: ${(props) => props.theme.buttons.primary.textDecoration};
   text-transform: ${(props) => props.theme.buttons.primary.textTransform};
+  font-size: ${(props) => props.theme.buttons.primary.fontSize};
 `;
 export const PrimaryLinkStyle = styled(Link)`
   color: ${(props) => props.theme.buttons.primary.textColor};
-  font-size: ${(props) => props.theme.buttons.primary.textColor};
+  font-size: ${(props) => props.theme.buttons.primary.fontSize};
   font-weight: ${(props) => props.theme.buttons.primary.fontWeight};
   text-decoration: ${(props) => props.theme.buttons.primary.textDecoration};
   text-transform: ${(props) => props.theme.buttons.primary.textTransform};
