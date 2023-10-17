@@ -38,12 +38,6 @@ function CheckoutPage() {
               <OutputShoppingCart />
             )}
           </Styles.ShoppingCartListFlexContainer>
-          <Styles.ContinueShoppingContainer>
-            <i className="fa-solid fa-arrow-left fa-xl"></i>
-            <Styles.ContinueShoppingButtonLink to="/">
-              Continue Shopping
-            </Styles.ContinueShoppingButtonLink>
-          </Styles.ContinueShoppingContainer>
         </Styles.ShoppingCartContainer>
         <Styles.OrderSummaryContainer>
           <h2>Order Summary</h2>
@@ -92,6 +86,12 @@ function CheckoutPage() {
           </PrimaryButtonContainer>
         </Styles.OrderSummaryContainer>
       </Styles.ShoppingCartFlexContainer>
+      <Styles.ContinueShoppingContainer>
+        <i className="fa-solid fa-arrow-left fa-xl"></i>
+        <Styles.ContinueShoppingButtonLink to="/">
+          Continue Shopping
+        </Styles.ContinueShoppingButtonLink>
+      </Styles.ContinueShoppingContainer>
     </React.Fragment>
   );
 }

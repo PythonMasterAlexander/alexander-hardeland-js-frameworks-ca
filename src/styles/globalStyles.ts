@@ -17,7 +17,7 @@ const GlobalStyles = createGlobalStyle`
     --background-color: hsla(200, 60%, 70%, 0.4);
     --card-product-background-color: hsla(220, 36%, 21%, 1);
     --button-background-color: hsla(0, 0%, 100%, 1);
-    --cart-list-item-background-color: hsla(0, 0%, 20%, 0.5);
+    --cart-list-item-background-color: hsla(0, 0%, 20%, 0.2);
     --input-padding-vertical: 7px;
     --input-padding-horizontal: 10px;
     --page-border-radius: 5px;

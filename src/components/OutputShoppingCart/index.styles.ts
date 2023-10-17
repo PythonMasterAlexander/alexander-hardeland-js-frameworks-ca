@@ -3,6 +3,7 @@ import { breakpoints } from "../../styles/constants/breakpoints";
 export const ProductListItemContainer = styled.div`
   display: flex;
   background: var(--cart-list-item-background-color);
+  border-radius: var(--page-border-radius);
   justify-content: space-between;
   align-items: center;
   padding: 0.8rem;
