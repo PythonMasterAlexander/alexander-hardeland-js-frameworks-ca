@@ -1,17 +1,6 @@
 import * as React from "react";
 import { ThemeProvider } from "styled-components";
-interface Theme {
-  color: {
-    buttonBackgroundColor: string;
-  };
-}
-
-const theme: Theme = {
-  color: {
-    buttonBackgroundColor: "var(--button-background-color)",
-  },
-};
-
+import { theme } from "./constants/theme";
 const ThemeWrapper = ({ children }: { children: React.ReactNode }) => (
   <ThemeProvider theme={theme}>{children}</ThemeProvider>
 );
