@@ -93,9 +93,6 @@ export const FormTextAreaField = styled.textarea`
 export const FormButton = styled(PrimaryButtonStyle)`
   cursor: pointer;
   width: 100%;
-  &:hover {
-    background: gray;
-  }
 `;
 export const FormErrorMessage = styled.span`
   display: block;
