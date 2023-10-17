@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { PrimaryButtonContainer } from "../../styles/sharedStyles";
 import { devices } from "../../styles/constants/devices";
 export const ContactPageGridContainer = styled.div`
   display: grid;
@@ -71,10 +72,7 @@ export const FormTextAreaFlexGrowContainer = styled.div`
   flex-grow: 2;
 `;
 
-export const FormButtonContainer = styled.div`
-  background: ${(props) => props.theme.color.buttonBackgroundColor};
-  border-radius: var(--page-border-radius);
-  text-align: center;
+export const FormButtonContainer = styled(PrimaryButtonContainer)`
   width: 50%;
   @media only screen and (${devices.xs}) and (max-width: 1200px) {
     width: 100%;

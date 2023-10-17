@@ -1,6 +1,10 @@
 import themeInterface from "./themeInterface";
 export const theme: themeInterface = {
-  color: {
-    buttonBackgroundColor: "var(--button-background-color)",
+  buttons: {
+    primary: {
+      background: "var(--button-background-color)",
+      borderRadius: "var(--page-border-radius)",
+      textAlign: "center",
+    },
   },
 };

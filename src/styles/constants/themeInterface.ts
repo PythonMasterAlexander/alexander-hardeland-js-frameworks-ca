@@ -1,6 +1,10 @@
 interface themeInterface {
-  color: {
-    buttonBackgroundColor: string;
+  buttons: {
+    primary: {
+      background: string;
+      borderRadius: string;
+      textAlign: string;
+    };
   };
 }
 export default themeInterface;
