@@ -50,6 +50,10 @@ const GlobalStyles = createGlobalStyle`
     background: none;
   }
 
+  input {
+    font-size: 1rem;
+  }
+
   * {
     border: 0;
     box-sizing: border-box;
