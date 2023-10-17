@@ -3,6 +3,7 @@ import * as Styles from "./index.styles";
 import OutputShoppingCart from "../../components/OutputShoppingCart";
 import UseCartStore from "../../components/OutputShoppingCart/UseCartStore";
 import getPricesFromCart from "../../components/OutputShoppingCart/getPricesFromCart";
+import { PrimaryButtonContainer } from "../../styles/sharedStyles";
 function CheckoutPage() {
   const clearAllProductsFromCartStore = UseCartStore(
     (state) => state.clearAllProductsFromCartStore
@@ -81,14 +82,14 @@ function CheckoutPage() {
               Clear Cart
             </Styles.ClearCartButton>
           </Styles.ClearCartContainer>
-          <Styles.CheckoutContainer>
+          <PrimaryButtonContainer>
             <Styles.CheckoutButtonLink
               to="/checkout-was-success"
               onClick={() => clearAllProductsFromCartStore()}
             >
               Checkout
             </Styles.CheckoutButtonLink>
-          </Styles.CheckoutContainer>
+          </PrimaryButtonContainer>
         </Styles.OrderSummaryContainer>
       </Styles.ShoppingCartFlexContainer>
     </React.Fragment>

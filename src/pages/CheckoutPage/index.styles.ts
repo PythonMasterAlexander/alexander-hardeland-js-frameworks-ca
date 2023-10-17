@@ -1,6 +1,11 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { breakpoints } from "../../styles/constants/breakpoints";
+import {
+  PrimaryButtonContainer,
+  PrimaryButtonStyle,
+  PrimaryLinkStyle,
+} from "../../styles/sharedStyles";
 export const ShoppingCartFlexContainer = styled.section`
   display: flex;
   gap: 1.5rem;
@@ -27,10 +32,7 @@ export const OrderSummaryContainer = styled.section`
   flex-direction: column;
   gap: 1.5rem;
 `;
-export const ClearCartContainer = styled.div`
-  background: var(--button-background-color);
-  border-radius: var(--page-border-radius);
-  text-align: center;
+export const ClearCartContainer = styled(PrimaryButtonContainer)`
   cursor: pointer;
 `;
 export const ContinueShoppingContainer = styled.div`
@@ -39,32 +41,23 @@ export const ContinueShoppingContainer = styled.div`
 export const SummaryInformationBeforeCheckout = styled.div`
   flex: 2;
 `;
-export const CheckoutContainer = styled.div`
-  background: var(--button-background-color);
-  border-radius: var(--page-border-radius);
-  text-align: center;
-`;
 export const ContinueShoppingButtonLink = styled(Link)`
   color: var(--black-text-color);
   font-weight: 700;
   padding-left: 1rem;
 `;
-export const CheckoutButtonLink = styled(Link)`
-  color: var(--black-text-color);
+export const CheckoutButtonLink = styled(PrimaryLinkStyle)`
   padding: var(--button-padding-horizontal) 0;
   display: block;
-  font-weight: 700;
-  text-decoration: none;
   width: 100%;
   height: 100%;
 `;
-export const ClearCartButton = styled.button`
+export const ClearCartButton = styled(PrimaryButtonStyle)`
   padding: var(--input-padding-horizontal) 0;
   font-weight: 700;
   cursor: pointer;
   width: 100%;
 `;
-
 export const ShoppingCartHeader = styled.h1`
   font-size: var(--main-heading-responsive-font-size);
   padding-bottom: 1.5rem;
