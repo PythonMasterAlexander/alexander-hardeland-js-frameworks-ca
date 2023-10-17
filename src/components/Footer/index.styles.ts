@@ -9,10 +9,6 @@ const justifyStartOnMediumAndBelow = `
     justify-self: start;
   }
 `;
-export const PageFooterContainer = style.footer`
-  background: hsla(0, 0%, 20%, 1);
-  color: hsla(0, 100%, 100%, 0.78);
-`;
 export const FooterGridContainer = style.div`
   display: grid;
   row-gap: 2.25rem;

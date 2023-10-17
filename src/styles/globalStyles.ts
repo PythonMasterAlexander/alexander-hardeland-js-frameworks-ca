@@ -17,7 +17,7 @@ const GlobalStyles = createGlobalStyle`
     --background-color: hsla(200, 60%, 70%, 0.4);
     --card-product-background-color: hsla(220, 36%, 21%, 1);
     --button-background-color: hsla(0, 0%, 100%, 1);
-    --cart-list-item-background-color: hsla(0, 0%, 20%, 0.5);
+    --cart-list-item-background-color: hsla(0, 0%, 20%, 0.2);
     --input-padding-vertical: 7px;
     --input-padding-horizontal: 10px;
     --page-border-radius: 5px;
@@ -27,6 +27,9 @@ const GlobalStyles = createGlobalStyle`
     --second-heading-responsive-font-size: clamp(1.3rem, 1vw + 2vw, 1.5rem);
     --third-heading-responsive-font-size: clamp(1rem, 1vw + 2vw, 1.3rem);
     --list-item-product-font-size: clamp(0.6rem, 1vw + 2vw, 1rem);
+    --button-font-size: clamp(1rem, 1vw + 2vw, 1rem);
+    --footer-background-color: hsla(0, 0%, 20%, 1);
+    --footer-text-primary-color: hsla(0, 100%, 100%, 0.78);
   }
 
   html {
@@ -47,6 +50,10 @@ const GlobalStyles = createGlobalStyle`
 
   button {
     background: none;
+  }
+
+  input {
+    font-size: 1rem;
   }
 
   * {

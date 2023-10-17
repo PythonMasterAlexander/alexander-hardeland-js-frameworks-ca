@@ -13,7 +13,6 @@ export const LinkStyle = style(Link)`
   border-radius: 100px;
   background: hsla(220, 36%, 21%, 1);
   &:hover {
-    background: hsla(220, 36%, 21%, 0.8);
     text-decoration: underline;
   }
 `;

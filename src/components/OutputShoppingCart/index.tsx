@@ -16,44 +16,48 @@ function OutputShoppingCart() {
   const removeSingleProduct = UseCartStore(
     (state) => state.removeProductFromCartStore
   );
-
   const handleRemoveSingleProduct = (product: Product) => {
     removeSingleProduct(product);
   };
   return (
     <React.Fragment>
-      {cartStore.map((productInCart) => (
-        <li key={generateUniqueKeyOnEachProduct()}>
-          <Styles.ProductListItemContainer>
-            <div>
-              <Styles.ListItemProductImage
-                src={productInCart.imageUrl}
-                alt={productInCart.description}
-              />
-            </div>
-            <div>
-              <Styles.ListItemProductHeading>
-                {productInCart.title}
-              </Styles.ListItemProductHeading>
-            </div>
-            <Styles.RemoveOnMobile>
-              <Styles.ListItemPriceText>Price</Styles.ListItemPriceText>
-              <span>{productInCart.price}$</span>
-            </Styles.RemoveOnMobile>
-            <Styles.RemoveOnMobile>
-              <Styles.ListItemPriceText>Discount</Styles.ListItemPriceText>
-              <span>
-                {productInCart.price - productInCart.discountedPrice}$
-              </span>
-            </Styles.RemoveOnMobile>
-            <div>
-              <button onClick={() => handleRemoveSingleProduct(productInCart)}>
-                Remove
-              </button>
-            </div>
-          </Styles.ProductListItemContainer>
-        </li>
-      ))}
+      {cartStore.map((productInCart) => {
+        const calculatedPrice = (
+          productInCart.price - productInCart.discountedPrice
+        ).toFixed(2);
+        return (
+          <li key={generateUniqueKeyOnEachProduct()}>
+            <Styles.ProductListItemContainer>
+              <div>
+                <Styles.ListItemProductImage
+                  src={productInCart.imageUrl}
+                  alt={productInCart.description}
+                />
+              </div>
+              <div>
+                <Styles.ListItemProductHeading>
+                  {productInCart.title}
+                </Styles.ListItemProductHeading>
+              </div>
+              <Styles.RemoveOnMobile>
+                <Styles.ListItemPriceText>Price</Styles.ListItemPriceText>
+                <span>{productInCart.price}$</span>
+              </Styles.RemoveOnMobile>
+              <Styles.RemoveOnMobile>
+                <Styles.ListItemPriceText>Discount</Styles.ListItemPriceText>
+                <span>{calculatedPrice}$</span>
+              </Styles.RemoveOnMobile>
+              <div>
+                <Styles.RemoveSingleProductButton
+                  onClick={() => handleRemoveSingleProduct(productInCart)}
+                >
+                  Remove
+                </Styles.RemoveSingleProductButton>
+              </div>
+            </Styles.ProductListItemContainer>
+          </li>
+        );
+      })}
     </React.Fragment>
   );
 }

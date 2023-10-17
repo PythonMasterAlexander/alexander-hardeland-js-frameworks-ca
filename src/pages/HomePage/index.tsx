@@ -1,19 +1,12 @@
 import * as React from "react";
 import * as Styles from "./index.styles";
 import ApiCallData from "./ApiCallData";
-
 function HomePage() {
   const { products, isLoading, isError } = ApiCallData();
-
-  // Filter value will be used as the state to determen the value of the input field
   const [filterValue, setFilterValue] = React.useState<string>("");
-
   const HandleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    // When ever the user write someting in the input field, the value will be set in the filter state
     setFilterValue(event.target.value.trim().toLowerCase());
   };
-
-  // Create a interface for the Products return array when its been filtered out
   interface Product {
     id: string;
     title: string;
@@ -22,7 +15,6 @@ function HomePage() {
     price: number;
     imageUrl: string;
   }
-  // Filter the products array
   const filteredProducts: Product[] = products.filter((product) => {
     const productTitle: string = product.title.trim().toLowerCase();
 
@@ -30,7 +22,6 @@ function HomePage() {
       return product;
     }
   });
-
   function OutputProductOnHomePage() {
     return (
       <React.Fragment>
@@ -51,16 +42,15 @@ function HomePage() {
               </Styles.ProductCardText>
             </Styles.ProductCardBody>
             <Styles.ProductLinkContainer>
-              <Styles.ProductButtonLink to={`/product/${product.id}`}>
+              <Styles.ProductLinkStyle to={`/product/${product.id}`}>
                 View product
-              </Styles.ProductButtonLink>
+              </Styles.ProductLinkStyle>
             </Styles.ProductLinkContainer>
           </Styles.ProductCardContainer>
         ))}
       </React.Fragment>
     );
   }
-
   return (
     <React.Fragment>
       <Styles.HomePageSearchProductContainer>

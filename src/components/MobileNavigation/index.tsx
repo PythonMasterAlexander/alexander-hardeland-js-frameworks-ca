@@ -1,6 +1,6 @@
 import * as React from "react";
 import * as Styles from "./index.styles";
-import { Link } from "react-router-dom";
+import { PrimaryLinkStyle } from "../../styles/sharedStyles";
 function MobileNavigation() {
   const [isMobileNavigationClicked, setMobileNavigationClicked] =
     React.useState(false);
@@ -24,14 +24,14 @@ function MobileNavigation() {
       <Styles.MobileNavigation
         style={{ display: isMobileNavigationClicked ? "inline" : "none" }}
       >
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact</Link>
-          </li>
-        </ul>
+        <Styles.UnorderedListNavigationContainer>
+          <Styles.LinkListItem>
+            <PrimaryLinkStyle to="/">Home</PrimaryLinkStyle>
+          </Styles.LinkListItem>
+          <Styles.LinkListItem>
+            <PrimaryLinkStyle to="/contact">Contact</PrimaryLinkStyle>
+          </Styles.LinkListItem>
+        </Styles.UnorderedListNavigationContainer>
       </Styles.MobileNavigation>
     </React.Fragment>
   );

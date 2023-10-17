@@ -1,10 +1,10 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 export const CheckoutSuccessPageHeader = styled.h1`
-  margin-bottom: 1.5rem;
+  margin: 1.5rem 0;
 `;
 export const GoBackToStoreButton = styled(Link)`
   color: var(--black-text-color);
-  font-weight: 700;
+  font-weight: ${(props) => props.theme.buttons.primary.fontWeight};
   padding-left: 1rem;
 `;

@@ -1,5 +1,8 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import {
+  PrimaryButtonContainer,
+  PrimaryLinkStyle,
+} from "../../styles/sharedStyles";
 export const HomePageMainContainer = styled.section`
   display: grid;
   justify-content: space-between;
@@ -15,11 +18,10 @@ export const HomePageMainContainer = styled.section`
     grid-template-columns: repeat(1, 1fr);
   }
 `;
-
 export const ProductCardContainer = styled.article`
   background-color: var(--card-product-background-color);
   border-radius: 0.375rem;
-  color: #ffffff;
+  color: var(--button-background-color);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -27,30 +29,29 @@ export const ProductCardContainer = styled.article`
   padding: 1rem;
   width: 100%;
 `;
-
-export const ProductLinkContainer = styled.div`
-  border-radius: 0.375rem;
-  background-color: #ffffff;
-  text-align: center;
-  padding: 1rem 0;
+export const ProductLinkContainer = styled(PrimaryButtonContainer)`
+  cursor: pointer;
+  padding: var(--button-padding-horizontal) 0;
 `;
-
-export const HomePageSearchProductContainer = styled.section``;
-
+export const ProductLinkStyle = styled(PrimaryLinkStyle)`
+  display: block;
+  width: 100%;
+`;
+export const HomePageSearchProductContainer = styled.section`
+  margin: 3rem 0;
+`;
 export const SearchProductFlexContainer = styled.div`
   display: flex;
 `;
-
+export const HomePageHeading = styled.h1`
+  font-size: var(--main-heading-responsive-font-size);
+  margin-bottom: 1.5rem;
+`;
 export const ProductCardTextHeading = styled.h2`
   font-size: var(--second-heading-responsive-font-size);
   letter-spacing: -0.031rem;
   margin-bottom: 1rem;
 `;
-
-export const HomePageHeading = styled.h1`
-  font-size: var(--main-heading-responsive-font-size);
-`;
-
 export const SearchProductText = styled.span`
   font-size: clamp(1rem, 1vw + 3vw, 1.313rem);
   font-weight: 700;
@@ -59,38 +60,24 @@ export const SearchProductText = styled.span`
   border-radius: var(--page-border-radius) 0 0 var(--page-border-radius);
   padding: var(--input-padding-horizontal) var(--input-padding-vertical);
 `;
-
 export const SearchProductInputField = styled.input`
   flex-grow: 2;
   border-radius: 0 var(--page-border-radius) var(--page-border-radius) 0;
   padding-left: var(--input-padding-vertical);
-
   &:focus {
     outline-color: var(--search-background-color);
     outline-style: solid;
     outline-width: 2px;
   }
 `;
-
 export const ProductImage = styled.img`
   height: 9.375rem;
   object-fit: contain;
   max-width: 100%;
 `;
-
 export const ProductCardBody = styled.div`
   flex-grow: 1;
 `;
-
 export const ProductCardText = styled.p`
   font-size: clamp(0.75rem, 1vw + 2vw, 1.3rem);
-`;
-
-export const ProductButtonLink = styled(Link)`
-  color: #000000;
-  font-family: "Lato", sans-serif;
-  font-weight: bold;
-  font-size: clamp(1rem, 1vw + 2vw, 1.3rem);
-  text-decoration: none;
-  text-transform: uppercase;
 `;

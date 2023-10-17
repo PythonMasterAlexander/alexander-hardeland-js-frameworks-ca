@@ -1,3 +1,4 @@
-export function clickToGoToTopOfPage() {
+function clickToGoToTopOfPage() {
   document.body.scrollIntoView();
 }
+export default clickToGoToTopOfPage;
