@@ -12,5 +12,9 @@ interface themeInterface {
       padding: string;
     };
   };
+  footer: {
+    background: string;
+    color: string;
+  };
 }
 export default themeInterface;

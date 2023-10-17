@@ -20,3 +20,7 @@ export const PrimaryLinkStyle = styled(Link)`
   text-decoration: ${(props) => props.theme.buttons.primary.textDecoration};
   text-transform: ${(props) => props.theme.buttons.primary.textTransform};
 `;
+export const FooterWrapperStyle = styled.footer`
+  background: ${(props) => props.theme.footer.background};
+  color: ${(props) => props.theme.footer.color};
+`;

@@ -13,4 +13,8 @@ export const theme: themeInterface = {
       padding: "var(--button-padding-horizontal) 0",
     },
   },
+  footer: {
+    background: "var(--footer-background-color)",
+    color: "var(--footer-text-primary-color)",
+  },
 };

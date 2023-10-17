@@ -1,10 +1,10 @@
-import * as React from "react";
 import * as Styles from "./index.styles";
 import { Link } from "react-router-dom";
-import { clickToGoToTopOfPage } from "./clickToGoToTopOfPage";
+import clickToGoToTopOfPage from "./clickToGoToTopOfPage";
+import { FooterWrapperStyle } from "../../styles/sharedStyles";
 function Footer() {
   return (
-    <Styles.PageFooterContainer>
+    <FooterWrapperStyle>
       <Styles.FooterGridContainer>
         <section>
           <Styles.FooterPageLogo>
@@ -121,7 +121,7 @@ function Footer() {
           </span>
         </Styles.CopyRightInformationContainer>
       </Styles.FooterGridContainer>
-    </Styles.PageFooterContainer>
+    </FooterWrapperStyle>
   );
 }
 export default Footer;

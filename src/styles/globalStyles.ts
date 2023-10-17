@@ -28,6 +28,8 @@ const GlobalStyles = createGlobalStyle`
     --third-heading-responsive-font-size: clamp(1rem, 1vw + 2vw, 1.3rem);
     --list-item-product-font-size: clamp(0.6rem, 1vw + 2vw, 1rem);
     --button-font-size: clamp(1rem, 1vw + 2vw, 1rem);
+    --footer-background-color: hsla(0, 0%, 20%, 1);
+    --footer-text-primary-color: hsla(0, 100%, 100%, 0.78);
   }
 
   html {
