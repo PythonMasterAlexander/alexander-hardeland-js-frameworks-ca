@@ -4,7 +4,7 @@ export const LinkListItem = style.li`
   display: inline-block;
   padding-right: 0.75rem; 
 `;
-export const LinkStyle = style(NavLink)`
+export const LinkStyle = style(NavLink).attrs(() => ({ tabIndex: 0 }))`
   color: hsla(0, 100%, 100%, 1);
   font-size: 1.25rem;
   text-decoration: none;
@@ -14,5 +14,8 @@ export const LinkStyle = style(NavLink)`
   background: hsla(220, 36%, 21%, 1);
   &:hover {
     text-decoration: underline;
+  }
+  &.active{
+    color: black;
   }
 `;
