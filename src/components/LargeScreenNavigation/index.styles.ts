@@ -4,7 +4,7 @@ export const LinkListItem = style.li`
   display: inline-block;
   padding-right: 0.75rem; 
 `;
-export const LinkStyle = style(NavLink).attrs(() => ({ tabIndex: 0 }))`
+export const LinkStyle = style(NavLink)`
   color: hsla(0, 100%, 100%, 1);
   font-size: 1.25rem;
   text-decoration: none;
