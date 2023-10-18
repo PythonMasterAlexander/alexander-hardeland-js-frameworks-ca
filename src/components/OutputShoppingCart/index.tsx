@@ -1,4 +1,3 @@
-import * as React from "react";
 import * as Styles from "./index.styles";
 import UseCartStore from "./UseCartStore";
 import generateUniqueKeyOnEachProduct from "./generateUniqueKeyOnEachProduct";
@@ -20,7 +19,7 @@ function OutputShoppingCart() {
     removeSingleProduct(product);
   };
   return (
-    <React.Fragment>
+    <>
       {cartStore.map((productInCart) => {
         const calculatedPrice = (
           productInCart.price - productInCart.discountedPrice
@@ -58,7 +57,7 @@ function OutputShoppingCart() {
           </li>
         );
       })}
-    </React.Fragment>
+    </>
   );
 }
 export default OutputShoppingCart;

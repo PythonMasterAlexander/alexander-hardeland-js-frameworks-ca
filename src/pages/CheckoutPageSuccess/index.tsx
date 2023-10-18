@@ -1,9 +1,8 @@
-import * as React from "react";
 import * as Styles from "./index.styles";
 import { Helmet } from "react-helmet";
 function CheckoutPageSuccess() {
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Hello World</title>
       </Helmet>
@@ -16,7 +15,7 @@ function CheckoutPageSuccess() {
           Go back to the store
         </Styles.GoBackToStoreButton>
       </div>
-    </React.Fragment>
+    </>
   );
 }
 export default CheckoutPageSuccess;

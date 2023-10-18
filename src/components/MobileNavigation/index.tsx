@@ -8,7 +8,7 @@ function MobileNavigation() {
     setMobileNavigationClicked(!isMobileNavigationClicked);
   }
   return (
-    <React.Fragment>
+    <>
       <Styles.HamburgerMenuClickOnIcon
         onClick={toggleHamburgerMenuOnOff}
         type="checkbox"
@@ -33,7 +33,7 @@ function MobileNavigation() {
           </Styles.LinkListItem>
         </Styles.UnorderedListNavigationContainer>
       </Styles.MobileNavigation>
-    </React.Fragment>
+    </>
   );
 }
 export default MobileNavigation;

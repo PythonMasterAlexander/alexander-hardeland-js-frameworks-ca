@@ -24,7 +24,7 @@ function HomePage() {
   });
   function OutputProductOnHomePage() {
     return (
-      <React.Fragment>
+      <>
         {filteredProducts.map((product) => (
           <Styles.ProductCardContainer key={product.id}>
             <hgroup>
@@ -48,7 +48,7 @@ function HomePage() {
             </Styles.ProductLinkContainer>
           </Styles.ProductCardContainer>
         ))}
-      </React.Fragment>
+      </>
     );
   }
   return (
