@@ -1,49 +1,21 @@
 import * as React from "react";
 import * as Styles from "./index.styles";
 import ApiCallData from "./ApiCallData";
-import { Product } from "./types";
+import OutputProductOnHomePage from "../../components/OutputProductOnHomePage";
+import { ApiReturnData } from "./types";
 function HomePage() {
-  const { products, isLoading, isError } = ApiCallData();
+  const { products } = ApiCallData();
   const [filterValue, setFilterValue] = React.useState<string>("");
+
   const HandleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setFilterValue(event.target.value.trim().toLowerCase());
   };
-  const filteredProducts: Product[] = products.filter((product) => {
+  const filteredProducts: ApiReturnData[] = products.filter((product) => {
     const productTitle: string = product.title.trim().toLowerCase();
-
     if (productTitle.startsWith(filterValue)) {
       return product;
     }
   });
-  function OutputProductOnHomePage() {
-    return (
-      <>
-        {filteredProducts.map((product) => (
-          <Styles.ProductCardContainer key={product.id}>
-            <hgroup>
-              <Styles.ProductImage
-                src={product.imageUrl}
-                alt={product.description}
-              />
-              <Styles.ProductCardTextHeading>
-                {product.title}
-              </Styles.ProductCardTextHeading>
-            </hgroup>
-            <Styles.ProductCardBody>
-              <Styles.ProductCardText>
-                {product.description}
-              </Styles.ProductCardText>
-            </Styles.ProductCardBody>
-            <Styles.ProductLinkContainer>
-              <Styles.ProductLinkStyle to={`/product/${product.id}`}>
-                View product
-              </Styles.ProductLinkStyle>
-            </Styles.ProductLinkContainer>
-          </Styles.ProductCardContainer>
-        ))}
-      </>
-    );
-  }
   return (
     <>
       <Styles.HomePageSearchProductContainer>
@@ -58,7 +30,7 @@ function HomePage() {
       </Styles.HomePageSearchProductContainer>
       <Styles.HomePageHeading>Welcome to Us</Styles.HomePageHeading>
       <Styles.HomePageMainContainer>
-        <OutputProductOnHomePage />
+        <OutputProductOnHomePage filteredProducts={filteredProducts} />
       </Styles.HomePageMainContainer>
     </>
   );
