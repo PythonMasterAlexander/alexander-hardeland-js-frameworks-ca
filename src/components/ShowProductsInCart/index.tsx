@@ -1,10 +1,4 @@
-interface ProductsInCart {
-  id: number;
-  price: number;
-  discountedPrice: number;
-  title: string;
-  imageUrl: string;
-}
+import { ProductsInCart } from "./types";
 function ShowProductsInCart(productsInCart: Array<ProductsInCart>) {
   return (
     <div>

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 export const PrimaryButtonContainer = styled.div`
   background: ${(props) => props.theme.buttons.primary.background};
   border-radius: ${(props) => props.theme.buttons.primary.borderRadius};
@@ -13,7 +13,7 @@ export const PrimaryButtonStyle = styled.button`
   text-transform: ${(props) => props.theme.buttons.primary.textTransform};
   font-size: ${(props) => props.theme.buttons.primary.fontSize};
 `;
-export const PrimaryLinkStyle = styled(Link)`
+export const PrimaryLinkStyle = styled(NavLink)`
   color: ${(props) => props.theme.buttons.primary.textColor};
   font-size: ${(props) => props.theme.buttons.primary.fontSize};
   font-weight: ${(props) => props.theme.buttons.primary.fontWeight};

@@ -1,6 +1,5 @@
 import * as React from "react";
 import * as Styles from "./index.styles";
-import { PrimaryLinkStyle } from "../../styles/sharedStyles";
 function MobileNavigation() {
   const [isMobileNavigationClicked, setMobileNavigationClicked] =
     React.useState(false);
@@ -8,7 +7,7 @@ function MobileNavigation() {
     setMobileNavigationClicked(!isMobileNavigationClicked);
   }
   return (
-    <React.Fragment>
+    <>
       <Styles.HamburgerMenuClickOnIcon
         onClick={toggleHamburgerMenuOnOff}
         type="checkbox"
@@ -26,14 +25,16 @@ function MobileNavigation() {
       >
         <Styles.UnorderedListNavigationContainer>
           <Styles.LinkListItem>
-            <PrimaryLinkStyle to="/">Home</PrimaryLinkStyle>
+            <Styles.MobileLinkStyle to="/">Home</Styles.MobileLinkStyle>
           </Styles.LinkListItem>
           <Styles.LinkListItem>
-            <PrimaryLinkStyle to="/contact">Contact</PrimaryLinkStyle>
+            <Styles.MobileLinkStyle to="/contact">
+              Contact
+            </Styles.MobileLinkStyle>
           </Styles.LinkListItem>
         </Styles.UnorderedListNavigationContainer>
       </Styles.MobileNavigation>
-    </React.Fragment>
+    </>
   );
 }
 export default MobileNavigation;

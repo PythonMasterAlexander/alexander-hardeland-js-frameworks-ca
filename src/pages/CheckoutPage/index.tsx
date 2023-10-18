@@ -1,4 +1,3 @@
-import * as React from "react";
 import * as Styles from "./index.styles";
 import OutputShoppingCart from "../../components/OutputShoppingCart";
 import UseCartStore from "../../components/OutputShoppingCart/UseCartStore";
@@ -25,7 +24,7 @@ function CheckoutPage() {
   const returnPriceNumber: number = getPricesFromCart(cartStore);
   const totalPrice: string = returnPriceNumber.toFixed(2);
   return (
-    <React.Fragment>
+    <>
       <Styles.ShoppingCartFlexContainer>
         <Styles.ShoppingCartContainer>
           <Styles.ShoppingCartHeader>Shopping Cart</Styles.ShoppingCartHeader>
@@ -92,7 +91,7 @@ function CheckoutPage() {
           Continue Shopping
         </Styles.ContinueShoppingButtonLink>
       </Styles.ContinueShoppingContainer>
-    </React.Fragment>
+    </>
   );
 }
 export default CheckoutPage;
