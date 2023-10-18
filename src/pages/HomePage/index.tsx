@@ -3,6 +3,7 @@ import * as Styles from "./index.styles";
 import ApiCallData from "./ApiCallData";
 import OutputProductOnHomePage from "../../components/OutputProductOnHomePage";
 import { ApiReturnData } from "./types";
+import { Helmet } from "react-helmet";
 function HomePage() {
   const { products } = ApiCallData();
   const [filterValue, setFilterValue] = React.useState<string>("");
@@ -18,6 +19,9 @@ function HomePage() {
   });
   return (
     <>
+      <Helmet>
+        <title>Hello World</title>
+      </Helmet>
       <Styles.HomePageSearchProductContainer>
         <Styles.SearchProductFlexContainer>
           <Styles.SearchProductText>Search</Styles.SearchProductText>

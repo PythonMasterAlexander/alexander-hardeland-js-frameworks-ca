@@ -1,6 +1,7 @@
 import * as ReactHookForm from "react-hook-form";
 import * as Styles from "./index.styles";
 import * as yup from "yup";
+import { Helmet } from "react-helmet";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { FormData } from "./types";
 function ContactPage() {
@@ -28,6 +29,9 @@ function ContactPage() {
   };
   return (
     <>
+      <Helmet>
+        <title>Hello from the Contact page</title>
+      </Helmet>
       <Styles.ContactPageGridContainer>
         <Styles.ContactPageInformationContainer>
           <Styles.InformationContainerHeading>

@@ -2,6 +2,7 @@ import * as Styles from "./index.styles";
 import OutputShoppingCart from "../../components/OutputShoppingCart";
 import UseCartStore from "../../components/OutputShoppingCart/UseCartStore";
 import getPricesFromCart from "../../components/OutputShoppingCart/getPricesFromCart";
+import { Helmet } from "react-helmet";
 import { PrimaryButtonContainer } from "../../styles/sharedStyles";
 function CheckoutPage() {
   const clearAllProductsFromCartStore = UseCartStore(
@@ -25,6 +26,9 @@ function CheckoutPage() {
   const totalPrice: string = returnPriceNumber.toFixed(2);
   return (
     <>
+      <Helmet>
+        <title>Hello from the Checkout page</title>
+      </Helmet>
       <Styles.ShoppingCartFlexContainer>
         <Styles.ShoppingCartContainer>
           <Styles.ShoppingCartHeader>Shopping Cart</Styles.ShoppingCartHeader>
