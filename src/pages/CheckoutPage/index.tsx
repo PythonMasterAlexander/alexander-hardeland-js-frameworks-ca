@@ -2,6 +2,7 @@ import * as Styles from "./index.styles";
 import OutputShoppingCart from "../../components/OutputShoppingCart";
 import UseCartStore from "../../components/OutputShoppingCart/UseCartStore";
 import getPricesFromCart from "../../components/OutputShoppingCart/getPricesFromCart";
+import { Helmet } from "react-helmet";
 import { PrimaryButtonContainer } from "../../styles/sharedStyles";
 function CheckoutPage() {
   const clearAllProductsFromCartStore = UseCartStore(
@@ -25,6 +26,15 @@ function CheckoutPage() {
   const totalPrice: string = returnPriceNumber.toFixed(2);
   return (
     <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+          name="description"
+          content="This page is where the user can see whats in the cart. From here the user can clear the cart, checkout, or go back and shop more"
+        />
+        <title>Checkout</title>
+      </Helmet>
       <Styles.ShoppingCartFlexContainer>
         <Styles.ShoppingCartContainer>
           <Styles.ShoppingCartHeader>Shopping Cart</Styles.ShoppingCartHeader>

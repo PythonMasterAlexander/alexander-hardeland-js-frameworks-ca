@@ -3,6 +3,7 @@ import * as Styles from "./index.styles";
 import ApiCallData from "./ApiCallData";
 import OutputProductOnHomePage from "../../components/OutputProductOnHomePage";
 import { ApiReturnData } from "./types";
+import { Helmet } from "react-helmet";
 function HomePage() {
   const { products } = ApiCallData();
   const [filterValue, setFilterValue] = React.useState<string>("");
@@ -18,6 +19,15 @@ function HomePage() {
   });
   return (
     <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+          name="description"
+          content="The home page for Shop With Us, this is the page the user lands on. From here he can start shoping with us by clicking products."
+        />
+        <title>Shop With Us</title>
+      </Helmet>
       <Styles.HomePageSearchProductContainer>
         <Styles.SearchProductFlexContainer>
           <Styles.SearchProductText>Search</Styles.SearchProductText>

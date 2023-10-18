@@ -1,6 +1,7 @@
 import * as ReactHookForm from "react-hook-form";
 import * as Styles from "./index.styles";
 import * as yup from "yup";
+import { Helmet } from "react-helmet";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { FormData } from "./types";
 function ContactPage() {
@@ -28,6 +29,15 @@ function ContactPage() {
   };
   return (
     <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+          name="description"
+          content="This is the contact page where the user can contact us by sending a message. The user must provide information that we can go work with."
+        />
+        <title>Contact Us</title>
+      </Helmet>
       <Styles.ContactPageGridContainer>
         <Styles.ContactPageInformationContainer>
           <Styles.InformationContainerHeading>
