@@ -27,7 +27,13 @@ function CheckoutPage() {
   return (
     <>
       <Helmet>
-        <title>Hello from the Checkout page</title>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+          name="description"
+          content="This page is where the user can see whats in the cart. From here the user can clear the cart, checkout, or go back and shop more"
+        />
+        <title>Checkout</title>
       </Helmet>
       <Styles.ShoppingCartFlexContainer>
         <Styles.ShoppingCartContainer>

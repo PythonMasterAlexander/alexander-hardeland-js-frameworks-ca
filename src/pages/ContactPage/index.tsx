@@ -30,7 +30,13 @@ function ContactPage() {
   return (
     <>
       <Helmet>
-        <title>Hello from the Contact page</title>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+          name="description"
+          content="This is the contact page where the user can contact us by sending a message. The user must provide information that we can go work with."
+        />
+        <title>Contact Us</title>
       </Helmet>
       <Styles.ContactPageGridContainer>
         <Styles.ContactPageInformationContainer>

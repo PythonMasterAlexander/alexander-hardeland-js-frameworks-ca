@@ -4,7 +4,13 @@ function CheckoutPageSuccess() {
   return (
     <>
       <Helmet>
-        <title>Hello from the Checkout success page</title>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+          name="description"
+          content="When the user has checkout out any product this page will be displayed."
+        />
+        <title>Congratulate</title>
       </Helmet>
       <Styles.CheckoutSuccessPageHeader>
         The order was a success

@@ -20,7 +20,13 @@ function HomePage() {
   return (
     <>
       <Helmet>
-        <title>Hello World</title>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+          name="description"
+          content="The home page for Shop With Us, this is the page the user lands on. From here he can start shoping with us by clicking products."
+        />
+        <title>Shop With Us</title>
       </Helmet>
       <Styles.HomePageSearchProductContainer>
         <Styles.SearchProductFlexContainer>
