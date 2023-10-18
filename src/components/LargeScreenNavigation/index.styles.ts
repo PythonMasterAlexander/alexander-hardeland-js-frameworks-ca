@@ -1,10 +1,10 @@
 import style from "styled-components";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 export const LinkListItem = style.li`
   display: inline-block;
   padding-right: 0.75rem; 
 `;
-export const LinkStyle = style(Link)`
+export const LinkStyle = style(NavLink)`
   color: hsla(0, 100%, 100%, 1);
   font-size: 1.25rem;
   text-decoration: none;
