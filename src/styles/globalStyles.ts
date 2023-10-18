@@ -26,7 +26,7 @@ const GlobalStyles = createGlobalStyle`
     --main-heading-responsive-font-size: clamp(1.75rem, 1vw + 3vw, 3.125rem);
     --second-heading-responsive-font-size: clamp(1.3rem, 1vw + 2vw, 1.5rem);
     --third-heading-responsive-font-size: clamp(1rem, 1vw + 2vw, 1.3rem);
-    --list-item-product-font-size: clamp(0.6rem, 1vw + 2vw, 1rem);
+    --list-item-product-font-size: clamp(0.6rem, 1vw + 2vw, 0.8rem);
     --button-font-size: clamp(1rem, 1vw + 2vw, 1rem);
     --footer-background-color: hsla(0, 0%, 20%, 1);
     --footer-text-primary-color: hsla(0, 100%, 100%, 0.78);
