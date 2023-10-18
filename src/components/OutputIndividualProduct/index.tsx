@@ -11,14 +11,11 @@ function OutputIndividualProduct() {
   const noDiscount = "No discount";
   const dollarSymbol = " $";
   const { id } = useParams();
-
   const { isLoading, individualProductData, isError } =
     GetIndividualProductData(id);
-
   const addProductToCartStore = UseCartStore(
     (state) => state.addProductToCartStore
   );
-
   if (isLoading || !individualProductData || isError) {
     return (
       <>
@@ -28,11 +25,9 @@ function OutputIndividualProduct() {
   } else {
     const { title, description, imageUrl, reviews, price, discountedPrice } =
       individualProductData;
-
     const isDiscount: boolean = checkForDiscount(price, discountedPrice);
     const discountedDifference: number = price - discountedPrice;
     const isReviewOnProduct = checkForReview(reviews);
-
     let reviewUserName: string = "";
     let reviewRating: number = 0;
     let reviewDescription: string = "";

@@ -1,24 +1,6 @@
 import * as Zustand from "zustand";
+import { CartStore, CartStoreActions } from "./types";
 import { devtools, persist } from "zustand/middleware";
-interface Product {
-  id: string;
-  title: string;
-  imageUrl: string;
-  description: string;
-  discountedPrice: number;
-  price: number;
-  reviews: Array<object>;
-}
-interface CartStore {
-  numberOfProductsInCartStore: number;
-  cartStore: Array<Product>;
-  totalProductPrice: number;
-}
-interface CartStoreActions {
-  addProductToCartStore: (product: Product) => void;
-  removeProductFromCartStore: (productToRemove: Product) => void;
-  clearAllProductsFromCartStore: () => void;
-}
 const UseCartStore = Zustand.create<CartStore & CartStoreActions>()(
   devtools(
     persist(

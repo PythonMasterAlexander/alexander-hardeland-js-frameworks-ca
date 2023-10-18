@@ -1,12 +1,4 @@
-interface Product {
-  id: string;
-  title: string;
-  imageUrl: string;
-  description: string;
-  discountedPrice: number;
-  price: number;
-  reviews: Array<object>;
-}
+import { Product } from "./types";
 function getPricesFromCart(cartStore: Array<Product>) {
   let totalPrice: number = 0;
   let totalDiscountedPrice: number = 0;

@@ -1,6 +1,5 @@
 import * as React from "react";
 import * as Styles from "./index.styles";
-import { PrimaryLinkStyle } from "../../styles/sharedStyles";
 function MobileNavigation() {
   const [isMobileNavigationClicked, setMobileNavigationClicked] =
     React.useState(false);

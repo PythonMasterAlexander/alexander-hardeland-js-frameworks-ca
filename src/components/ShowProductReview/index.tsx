@@ -1,10 +1,6 @@
 import * as Styles from "./index.styles";
-interface reviewData {
-  username: string;
-  rating: number;
-  description: string;
-}
-function ShowProductReview(review: reviewData) {
+import { ReviewData } from "./types";
+function ShowProductReview(review: ReviewData) {
   return (
     <div>
       <ul className="product-review__list-container">

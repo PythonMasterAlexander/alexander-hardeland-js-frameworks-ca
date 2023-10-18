@@ -1,17 +1,9 @@
 import * as Styles from "./index.styles";
 import UseCartStore from "./UseCartStore";
 import generateUniqueKeyOnEachProduct from "./generateUniqueKeyOnEachProduct";
+import { Product } from "./types";
 function OutputShoppingCart() {
   const cartStore = UseCartStore((state) => state.cartStore);
-  interface Product {
-    id: string;
-    title: string;
-    imageUrl: string;
-    description: string;
-    discountedPrice: number;
-    price: number;
-    reviews: Array<object>;
-  }
   const removeSingleProduct = UseCartStore(
     (state) => state.removeProductFromCartStore
   );
