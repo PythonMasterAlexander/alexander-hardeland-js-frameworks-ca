@@ -52,7 +52,7 @@ function HomePage() {
     );
   }
   return (
-    <React.Fragment>
+    <>
       <Styles.HomePageSearchProductContainer>
         <Styles.SearchProductFlexContainer>
           <Styles.SearchProductText>Search</Styles.SearchProductText>
@@ -67,7 +67,7 @@ function HomePage() {
       <Styles.HomePageMainContainer>
         <OutputProductOnHomePage />
       </Styles.HomePageMainContainer>
-    </React.Fragment>
+    </>
   );
 }
 export default HomePage;
