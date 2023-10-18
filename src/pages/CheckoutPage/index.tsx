@@ -55,7 +55,7 @@ function CheckoutPage() {
                   Your discount
                 </Styles.SummaryInformationListItemText>
                 <Styles.SummaryInformationListItemPrice>
-                  {totalDiscountPrice}
+                  {totalDiscountPrice} $
                 </Styles.SummaryInformationListItemPrice>
               </Styles.SummaryInformationListItem>
               <Styles.SummaryInformationListItem>
@@ -63,7 +63,7 @@ function CheckoutPage() {
                   Total
                 </Styles.SummaryInformationListItemText>
                 <Styles.SummaryInformationListItemPrice>
-                  {totalPrice}
+                  {totalPrice} $
                 </Styles.SummaryInformationListItemPrice>
               </Styles.SummaryInformationListItem>
             </ul>

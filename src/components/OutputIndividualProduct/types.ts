@@ -1,8 +1,14 @@
 export interface ApiReturnData {
   id: string;
   title: string;
+  imageUrl: string;
   description: string;
   discountedPrice: number;
   price: number;
-  imageUrl: string;
+  reviews: Array<{
+    id: string;
+    username: string;
+    rating: number;
+    description: string;
+  }>;
 }

@@ -1,8 +1,8 @@
 import ApiCallData from "./ApiCallData";
 import { filterValue } from "./HandleInputChange";
-import { Product } from "./types";
+import { ApiReturnData } from "./types";
 const { products } = ApiCallData();
-const FilteredProducts: Product[] = products.filter((product) => {
+const FilteredProducts: ApiReturnData[] = products.filter((product) => {
   const productTitle: string = product.title.trim().toLowerCase();
 
   if (productTitle.startsWith(filterValue)) {
