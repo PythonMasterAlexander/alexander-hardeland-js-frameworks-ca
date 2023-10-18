@@ -1,20 +1,13 @@
 import * as React from "react";
 import * as Styles from "./index.styles";
 import ApiCallData from "./ApiCallData";
+import { Product } from "./types";
 function HomePage() {
   const { products, isLoading, isError } = ApiCallData();
   const [filterValue, setFilterValue] = React.useState<string>("");
   const HandleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setFilterValue(event.target.value.trim().toLowerCase());
   };
-  interface Product {
-    id: string;
-    title: string;
-    description: string;
-    discountedPrice: number;
-    price: number;
-    imageUrl: string;
-  }
   const filteredProducts: Product[] = products.filter((product) => {
     const productTitle: string = product.title.trim().toLowerCase();
 

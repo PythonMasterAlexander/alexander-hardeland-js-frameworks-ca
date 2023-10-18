@@ -16,6 +16,6 @@ export const LinkStyle = style(NavLink)`
     text-decoration: underline;
   }
   &.active{
-    color: hsla(0, 0%, 100%, 0.3);
+    color: hsla(0, 0%, 100%, 0.7);
   }
 `;

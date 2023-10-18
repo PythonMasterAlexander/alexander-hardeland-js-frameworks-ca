@@ -1,14 +1,7 @@
 import * as React from "react";
+import { ApiReturnData } from "./types";
 function ApiCallData() {
   const url: string = "https://api.noroff.dev/api/v1/online-shop";
-  interface ApiReturnData {
-    id: string;
-    title: string;
-    description: string;
-    discountedPrice: number;
-    price: number;
-    imageUrl: string;
-  }
   const [products, setProducts] = React.useState<Array<ApiReturnData>>([]);
   const [isLoading, setIsLoading] = React.useState<boolean>(false);
   const [isError, setIsError] = React.useState<boolean>(false);
