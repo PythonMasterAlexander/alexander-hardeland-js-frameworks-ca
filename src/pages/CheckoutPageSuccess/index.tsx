@@ -1,11 +1,7 @@
 import * as Styles from "./index.styles";
-import { Helmet } from "react-helmet";
 function CheckoutPageSuccess() {
   return (
     <>
-      <Helmet>
-        <title>Hello World</title>
-      </Helmet>
       <Styles.CheckoutSuccessPageHeader>
         The order was a success
       </Styles.CheckoutSuccessPageHeader>
