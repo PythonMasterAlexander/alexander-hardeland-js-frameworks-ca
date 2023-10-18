@@ -1,4 +1,5 @@
 import style from "styled-components";
+import { PrimaryLinkStyle } from "../../styles/sharedStyles";
 export const MobileNavigation = style.nav`
   display: none;
 `;
@@ -22,5 +23,10 @@ export const LinkListItem = style.li`
     padding-top: 0;
     display: inline;
     margin: 0;
+  }
+`;
+export const MobileLinkStyle = style(PrimaryLinkStyle)`
+  &.active{
+    color: hsla(0, 0%, 60%, 0.8);
   }
 `;

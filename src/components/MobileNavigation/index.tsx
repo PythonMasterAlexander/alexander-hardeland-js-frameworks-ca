@@ -26,10 +26,12 @@ function MobileNavigation() {
       >
         <Styles.UnorderedListNavigationContainer>
           <Styles.LinkListItem>
-            <PrimaryLinkStyle to="/">Home</PrimaryLinkStyle>
+            <Styles.MobileLinkStyle to="/">Home</Styles.MobileLinkStyle>
           </Styles.LinkListItem>
           <Styles.LinkListItem>
-            <PrimaryLinkStyle to="/contact">Contact</PrimaryLinkStyle>
+            <Styles.MobileLinkStyle to="/contact">
+              Contact
+            </Styles.MobileLinkStyle>
           </Styles.LinkListItem>
         </Styles.UnorderedListNavigationContainer>
       </Styles.MobileNavigation>
