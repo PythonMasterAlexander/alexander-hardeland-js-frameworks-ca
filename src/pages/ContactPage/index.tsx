@@ -2,13 +2,8 @@ import * as ReactHookForm from "react-hook-form";
 import * as Styles from "./index.styles";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
+import { FormData } from "./types";
 function ContactPage() {
-  interface FormData {
-    fullName: string;
-    subject: string;
-    email: string;
-    bodyText: string;
-  }
   const schema = yup
     .object({
       fullName: yup
