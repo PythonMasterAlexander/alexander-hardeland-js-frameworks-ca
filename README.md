@@ -12,6 +12,10 @@ You are tasked with build out the following pages for an eCom store:
 - Cart page
 - Checkout success page
 
+### Link
+- [API](https://docs.noroff.dev/docs/v1)
+
+
 ## Built With
 
 - [React.js](https://reactjs.org/)
@@ -22,12 +26,10 @@ You are tasked with build out the following pages for an eCom store:
 
 ### Installing
 
-This is where you list how to get the project started. It typically just includes telling a person to clone the repo and then to install the dependencies e.g.
-
 1. Clone the repo:
 
 ```bash
-git clone git@github.com:NoroffFEU/portfolio-1-example.git
+git clone git@github.com:PythonMasterAlexander/alexander-hardeland-js-frameworks-ca.git
 ```
 
 2. Install the dependencies:
