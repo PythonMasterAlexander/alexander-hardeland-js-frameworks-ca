@@ -1,32 +1,70 @@
-Goal
-To apply knowledge of React to build an eCom store.
+# Your project title
 
-Brief
-The API you are using for this brief is: https://api.noroff.dev/api/v1/online-shop
-You can find individual items by appending a product ID at the end of the API URL e.g. https://api.noroff.dev/api/v1/online-shop/f99cafd2-bd40-4694-8b33-a6052f36b435
-You are tasked with build out the following pages for an eCom store:
+![image](https://user-images.githubusercontent.com/52622303/164316813-4b12d99f-aeb7-4069-85cf-e72b3a50ac99.png)
 
-    Homepage
-    Individual product page
-    Cart page
-    Checkout success page
+A simple overview of the use/purpose of the project.
 
-The Homepage should have a list of all the products. There should be a look-ahead search bar that filters products when typing in a product name. Clicking on a product should take a user to an individual product page.
-You pages should use a <Layout> component that contains a header and footer. The header should contain a nav bar as well as a Cart icon component that acts as a button as well as displays the current number of items in the cart.
-The individual product page should display data for a single product. There should be an Add to cart button which, upon clicking, adds the product to the cart. The product page should display the title of the product, the description and the image. There should also be reviews listed for the product, if there are any. You should use the discountedPrice property to display the price of the product. If there is a difference between the discountedPrice and price properties then that means there is a discount for that product. Calculate what this discount is and display it on the page.
+## Description
 
-Clicking on the Cart icon will load the Cart page, which will list all of the products as well as a total. The Cart page will have a Checkout button. Clicking this Checkout button then goes to a Checkout success page.
-The Checkout success page will display a message to the user notifying them that their order was successful. There should also be a link that lets a user go back to the store. The cart must be cleared if the user gets to the Checkout success page.
-There will be a contact page which will contain a contact form with the following fields. There must be form validation:
+Add a more detailed description of what your project entails and set out to do.
 
-    Full name (Minimum number of characters is 3, required)
-    Subject (Minimum number of characters is 3, required)
-    Email (Must be a valid email address, required)
-    Body (Minimum number of characters is 3, required)
+You can add some bullet points if you'd like to:
 
-You will be using React Router to switch between pages.
-Your design should be responsive. You are welcome to use a CSS Framework, however, you’re encouraged to design from scratch and use styled-components or CSS Modules.
+- List item 1
+- List item 2
+- List item 3
 
-You are not required to use TypeScript.
-Your code is expected to be clean and well-formatted.
+## Built With
 
+You can list a the tech stack that you've used over here
+
+- [React.js](https://reactjs.org/)
+- [Bootstrap](https://getbootstrap.com)
+
+## Getting Started
+
+### Installing
+
+This is where you list how to get the project started. It typically just includes telling a person to clone the repo and then to install the dependencies e.g.
+
+1. Clone the repo:
+
+```bash
+git clone git@github.com:NoroffFEU/portfolio-1-example.git
+```
+
+2. Install the dependencies:
+
+```
+npm install
+```
+
+### Running
+
+Here is where you detail how to run the app. It typically involves the commands you'd need to run to start the project e.g.
+
+To run the app, run the following commands:
+
+```bash
+npm run start
+```
+
+## Contributing
+
+Here you can detail any information you want to provide regarding contributing to the project. For big projects you will usually have a separate `CONTRIBUTING.md` and link to it, but for smaller projects you can simply include instructions here. These instructions can simply detail the process you want a person to take, such as to make sure to open a pull request so code can be reviewed.
+
+## Contact
+
+This is where you can leave your social links for people to contact you, such as a LinkedIn profile or Twitter link e.g.
+
+[My Twitter page](www.twitter.com)
+
+[My LinkedIn page](www.linkedin.com)
+
+## License
+
+You can link to your license file here if you're using one, or mention what license the codebase falls under. If you're unsure then you can simply delete this section.
+
+## Acknowledgments
+
+This is where you can add any acknowledgements if you'd like, such as to people who have helped you or any code snippets you'd like to mention. You can delete this section if you don't have any acknowledgements to make.
