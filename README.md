@@ -21,7 +21,8 @@ You are tasked with build out the following pages for an eCom store:
 - [React.js](https://reactjs.org/)
 - [Styled Components](https://styled-components.com/)
 - TypeScript
-
+- Html
+  
 ## Getting Started
 
 ### Installing
