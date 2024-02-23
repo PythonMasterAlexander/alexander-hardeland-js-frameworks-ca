@@ -1,6 +1,6 @@
 # JavaScript Frameworks CA
 
-![image](https://user-images.githubusercontent.com/52622303/164316813-4b12d99f-aeb7-4069-85cf-e72b3a50ac99.png)
+![image](https://i.postimg.cc/zXZ8bX7n/javascript-frameworks-ca-image-one.png)
 
 ## Description
 To apply knowledge of React to build an eCom store, noroff provides the API for your store.
